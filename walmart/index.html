@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your $1000 Walmart Reward</title>
+    <link rel="preload" href="images/walmart-card.webp" as="image" type="image/webp">
+    
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #f0f2f5; 
+            color: #1c1e21; 
+            margin: 0; 
+            padding: 20px 10px; 
+        }
+
+        .main-container {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 25px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 { text-align: center; font-size: 26px; line-height: 1.3; margin-top: 0; }
+        .card-img { display: block; width: 90%; max-width: 350px; margin: 20px auto; border-radius: 10px; }
+
+        .dynamic-date { text-align: center; color: #d93025; font-weight: bold; font-size: 14px; margin-bottom: 15px; }
+        .urgency-bar { background-color: #fff3cd; color: #856404; padding: 10px; border-radius: 5px; text-align: center; font-weight: bold; font-size: 15px; margin-bottom: 20px; border: 1px solid #ffeeba; }
+        .urgency-bar span { color: #d93025; font-size: 16px; }
+
+        .step-container { display: none; animation: fadeIn 0.4s; }
+        .step-container.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .checklist { list-style: none; padding: 0; margin-bottom: 20px; }
+        .checklist li { margin-bottom: 12px; font-size: 16px; display: flex; align-items: center; font-weight: 500; }
+        .checklist li::before { content: '✅'; margin-right: 10px; }
+
+        .btn { display: block; width: 100%; background-color: #0071ce; color: white; border: none; padding: 16px; font-size: 18px; font-weight: bold; border-radius: 6px; cursor: pointer; text-align: center; text-decoration: none; box-sizing: border-box; transition: background-color 0.2s; }
+        .btn:hover { background-color: #005bb5; }
+
+        .step-indicator { font-weight: bold; color: #65676b; font-size: 14px; margin-bottom: 5px; }
+        .question-title { font-weight: bold; font-size: 20px; margin-bottom: 18px; }
+
+        .radio-group label { display: block; padding: 15px; border: 1px solid #ccd0d5; border-radius: 6px; margin-bottom: 12px; cursor: pointer; font-size: 16px; background-color: #f8f9fa; transition: background 0.2s; }
+        .radio-group label:hover { background-color: #e9ecef; }
+        .radio-group input[type="radio"] { margin-right: 12px; transform: scale(1.2); }
+
+        .disclaimer { font-size: 12px; color: #65676b; margin-top: 25px; line-height: 1.5; }
+
+        /* Loading Bar */
+        .loading-text { text-align: center; margin-bottom: 12px; font-weight: bold; font-size: 18px; color: #1c1e21; }
+        .progress-bar { width: 100%; background-color: #e4e6eb; border-radius: 10px; overflow: hidden; height: 12px; }
+        .progress-fill { height: 100%; background-color: #0071ce; width: 0%; transition: width 0.3s linear; }
+        .success-msg { color: #4CAF50; font-weight: bold; font-size: 22px; margin-bottom: 15px; }
+
+        /* Comments Section */
+        .comments-header { border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 15px; }
+        .add-comment textarea { width: 100%; height: 50px; padding: 10px; border: 1px solid #ccd0d5; border-radius: 4px; box-sizing: border-box; resize: none; font-family: inherit; margin-bottom: 20px;}
+        
+        .comments-list { max-height: 450px; overflow-y: auto; padding-right: 10px; }
+        .comments-list::-webkit-scrollbar { width: 6px; }
+        .comments-list::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+        .comments-list::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 4px; }
+        .comments-list::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+
+        .comment { display: flex; margin-bottom: 15px; }
+        .avatar { width: 45px; height: 45px; border-radius: 50%; margin-right: 12px; object-fit: cover; flex-shrink: 0; background-color: #ccc; }
+        .comment-content { background-color: #f0f2f5; padding: 10px 12px; border-radius: 18px; font-size: 14px; width: 100%; box-sizing: border-box;}
+        .comment-name { font-weight: bold; color: #385898; margin-bottom: 4px; }
+        .comment-text { color: #1c1e21; line-height: 1.4; }
+        .comment-proof-img { display: block; width: 100%; max-width: 220px; border-radius: 8px; margin-top: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); background-color: #eee; }
+        .comment-action { font-size: 12px; color: #65676b; margin-top: 5px; font-weight: bold; padding-left: 12px;}
+
+        /* Footer */
+        .fb-footer { text-align: center; font-size: 11px; color: #999; margin-top: 40px; padding: 20px 10px; border-top: 1px solid #eee; line-height: 1.5; }
+        .fb-footer a { color: #999; text-decoration: none; margin: 0 5px; }
+        .fb-footer a:hover { text-decoration: underline; }
+    </style>
+    <meta http-equiv="delegate-ch" content="sec-ch-ua https://www.2timetowin.xyz; sec-ch-ua-mobile https://www.2timetowin.xyz; sec-ch-ua-arch https://www.2timetowin.xyz; sec-ch-ua-model https://www.2timetowin.xyz; sec-ch-ua-platform https://www.2timetowin.xyz; sec-ch-ua-platform-version https://www.2timetowin.xyz; sec-ch-ua-bitness https://www.2timetowin.xyz; sec-ch-ua-full-version-list https://www.2timetowin.xyz; sec-ch-ua-full-version https://www.2timetowin.xyz" />
+
+<script>!function(w,d,o,n,c){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};var s=d.createElement(n),t=d.getElementsByTagName(n)[0];s.async=!0;s.defer=!0;s.src="https://www.2timetowin.xyz/t/t.js";t.parentNode.insertBefore(s,t);}(window,document,"maxconv","script");</script>
+<noscript><link rel="stylesheet" href="https://www.2timetowin.xyz/t/t.css?mc_ns=1" /></noscript>
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2497471847313926');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2497471847313926&ev=PageView&noscript=1"
+/></noscript>
+</head>
+<body>
+<div style="background-color: #0071ce; color: white; text-align: center; padding: 10px; font-size: 14px; font-weight: bold;">
+    🇺🇸 2026 Walmart Customer Appreciation Program
+</div>
+    <div class="main-container">
+        
+        <div class="dynamic-date">
+            ⚠️ Update: <span id="current-date"></span>
+        </div>
+
+        <h1>Claim a $1000 Walmart<br>Gift Card</h1>
+        
+        <picture>
+            <source srcset="images/walmart-card.webp" type="image/webp">
+            <img src="images/walmart-card.jpg" alt="Walmart Card" class="card-img">
+        </picture>
+
+        <div class="urgency-bar">
+           🔥 Hurry! Only <span id="spots-left" style="color: #d93025; font-size: 16px;">41</span> allowances left for <strong id="user-location">your area</strong> today.
+        </div>
+
+        <div id="step-0" class="step-container active">
+            <ul class="checklist">
+                <li>Takes less than 30 second</li>
+                <li>No payment or credit card needed</li>
+                <li>Instant confirmation by email</li>
+            </ul>
+            <button class="btn" onclick="nextStep(1)">Start Now</button>
+        </div>
+
+        <div id="step-1" class="step-container">
+            <p class="step-indicator">Question 1 of 3</p>
+            <div class="question-title">How often do you shop at Walmart?</div>
+            <div class="radio-group">
+                <label onclick="nextStep(2)"><input type="radio" name="q1"> Rarely</label>
+                <label onclick="nextStep(2)"><input type="radio" name="q1"> Sometimes</label>
+                <label onclick="nextStep(2)"><input type="radio" name="q1"> Weekly</label>
+            </div>
+        </div>
+
+        <div id="step-2" class="step-container">
+            <p class="step-indicator">Question 2 of 3</p>
+            <div class="question-title">What would you use your gift card for?</div>
+            <div class="radio-group">
+                <label onclick="nextStep(3)"><input type="radio" name="q2"> Groceries</label>
+                <label onclick="nextStep(3)"><input type="radio" name="q2"> Electronics</label>
+                <label onclick="nextStep(3)"><input type="radio" name="q2"> Home & Kitchen</label>
+            </div>
+        </div>
+        
+        <div id="step-3" class="step-container">
+            <p class="step-indicator">Question 3 of 3</p>
+            <div class="question-title">Are you over 18 years old?</div>
+            <div class="radio-group">
+                <label onclick="startLoading()"><input type="radio" name="q3"> Yes</label>
+                <label onclick="startLoading()"><input type="radio" name="q3"> No</label>
+            </div>
+        </div>
+
+        <div id="step-loading" class="step-container">
+            <div class="loading-text" id="loading-msg">Sending answers...</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <div id="step-final" class="step-container">
+            <div class="success-msg">✅ You qualify!</div>
+            <p>Confirm your email on the advertiser page in order to get your $1000 Walmart Gift Card.</p>
+            <a href="https://www.2timetowin.xyz/click" class="btn final-btn">Claim My $1000 Gift Card</a>
+            <div style="text-align: center; margin-top: 15px; font-size: 12px; color: #666;">
+    🔒 100% Secure & Private | 🛡️ Verified Program
+</div>
+        </div>
+
+        <div class="disclaimer">
+            🔹 This short quiz is part of a consumer feedback initiative funded by the GetnGoods Program (GNG).<br>
+            🎁 As a thank-you for participating, you may qualify for a $1000 Walmart Gift Card.
+        </div>
+
+        <hr style="border:0; border-top:1px solid #ddd; margin: 30px 0;">
+
+        <div class="comments-section">
+            <h3 style="font-size:16px;">Read what others have to say about our program:</h3>
+            <div class="comments-header">
+                <span style="font-weight:bold; font-size:14px;">130 comments</span>
+                <span style="float:right; font-size:12px; color:#666;">Sort by <select><option>Newest</option></select></span>
+            </div>
+            
+            <div class="add-comment">
+                <textarea placeholder="Add a comment..."></textarea>
+            </div>
+
+            <div class="comments-list">
+                
+                <div class="comment">
+                    <img src="images/avatar1.webp" alt="User" class="avatar" onerror="this.src='https://via.placeholder.com/50/cccccc/ffffff?text=BM'">
+                    <div class="comment-content">
+                        <div class="comment-name">Beverly Maguire</div>
+                        <div class="comment-text">I honestly thought this was another scam, but I actually received the $1000 Walmart gift card! Used it to buy groceries and a new TV. Thank you so much! 😍</div>
+                        <img src="images/proof1.webp" class="comment-proof-img" onerror="this.style.display='none'">
+                        <div class="comment-action">Like · Reply · <span style="color:#90949c;">12 mins</span></div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <img src="images/avatar2.webp" alt="User" class="avatar" onerror="this.src='https://via.placeholder.com/50/cccccc/ffffff?text=RT'">
+                    <div class="comment-content">
+                        <div class="comment-name">Robert Thompson</div>
+                        <div class="comment-text">Is this real? I just finished answering the 3 questions.</div>
+                        <div class="comment-action">Like · Reply · <span style="color:#90949c;">1 hr</span></div>
+                        
+                        <div class="comment" style="margin-top: 10px; margin-bottom: 0;">
+                            <img src="images/avatar4.webp" alt="User" class="avatar" style="width: 32px; height: 32px;" onerror="this.src='https://via.placeholder.com/50/cccccc/ffffff?text=GL'">
+                            <div class="comment-content" style="padding: 8px 10px;">
+                                <div class="comment-name">Gary Lewis</div>
+                                <div class="comment-text">Yes it is! I got my confirmation email instantly and the digital card arrived the same day.</div>
+                                <div class="comment-action">Like · Reply · <span style="color:#90949c;">45 mins</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <img src="images/avatar3.webp" alt="User" class="avatar" onerror="this.src='https://via.placeholder.com/50/cccccc/ffffff?text=SW'">
+                    <div class="comment-content">
+                        <div class="comment-name">Susan Williams</div>
+                        <div class="comment-text">This is amazing! $1000 is going to help me buy a new laptop for my daughter's school and tons of groceries. Bless you all.</div>
+                        <img src="images/proof2.webp" class="comment-proof-img" onerror="this.style.display='none'">
+                        <div class="comment-action">Like · Reply · <span style="color:#90949c;">3 hrs</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="fb-footer">
+            <p>This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
+            <p>This is an independent rewards program</p>
+            <p><a href="https://www.2timetowin.xyz/click">Privacy Policy</a> | <a href="https://www.2timetowin.xyz/click">Terms of Service</a> | <a href="https://www.2timetowin.xyz/click">Contact Us</a></p>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // 1. 动态日期
+    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('current-date').innerText = new Date().toLocaleDateString('en-US', dateOptions);
+
+    // 2. 动态递减名额逻辑
+    let spotsLeft = 41; 
+    const spotsElement = document.getElementById('spots-left');
+
+    const countdownInterval = setInterval(() => {
+        if (spotsLeft > 3) {
+            spotsLeft -= Math.floor(Math.random() * 2) + 1;
+            spotsElement.innerText = spotsLeft;
+        } else {
+            clearInterval(countdownInterval);
+        }
+    }, Math.floor(Math.random() * 7000) + 8000); // 每 8 到 15 秒随机减 1-2 个
+
+    // 3. 地区检测逻辑
+    const mockLocation = "your area"; 
+    document.getElementById('user-location').innerText = mockLocation;
+});
+
+// 问卷点击与进度条逻辑
+function nextStep(step) {
+    document.querySelectorAll('.step-container').forEach(el => el.classList.remove('active'));
+    document.getElementById('step-' + step).classList.add('active');
+}
+
+function startLoading() {
+    document.querySelectorAll('.step-container').forEach(el => el.classList.remove('active'));
+    document.getElementById('step-loading').classList.add('active');
+    
+    let progress = 0;
+    let fill = document.getElementById('progress-fill');
+    let msg = document.getElementById('loading-msg');
+    
+    let interval = setInterval(() => {
+        progress += Math.floor(Math.random() * 15) + 5; 
+        if (progress > 100) progress = 100;
+        fill.style.width = progress + '%';
+        
+        if(progress > 30 && progress < 60) {
+            msg.innerText = "Checking availability in your area...";
+        } else if(progress >= 60 && progress < 90) {
+            msg.innerText = "Reserving your $1000 allowance...";
+        }
+        
+        if (progress === 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                document.getElementById('step-loading').classList.remove('active');
+                document.getElementById('step-final').classList.add('active');
+            }, 500);
+        }
+    }, 400); 
+}
+    </script>
+</body>
+
+</html>
