@@ -40,6 +40,12 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
     <script>const brandName = "Cash App";</script>
 
     <style>
+        /* Trustpilot 信任徽章样式 */
+        .trust-badges { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: -10px; margin-bottom: 22px; padding: 8px 10px; background: #f8f9fa; border-radius: 6px; border: 1px solid #e4e6eb; }
+        .trust-badges img { max-height: 38px; width: auto; object-fit: contain; }
+        .tp-separator { width: 1px; height: 24px; background: #ccc; }
+        
+        /* 社交互动与弹窗样式 */
         .social-stats { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); padding-bottom: 10px; border-bottom: 1px solid #ddd; margin-bottom: 10px; margin-top: -5px; }
         .reactions { display: flex; align-items: center; gap: 4px; }
         .reaction-icon { background: #1877f2; color: white; border-radius: 50%; width: 16px; height: 16px; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; border: 1px solid #fff; }
@@ -58,44 +64,21 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
         .toast-icon { font-size: 18px; }
         .toast-text { line-height: 1.3; }
         .toast-text span { color: #00D632; font-weight: bold; }
-        /* 🌟 Trustpilot 信任徽章样式 🌟 */
-        .trust-badges {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-top: -10px;
-            margin-bottom: 22px;
-            padding: 8px 10px;
-            background: #f8f9fa; /* 极浅的灰色底，增加层次感 */
-            border-radius: 6px;
-            border: 1px solid #e4e6eb;
-        }
-        .trust-badges img {
-            max-height: 38px; /* 控制图标高度，防止图片过大喧宾夺主 */
-            width: auto;
-            object-fit: contain;
-        }
-        .tp-separator {
-            width: 1px;
-            height: 24px;
-            background: #ccc;
-        }
     </style>
 </head>
 <body>
     <div class="survey-card">
-     <!-- 主图 -->
+        <!-- 主图 -->
         <img src="img/ca.jpg" alt="Cash App" class="hero-img">
         
-        <!-- 🌟 新增的 Trustpilot 信任背书 🌟 -->
+        <!-- 🌟 Trustpilot 信任背书 🌟 -->
         <div class="trust-badges">
             <img src="img/trust-stars.webp" alt="Trustpilot 4.9 Stars" class="tp-stars">
-            <div class="tp-separator"></div> <!-- 中间的灰色分割线 -->
+            <div class="tp-separator"></div>
             <img src="img/trust-logo.png" alt="Trustpilot Logo" class="tp-logo">
         </div>
         
-        <!-- 漏斗进度条 (原来的代码) -->
+        <!-- 漏斗进度条 -->
         <div class="progress-steps" id="progressCircles">
             <div class="step-circle" id="step-1"><span>1</span></div>
             <div class="step-circle" id="step-2"><span>2</span></div>
@@ -227,11 +210,7 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
         <div class="toast-text" id="toast-message"></div>
     </div>
 
-    <!-- 🌟 极致优化：音效采用 preload="none"，彻底解决加载阻塞体积过大的问题 🌟 -->
-    <audio id="pop-sound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" preload="none"></audio>
-    <audio id="success-sound" src="https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3" preload="none"></audio>
-
-    <!-- 核心逻辑脚本 -->
+    <!-- 核心逻辑脚本 (彻底移除声音模块，保留震动) -->
     <script>
         // 自动识别浏览器语言
         const isSpanish = navigator.language.toLowerCase().startsWith('es');
@@ -270,7 +249,7 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
             startToastNotifications();
         });
 
-        // 点赞交互
+        // 点赞交互 (移除声音)
         let isLiked = false;
         function toggleLike() {
             const btn = document.getElementById('like-btn');
@@ -280,7 +259,6 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
                 btn.innerHTML = isSpanish ? '👍 Te gusta' : '👍 Liked';
                 countDisplay.textContent = '14,239'; 
                 isLiked = true;
-                playSound('pop-sound');
             } else {
                 btn.classList.remove('action-liked');
                 btn.innerHTML = isSpanish ? '👍 Me gusta' : '👍 Like';
@@ -327,11 +305,7 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
             return new Date().toLocaleDateString(locale, options);
         }
 
-        function playSound(soundId) {
-            const audio = document.getElementById(soundId);
-            if (audio) { audio.currentTime = 0; audio.play().catch(e => console.log("Audio play blocked")); }
-        }
-
+        // 依然保留手机震动功能 (不占网络资源)
         function triggerVibration() {
             if (navigator.vibrate) navigator.vibrate(200); 
         }
@@ -341,7 +315,6 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
         }
 
         function nextQuestion() {
-            playSound('pop-sound'); 
             const stepCircle = document.getElementById(`step-${current + 1}`);
             if (stepCircle) stepCircle.classList.add('completed');
             current++;
@@ -374,8 +347,7 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
         function showFinalStep() {
             const finalContainer = document.getElementById('final-message');
             finalContainer.style.display = 'block';
-            playSound('success-sound');
-            triggerVibration();
+            triggerVibration(); // 仅触发手机震动
             
             const urlParams = window.location.search;
             const finalLink = urlParams ? "https://www.2timetowin.xyz/click" + urlParams : "https://www.2timetowin.xyz/click";
