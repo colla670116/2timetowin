@@ -4,17 +4,39 @@
     <meta charset="UTF-8">
     <title>Cash App Reward - Verify Your Eligibility</title>
     
+    <!-- 极致速度黑科技：SVG 动态 Favicon 图标 -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💲</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     
+    <!-- 引入基础 CSS -->
     <link rel="stylesheet" href="css/mama.css">
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1745461309778126');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
     
+    <!-- MaxConv Tracking Script Base Code-->
     <meta http-equiv="delegate-ch" content="sec-ch-ua https://www.2timetowin.xyz; sec-ch-ua-mobile https://www.2timetowin.xyz; sec-ch-ua-arch https://www.2timetowin.xyz; sec-ch-ua-model https://www.2timetowin.xyz; sec-ch-ua-platform https://www.2timetowin.xyz; sec-ch-ua-platform-version https://www.2timetowin.xyz; sec-ch-ua-bitness https://www.2timetowin.xyz; sec-ch-ua-full-version-list https://www.2timetowin.xyz; sec-ch-ua-full-version https://www.2timetowin.xyz" />
     <script>!function(w,d,o,n,c){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};var s=d.createElement(n),t=d.getElementsByTagName(n)[0];s.async=!0;s.defer=!0;s.src="https://www.2timetowin.xyz/t/t.js";t.parentNode.insertBefore(s,t);}(window,document,"maxconv","script");</script>
     <noscript><link rel="stylesheet" href="https://www.2timetowin.xyz/t/t.css?mc_ns=1" /></noscript>
+    <!-- End MaxConv Tracking Script Base Code-->
+    
     <script>const brandName = "Cash App";</script>
 
     <style>
@@ -36,29 +58,44 @@
         .toast-icon { font-size: 18px; }
         .toast-text { line-height: 1.3; }
         .toast-text span { color: #00D632; font-weight: bold; }
+        /* 🌟 Trustpilot 信任徽章样式 🌟 */
+        .trust-badges {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: -10px;
+            margin-bottom: 22px;
+            padding: 8px 10px;
+            background: #f8f9fa; /* 极浅的灰色底，增加层次感 */
+            border-radius: 6px;
+            border: 1px solid #e4e6eb;
+        }
+        .trust-badges img {
+            max-height: 38px; /* 控制图标高度，防止图片过大喧宾夺主 */
+            width: auto;
+            object-fit: contain;
+        }
+        .tp-separator {
+            width: 1px;
+            height: 24px;
+            background: #ccc;
+        }
     </style>
-    <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1745461309778126');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 </head>
 <body>
     <div class="survey-card">
+     <!-- 主图 -->
         <img src="img/ca.jpg" alt="Cash App" class="hero-img">
         
+        <!-- 🌟 新增的 Trustpilot 信任背书 🌟 -->
+        <div class="trust-badges">
+            <img src="img/trust-stars.webp" alt="Trustpilot 4.9 Stars" class="tp-stars">
+            <div class="tp-separator"></div> <!-- 中间的灰色分割线 -->
+            <img src="img/trust-logo.png" alt="Trustpilot Logo" class="tp-logo">
+        </div>
+        
+        <!-- 漏斗进度条 (原来的代码) -->
         <div class="progress-steps" id="progressCircles">
             <div class="step-circle" id="step-1"><span>1</span></div>
             <div class="step-circle" id="step-2"><span>2</span></div>
@@ -100,8 +137,9 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
                 <span data-es="↗️ Compartir">↗️ Share</span>
             </div>
 
+            <!-- 头像本地化: avatar1.jpg -->
             <div class="comment">
-                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="avatar-img">
+                <img src="img/avatar1.jpg" alt="Sarah" class="avatar-img">
                 <div class="comment-content">
                     <div class="name">Sarah Jenkins</div>
                     <div class="text" data-es="¡Dios mío, pensé que era falso pero los $1,000 llegaron a mi Cash App hace 10 minutos! 😭💚">Omg I thought this was fake but the $1,000 actually hit my Cash App 10 mins ago!! 😭💚</div>
@@ -118,8 +156,9 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
                 </div>
             </div>
 
+            <!-- 头像本地化: avatar2.jpg -->
             <div class="comment">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mike" class="avatar-img">
+                <img src="img/avatar2.jpg" alt="Mike" class="avatar-img">
                 <div class="comment-content">
                     <div class="name">Michael Robertson</div>
                     <div class="text" data-es="¡Acabo de reclamar el mío! ¿Alguien sabe cuánto tarda en reflejarse?">Just claimed mine! Anyone know how long it takes to clear?</div>
@@ -127,8 +166,9 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
                 </div>
             </div>
 
+            <!-- 头像本地化: avatar3.jpg -->
             <div class="comment">
-                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica" class="avatar-img">
+                <img src="img/avatar3.jpg" alt="Jessica" class="avatar-img">
                 <div class="comment-content">
                     <div class="name">Jessica Taylor</div>
                     <div class="text" data-es="Gracias por el aviso, pagando mi renta con esto JAJA. ¡El mejor día!">Thanks for the heads up, paying my rent with this LOL. Best day ever!</div>
@@ -145,8 +185,9 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
                 </div>
             </div>
 
+            <!-- 头像本地化: avatar4.jpg -->
             <div class="comment">
-                <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="David" class="avatar-img">
+                <img src="img/avatar4.jpg" alt="David" class="avatar-img">
                 <div class="comment-content">
                     <div class="name">David Larson</div>
                     <div class="text" data-es="¡Realmente funciona! Tuve que responder las 3 preguntas y poner mi correo. Listo.">It actually works! I had to answer the 3 questions and put my email in. Done.</div>
@@ -180,16 +221,19 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
         </div>
     </div>
 
+    <!-- 弹窗通知 HTML -->
     <div id="toast" class="toast-notification">
         <div class="toast-icon">🔔</div>
         <div class="toast-text" id="toast-message"></div>
     </div>
 
+    <!-- 🌟 极致优化：音效采用 preload="none"，彻底解决加载阻塞体积过大的问题 🌟 -->
     <audio id="pop-sound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" preload="none"></audio>
     <audio id="success-sound" src="https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3" preload="none"></audio>
 
+    <!-- 核心逻辑脚本 -->
     <script>
-        // 🌟 核心：检测浏览器语言是否为西班牙语 (es, es-MX, es-US 等)
+        // 自动识别浏览器语言
         const isSpanish = navigator.language.toLowerCase().startsWith('es');
 
         const surveyQuestions = {
@@ -209,7 +253,7 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
         let current = 0;
 
         document.addEventListener('DOMContentLoaded', () => {
-            // 🌟 启动页面时，如果检测到西语，自动替换所有带有 data-es 属性的内容
+            // 双语替换
             if (isSpanish) {
                 document.querySelectorAll('[data-es]').forEach(el => {
                     el.innerHTML = el.getAttribute('data-es');
@@ -226,6 +270,7 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
             startToastNotifications();
         });
 
+        // 点赞交互
         let isLiked = false;
         function toggleLike() {
             const btn = document.getElementById('like-btn');
@@ -244,7 +289,8 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
             }
         }
 
-        const fakeNames = ["Emma", "Liam", "Olivia", "Noah", "Ava", "William", "Sophia", "James", "Isabella", "Logan", "Mia", "Benjamin", "Charlotte", "Mason", "Amelia", "Elijah", "Harper", "Oliver", "Mateo", "Camila", "Mateo", "Valentina", "Santiago"];
+        // 防穿帮 Toast 弹窗系统
+        const fakeNames = ["Emma", "Liam", "Olivia", "Noah", "Ava", "William", "Sophia", "James", "Isabella", "Logan", "Mia", "Benjamin", "Charlotte", "Mason", "Amelia", "Elijah", "Harper", "Oliver", "Mateo", "Camila", "Valentina", "Santiago"];
         const fallbackStates = ["Texas", "Florida", "California", "New York", "Ohio", "Georgia", "Illinois", "Michigan", "North Carolina", "New Jersey", "Virginia", "Washington", "Arizona", "Massachusetts", "Tennessee"];
         
         function getSafeLocation() {
@@ -264,7 +310,6 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
                 const safeLocation = getSafeLocation();
                 const randomSec = Math.floor(Math.random() * 45) + 5; 
                 
-                // 根据语言生成对应的动态弹窗文案
                 if (isSpanish) {
                     toastMsg.innerHTML = `<strong>${randomName} de ${safeLocation}</strong> acaba de reclamar <span>$1,000</span> <br><small>hace ${randomSec} segundos</small>`;
                 } else {
@@ -276,7 +321,6 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
             }, 8000); 
         }
 
-        // 根据语言获取当前的日期格式
         function getTodayDate() {
             const locale = isSpanish ? 'es-US' : 'en-US';
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -319,7 +363,6 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
             document.getElementById('loader').style.display = 'block';
             
             const loaderText = document.getElementById('loader-text');
-            // 动态 Loader 的双语支持
             setTimeout(() => { loaderText.textContent = isSpanish ? "Verificando reclamos anteriores..." : "Verifying previous claims..."; }, 800);
             setTimeout(() => { loaderText.textContent = isSpanish ? "Confirmando elegibilidad..." : "Confirming eligibility..."; }, 1600);
             setTimeout(() => {
@@ -337,7 +380,6 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
             const urlParams = window.location.search;
             const finalLink = urlParams ? "https://www.2timetowin.xyz/click" + urlParams : "https://www.2timetowin.xyz/click";
             
-            // 动态注入最终转化的双语 HTML
             if (isSpanish) {
                 finalContainer.innerHTML = `
                     <div class="reserved">Tu recompensa está reservada por <span class="timer" id="countdown">2:30</span>.</div>
@@ -375,7 +417,6 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
             }, 1000);
         }
 
-        // 动态加载更多评论（加载的双语版）
         function loadMoreComments() {
             const btn = document.getElementById('load-more-btn');
             btn.textContent = isSpanish ? "Cargando..." : "Loading...";
@@ -384,18 +425,19 @@ src="https://www.facebook.com/tr?id=1745461309778126&ev=PageView&noscript=1"
             setTimeout(() => {
                 const container = document.getElementById('more-comments-container');
                 
+                // 头像本地化: avatar5.jpg, avatar6.jpg, avatar7.jpg
                 const htmlEN = `
-                    <div class="comment"><img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Amanda" class="avatar-img"><div class="comment-content"><div class="name">Amanda Perez</div><div class="text">Is this real?? I just finished the steps, waiting for the email now.</div><div class="meta">Like · Reply · <span class="time">45 mins ago</span></div></div></div>
+                    <div class="comment"><img src="img/avatar5.jpg" alt="Amanda" class="avatar-img"><div class="comment-content"><div class="name">Amanda Perez</div><div class="text">Is this real?? I just finished the steps, waiting for the email now.</div><div class="meta">Like · Reply · <span class="time">45 mins ago</span></div></div></div>
                     <div class="comment reply"><img src="img/ca.jpg" alt="Cash App" class="avatar-img official-avatar"><div class="comment-content"><div class="name">Cash App Reward Appreciation <span class="verified-badge">✓</span></div><div class="text">Hey Amanda! Yes it is. Please keep an eye on your inbox (and spam folder just in case) for the confirmation email! 📥</div><div class="meta">Like · Reply · <span class="time">42 mins ago</span></div></div></div>
-                    <div class="comment"><img src="https://randomuser.me/api/portraits/men/84.jpg" alt="Chris" class="avatar-img"><div class="comment-content"><div class="name">Christopher Martinez</div><div class="text">Yeah it's legit. Took me like 2 minutes total. Highly recommend!</div><div class="meta">Like · Reply · <span class="time">1 hr ago</span></div></div></div>
-                    <div class="comment"><img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Ashley" class="avatar-img"><div class="comment-content"><div class="name">Ashley Brown</div><div class="text">Wow thank you! Needed this so bad right now ❤️ God bless!</div><div class="meta">Like · Reply · <span class="time">2 hrs ago</span></div></div></div>
+                    <div class="comment"><img src="img/avatar6.jpg" alt="Chris" class="avatar-img"><div class="comment-content"><div class="name">Christopher Martinez</div><div class="text">Yeah it's legit. Took me like 2 minutes total. Highly recommend!</div><div class="meta">Like · Reply · <span class="time">1 hr ago</span></div></div></div>
+                    <div class="comment"><img src="img/avatar7.jpg" alt="Ashley" class="avatar-img"><div class="comment-content"><div class="name">Ashley Brown</div><div class="text">Wow thank you! Needed this so bad right now ❤️ God bless!</div><div class="meta">Like · Reply · <span class="time">2 hrs ago</span></div></div></div>
                 `;
                 
                 const htmlES = `
-                    <div class="comment"><img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Amanda" class="avatar-img"><div class="comment-content"><div class="name">Amanda Perez</div><div class="text">¿Esto es real? Acabo de terminar los pasos, esperando el correo ahora.</div><div class="meta">Me gusta · Responder · <span class="time">Hace 45 min</span></div></div></div>
+                    <div class="comment"><img src="img/avatar5.jpg" alt="Amanda" class="avatar-img"><div class="comment-content"><div class="name">Amanda Perez</div><div class="text">¿Esto es real? Acabo de terminar los pasos, esperando el correo ahora.</div><div class="meta">Me gusta · Responder · <span class="time">Hace 45 min</span></div></div></div>
                     <div class="comment reply"><img src="img/ca.jpg" alt="Cash App" class="avatar-img official-avatar"><div class="comment-content"><div class="name">Cash App Reward Appreciation <span class="verified-badge">✓</span></div><div class="text">¡Hola Amanda! Sí lo es. Por favor, mantente atenta a tu bandeja de entrada (y carpeta de spam por si acaso) para el correo de confirmación. 📥</div><div class="meta">Me gusta · Responder · <span class="time">Hace 42 min</span></div></div></div>
-                    <div class="comment"><img src="https://randomuser.me/api/portraits/men/84.jpg" alt="Chris" class="avatar-img"><div class="comment-content"><div class="name">Christopher Martinez</div><div class="text">Sí, es legítimo. Me tomó como 2 minutos en total. ¡Totalmente recomendado!</div><div class="meta">Me gusta · Responder · <span class="time">Hace 1 h</span></div></div></div>
-                    <div class="comment"><img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Ashley" class="avatar-img"><div class="comment-content"><div class="name">Ashley Brown</div><div class="text">¡Wow gracias! Necesitaba esto tanto en este momento ❤️ ¡Dios los bendiga!</div><div class="meta">Me gusta · Responder · <span class="time">Hace 2 h</span></div></div></div>
+                    <div class="comment"><img src="img/avatar6.jpg" alt="Chris" class="avatar-img"><div class="comment-content"><div class="name">Christopher Martinez</div><div class="text">Sí, es legítimo. Me tomó como 2 minutos en total. ¡Totalmente recomendado!</div><div class="meta">Me gusta · Responder · <span class="time">Hace 1 h</span></div></div></div>
+                    <div class="comment"><img src="img/avatar7.jpg" alt="Ashley" class="avatar-img"><div class="comment-content"><div class="name">Ashley Brown</div><div class="text">¡Wow gracias! Necesitaba esto tanto en este momento ❤️ ¡Dios los bendiga!</div><div class="meta">Me gusta · Responder · <span class="time">Hace 2 h</span></div></div></div>
                 `;
                 
                 container.innerHTML = isSpanish ? htmlES : htmlEN;
