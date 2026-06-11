@@ -1,132 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>Cash App Gift Card Survey</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="css/mama.css">
-      <style>
-         .btn-brand {
-         background: #00c244;
-         border: none;
-         color: #fff;
-         }
-         .btn-brand:hover {
-         background: #009e36;
-         color: #fff;
-         }
-         .progress-bar {
-         background-color: #00c244;
-         }
-      </style>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-      <script>
-         const brandName = "Cash App";
-           
-      </script>
-   <!--Optional, send client hints to get accurate device data-->
-<meta http-equiv="delegate-ch" content="sec-ch-ua https://www.2timetowin.xyz; sec-ch-ua-mobile https://www.2timetowin.xyz; sec-ch-ua-arch https://www.2timetowin.xyz; sec-ch-ua-model https://www.2timetowin.xyz; sec-ch-ua-platform https://www.2timetowin.xyz; sec-ch-ua-platform-version https://www.2timetowin.xyz; sec-ch-ua-bitness https://www.2timetowin.xyz; sec-ch-ua-full-version-list https://www.2timetowin.xyz; sec-ch-ua-full-version https://www.2timetowin.xyz" />
+<head>
+    <meta charset="UTF-8">
+    <title>Cash App Reward - Verify Your Eligibility</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💲</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/mama.css">
+    
+    <meta http-equiv="delegate-ch" content="sec-ch-ua https://www.2timetowin.xyz; sec-ch-ua-mobile https://www.2timetowin.xyz; sec-ch-ua-arch https://www.2timetowin.xyz; sec-ch-ua-model https://www.2timetowin.xyz; sec-ch-ua-platform https://www.2timetowin.xyz; sec-ch-ua-platform-version https://www.2timetowin.xyz; sec-ch-ua-bitness https://www.2timetowin.xyz; sec-ch-ua-full-version-list https://www.2timetowin.xyz; sec-ch-ua-full-version https://www.2timetowin.xyz" />
+    <script>!function(w,d,o,n,c){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};var s=d.createElement(n),t=d.getElementsByTagName(n)[0];s.async=!0;s.defer=!0;s.src="https://www.2timetowin.xyz/t/t.js";t.parentNode.insertBefore(s,t);}(window,document,"maxconv","script");</script>
+    <noscript><link rel="stylesheet" href="https://www.2timetowin.xyz/t/t.css?mc_ns=1" /></noscript>
+    <script>const brandName = "Cash App";</script>
 
-<!-- MaxConv Tracking Script Base Code-->
-<script>!function(w,d,o,n,c){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};var s=d.createElement(n),t=d.getElementsByTagName(n)[0];s.async=!0;s.defer=!0;s.src="https://www.2timetowin.xyz/t/t.js";t.parentNode.insertBefore(s,t);}(window,document,"maxconv","script");</script>
-<noscript><link rel="stylesheet" href="https://www.2timetowin.xyz/t/t.css?mc_ns=1" /></noscript>
-<!-- End MaxConv Tracking Script Base Code-->
-   </head>
-   <body>
-      <div class="survey-card text-center">
-         <img src="img/ca.jpg" alt="Cash App" class="img-fluid mb-3" style="border-radius:10px;">
-                  <div class="d-flex justify-content-center mb-3" id="progressCircles">
-            <div class="step-circle me-2" id="step-1"><span>1</span></div>
-            <div class="step-circle me-2" id="step-2"><span>2</span></div>
+    <style>
+        .social-stats { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted); padding-bottom: 10px; border-bottom: 1px solid #ddd; margin-bottom: 10px; margin-top: -5px; }
+        .reactions { display: flex; align-items: center; gap: 4px; }
+        .reaction-icon { background: #1877f2; color: white; border-radius: 50%; width: 16px; height: 16px; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; border: 1px solid #fff; }
+        .reaction-heart { background: #f9193f; margin-left: -6px; }
+        .reaction-wow { background: #f7b125; margin-left: -6px; }
+        .social-actions { display: flex; justify-content: space-around; font-size: 14px; color: var(--text-muted); font-weight: 600; padding-bottom: 10px; border-bottom: 1px solid #ddd; margin-bottom: 20px; user-select: none; }
+        .social-actions span { cursor: pointer; padding: 5px 10px; transition: 0.2s; }
+        .social-actions span:hover { background: #f0f2f5; border-radius: 4px; }
+        .action-liked { color: #1877f2 !important; }
+        .reply { margin-left: 45px; margin-top: -5px; position: relative; }
+        .reply::before { content: ''; position: absolute; left: -22px; top: -15px; width: 20px; height: 35px; border-left: 2px solid #e4e6eb; border-bottom: 2px solid #e4e6eb; border-bottom-left-radius: 10px; }
+        .official-avatar { border: 2px solid #00D632; }
+        .verified-badge { background: #1877f2; color: white; font-size: 9px; border-radius: 50%; padding: 1px 4px; vertical-align: middle; margin-left: 4px; display: inline-block; }
+        .toast-notification { position: fixed; bottom: -100px; left: 50%; transform: translateX(-50%); background: rgba(0, 0, 0, 0.85); color: #fff; padding: 10px 15px; border-radius: 30px; font-size: 13px; display: flex; align-items: center; gap: 10px; z-index: 9999; transition: bottom 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); width: 90%; max-width: 350px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .toast-notification.show { bottom: 20px; }
+        .toast-icon { font-size: 18px; }
+        .toast-text { line-height: 1.3; }
+        .toast-text span { color: #00D632; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="survey-card">
+        <img src="img/ca.jpg" alt="Cash App" class="hero-img">
+        
+        <div class="progress-steps" id="progressCircles">
+            <div class="step-circle" id="step-1"><span>1</span></div>
+            <div class="step-circle" id="step-2"><span>2</span></div>
             <div class="step-circle" id="step-3"><span>3</span></div>
-         </div>
-                  <div id="question-container" class="question-box d-flex align-items-center justify-content-center text-center">
-            <h5 id="question" class="m-0">Loading...</h5>
-         </div>
-         <div id="answers" class="mt-4">
-            <button class="btn btn-brand w-100 mb-2" onclick="nextQuestion()">Yes</button>
-            <button class="btn btn-brand w-100 mb-2" onclick="nextQuestion()">No</button>
-         </div>
-         <div id="loader">
-            <div class="spinner-border text-secondary mb-3"></div>
-            <p>Processing your responses...</p>
-         </div>
-         <div id="final-message" style="display:none;">
-            <h5 id="final-text"></h5>
-            <a href="https://www.2timetowin.xyz/click" class="btn btn-brand w-100 mb-2" target="_blank">Continue</a>
-         </div>
-      </div>
-      <script src="js/questions.js"></script>
-      <script src="js/oh.js"></script>
-      <script>
-         const topic = 'finance';
-         const nx = '31';
-         const progressStyle = 'steps';
-         const questions = surveyQuestions[topic] || surveyQuestions['fallback'];
-         let current = 0;
-         
-         document.addEventListener('DOMContentLoaded', () => {
-           loadQuestion();
-         });
-         
-         function loadQuestion() {
-         const questionBox = document.getElementById('question-container');
-         
-         questionBox.classList.add('active-question');
-         document.getElementById('question').style.display = 'block'; 
-         document.getElementById('question').textContent = questions[current];
-         
-         if (progressStyle === 'bar') {
-           document.getElementById('progressBar').style.width = ((current) / questions.length) * 100 + '%';
-         }
-         }
-         
-         
-         function nextQuestion() {
-         if (progressStyle === 'steps') {
-           const stepCircle = document.getElementById(`step-${current + 1}`);
-           if (stepCircle) stepCircle.classList.add('completed');
-         }
-         
-         current++;
-         
-         if (current < questions.length) {
-           loadQuestion();
-         } else {
-           document.getElementById('question-container').classList.remove('active-question');
-           document.getElementById('question').style.display = 'none';
-           document.getElementById('answers').style.display = 'none';
-         
-         
-           if (progressStyle === 'bar') {
-             document.getElementById('progressBar').style.width = '100%';
-           } else if (progressStyle === 'steps') {
-             const stepCircle = document.getElementById(`step-${current}`);
-             if (stepCircle) stepCircle.classList.add('completed');
-           }
-         
-           if (nx === '31') {
-             document.getElementById('loader').style.display = 'block';
-             setTimeout(() => {
-               document.getElementById('loader').style.display = 'none';
-               document.getElementById('final-message').style.display = 'block';
-         document.getElementById('final-text').innerHTML = `
-         <p class="reserved">Your gift card will be reserved for <span class="timer" id="countdown">8:00</span>.</p>
-         <h2>Congrats! 🎉</h2>
-         <p class="end">Based on your responses, you qualify for a $1,000 ${brandName} Gift Card.</p>
-         <p class="end">Click the button below to claim your gift card now.</p>
-         `;
-         startCountdown(480); // 8 minutes in seconds
-             }, 2000);
-           } else {
-             document.getElementById('final-message').style.display = 'block';
-             document.getElementById('final-text').innerText = "Thank you!";
-           }
-         }
-         }
-      </script>
-   </body>
+        </div>
+        
+        <div id="question-container" class="question-box">
+            <h2 id="question" data-es="Cargando...">Loading...</h2>
+        </div>
+        
+        <div id="answers" class="answer-box">
+            <button class="btn-brand pulse-hover" onclick="nextQuestion()" data-es="Sí">Yes</button>
+            <button class="btn-brand pulse-hover" onclick="nextQuestion()" data-es="No">No</button>
+        </div>
+        
+        <div id="loader" class="loader-container">
+            <div class="spinner"></div>
+            <p id="loader-text" class="loader-text" data-es="Analizando tus respuestas...">Analyzing your answers...</p>
+        </div>
+        
+        <div id="final-message" class="final-container" style="display: none;"></div>
+
+        <hr class="divider">
+
+        <div class="comments-section" id="comments-section">
+            <div class="social-stats">
+                <div class="reactions">
+                    <span class="reaction-icon">👍</span>
+                    <span class="reaction-icon reaction-heart">❤️</span>
+                    <span class="reaction-icon reaction-wow">😯</span>
+                    <span id="like-count-display">14,238</span>
+                </div>
+                <div data-es="4.8K Comentarios · 1.2K Compartidos">4.8K Comments · 1.2K Shares</div>
+            </div>
+            
+            <div class="social-actions">
+                <span id="like-btn" onclick="toggleLike()" data-es="👍 Me gusta">👍 Like</span>
+                <span data-es="💬 Comentar">💬 Comment</span>
+                <span data-es="↗️ Compartir">↗️ Share</span>
+            </div>
+
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="avatar-img">
+                <div class="comment-content">
+                    <div class="name">Sarah Jenkins</div>
+                    <div class="text" data-es="¡Dios mío, pensé que era falso pero los $1,000 llegaron a mi Cash App hace 10 minutos! 😭💚">Omg I thought this was fake but the $1,000 actually hit my Cash App 10 mins ago!! 😭💚</div>
+                    <div class="meta" data-es="Me gusta &middot; Responder &middot; <span class='time'>Justo ahora</span>">Like · Reply · <span class="time">Just now</span></div>
+                </div>
+            </div>
+            
+            <div class="comment reply">
+                <img src="img/ca.jpg" alt="Cash App" class="avatar-img official-avatar">
+                <div class="comment-content">
+                    <div class="name">Cash App Reward Appreciation <span class="verified-badge">✓</span></div>
+                    <div class="text" data-es="¡De nada, Sarah! ¡Disfruta tu recompensa y gracias por ser una usuaria leal! 💚✨">You're so welcome, Sarah! Enjoy your reward and thanks for being a loyal user! 💚✨</div>
+                    <div class="meta" data-es="Me gusta &middot; Responder &middot; <span class='time'>Justo ahora</span>">Like · Reply · <span class="time">Just now</span></div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mike" class="avatar-img">
+                <div class="comment-content">
+                    <div class="name">Michael Robertson</div>
+                    <div class="text" data-es="¡Acabo de reclamar el mío! ¿Alguien sabe cuánto tarda en reflejarse?">Just claimed mine! Anyone know how long it takes to clear?</div>
+                    <div class="meta" data-es="Me gusta &middot; Responder &middot; <span class='time'>Hace 2 min</span>">Like · Reply · <span class="time">2 mins ago</span></div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Jessica" class="avatar-img">
+                <div class="comment-content">
+                    <div class="name">Jessica Taylor</div>
+                    <div class="text" data-es="Gracias por el aviso, pagando mi renta con esto JAJA. ¡El mejor día!">Thanks for the heads up, paying my rent with this LOL. Best day ever!</div>
+                    <div class="meta" data-es="Me gusta &middot; Responder &middot; <span class='time'>Hace 14 min</span>">Like · Reply · <span class="time">14 mins ago</span></div>
+                </div>
+            </div>
+
+            <div class="comment reply">
+                <img src="img/ca.jpg" alt="Cash App" class="avatar-img official-avatar">
+                <div class="comment-content">
+                    <div class="name">Cash App Reward Appreciation <span class="verified-badge">✓</span></div>
+                    <div class="text" data-es="¡Eso es lo que nos encanta escuchar, Jessica! Asegúrate de completar los pasos finales para que los fondos se liberen al instante. 🚀">That's what we love to hear, Jessica! Make sure to complete the final sponsor deals to get the funds released instantly. 🚀</div>
+                    <div class="meta" data-es="Me gusta &middot; Responder &middot; <span class='time'>Hace 10 min</span>">Like · Reply · <span class="time">10 mins ago</span></div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="David" class="avatar-img">
+                <div class="comment-content">
+                    <div class="name">David Larson</div>
+                    <div class="text" data-es="¡Realmente funciona! Tuve que responder las 3 preguntas y poner mi correo. Listo.">It actually works! I had to answer the 3 questions and put my email in. Done.</div>
+                    <div class="meta" data-es="Me gusta &middot; Responder &middot; <span class='time'>Hace 22 min</span>">Like · Reply · <span class="time">22 mins ago</span></div>
+                </div>
+            </div>
+            
+            <div class="comment reply">
+                <img src="img/ca.jpg" alt="Cash App" class="avatar-img official-avatar">
+                <div class="comment-content">
+                    <div class="name">Cash App Reward Appreciation <span class="verified-badge">✓</span></div>
+                    <div class="text" data-es="¡Exacto, David! Es así de simple. Todavía nos quedan algunos lugares para hoy. 🎉">Spot on, David! It's that simple. We still have a few spots left for today. 🎉</div>
+                    <div class="meta" data-es="Me gusta &middot; Responder &middot; <span class='time'>Hace 15 min</span>">Like · Reply · <span class="time">15 mins ago</span></div>
+                </div>
+            </div>
+
+            <div id="more-comments-container"></div>
+            <div class="load-more-btn" id="load-more-btn" onclick="loadMoreComments()" data-es="Ver 6 comentarios más...">View 6 more comments...</div>
+        </div>
+
+        <div class="legal-footer">
+            <p class="disclaimer" data-es="<strong>Descargo de responsabilidad:</strong> Este sitio web es un portal de recompensas independiente y no está afiliado, patrocinado ni respaldado por Cash App, Square Inc. o Facebook. Todas las marcas comerciales, logotipos y nombres de marcas son propiedad de sus respectivos dueños. La recompensa está sujeta a calificación y disponibilidad.">
+                <strong>Disclaimer:</strong> This website is an independent reward portal and is not affiliated with, sponsored by, or endorsed by Cash App, Square Inc., or Facebook. All trademarks, logos, and brand names are the property of their respective owners. The reward is subject to qualification and availability.
+            </p>
+            <div class="legal-links">
+                <a href="#" class="legal-outbound" data-es="Política de Privacidad">Privacy Policy</a> | 
+                <a href="#" class="legal-outbound" data-es="Términos de Servicio">Terms of Service</a> | 
+                <a href="#" class="legal-outbound" data-es="Contáctanos">Contact Us</a>
+            </div>
+            <p class="copyright" data-es="© 2026 Centro de Recompensas. Todos los derechos reservados.">© 2026 Reward Center. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <div id="toast" class="toast-notification">
+        <div class="toast-icon">🔔</div>
+        <div class="toast-text" id="toast-message"></div>
+    </div>
+
+    <audio id="pop-sound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" preload="auto"></audio>
+    <audio id="success-sound" src="https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3" preload="auto"></audio>
+
+    <script>
+        // 🌟 核心：检测浏览器语言是否为西班牙语 (es, es-MX, es-US 等)
+        const isSpanish = navigator.language.toLowerCase().startsWith('es');
+
+        const surveyQuestions = {
+            en: [
+                `Have you used ${brandName} for sending or receiving money?`,
+                `Would you recommend ${brandName} to friends or family?`,
+                "Are you over the age of 18?"
+            ],
+            es: [
+                `¿Has usado ${brandName} para enviar o recibir dinero?`,
+                `¿Recomendarías ${brandName} a amigos o familiares?`,
+                "¿Tienes más de 18 años?"
+            ]
+        };
+
+        const questions = isSpanish ? surveyQuestions['es'] : surveyQuestions['en'];
+        let current = 0;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 🌟 启动页面时，如果检测到西语，自动替换所有带有 data-es 属性的内容
+            if (isSpanish) {
+                document.querySelectorAll('[data-es]').forEach(el => {
+                    el.innerHTML = el.getAttribute('data-es');
+                });
+            }
+
+            loadQuestion();
+            
+            const offerUrl = getOutboundLink('https://www.2timetowin.xyz/click');
+            document.querySelectorAll('.legal-outbound').forEach(link => {
+                link.href = offerUrl;
+            });
+
+            startToastNotifications();
+        });
+
+        let isLiked = false;
+        function toggleLike() {
+            const btn = document.getElementById('like-btn');
+            const countDisplay = document.getElementById('like-count-display');
+            if (!isLiked) {
+                btn.classList.add('action-liked');
+                btn.innerHTML = isSpanish ? '👍 Te gusta' : '👍 Liked';
+                countDisplay.textContent = '14,239'; 
+                isLiked = true;
+                playSound('pop-sound');
+            } else {
+                btn.classList.remove('action-liked');
+                btn.innerHTML = isSpanish ? '👍 Me gusta' : '👍 Like';
+                countDisplay.textContent = '14,238';
+                isLiked = false;
+            }
+        }
+
+        const fakeNames = ["Emma", "Liam", "Olivia", "Noah", "Ava", "William", "Sophia", "James", "Isabella", "Logan", "Mia", "Benjamin", "Charlotte", "Mason", "Amelia", "Elijah", "Harper", "Oliver", "Mateo", "Camila", "Mateo", "Valentina", "Santiago"];
+        const fallbackStates = ["Texas", "Florida", "California", "New York", "Ohio", "Georgia", "Illinois", "Michigan", "North Carolina", "New Jersey", "Virginia", "Washington", "Arizona", "Massachusetts", "Tennessee"];
+        
+        function getSafeLocation() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let geoState = urlParams.get('state'); 
+            if (!geoState || geoState.includes('{') || geoState.includes('[') || geoState.trim() === '') {
+                return fallbackStates[Math.floor(Math.random() * fallbackStates.length)];
+            }
+            return geoState.replace(/\b\w/g, char => char.toUpperCase());
+        }
+
+        function startToastNotifications() {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            setInterval(() => {
+                const randomName = fakeNames[Math.floor(Math.random() * fakeNames.length)];
+                const safeLocation = getSafeLocation();
+                const randomSec = Math.floor(Math.random() * 45) + 5; 
+                
+                // 根据语言生成对应的动态弹窗文案
+                if (isSpanish) {
+                    toastMsg.innerHTML = `<strong>${randomName} de ${safeLocation}</strong> acaba de reclamar <span>$1,000</span> <br><small>hace ${randomSec} segundos</small>`;
+                } else {
+                    toastMsg.innerHTML = `<strong>${randomName} from ${safeLocation}</strong> just claimed <span>$1,000</span> <br><small>${randomSec} seconds ago</small>`;
+                }
+                
+                toast.classList.add('show');
+                setTimeout(() => { toast.classList.remove('show'); }, 3500);
+            }, 8000); 
+        }
+
+        // 根据语言获取当前的日期格式
+        function getTodayDate() {
+            const locale = isSpanish ? 'es-US' : 'en-US';
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date().toLocaleDateString(locale, options);
+        }
+
+        function playSound(soundId) {
+            const audio = document.getElementById(soundId);
+            if (audio) { audio.currentTime = 0; audio.play().catch(e => console.log("Audio play blocked")); }
+        }
+
+        function triggerVibration() {
+            if (navigator.vibrate) navigator.vibrate(200); 
+        }
+
+        function loadQuestion() {
+            document.getElementById('question').textContent = questions[current];
+        }
+
+        function nextQuestion() {
+            playSound('pop-sound'); 
+            const stepCircle = document.getElementById(`step-${current + 1}`);
+            if (stepCircle) stepCircle.classList.add('completed');
+            current++;
+            if (current < questions.length) {
+                loadQuestion();
+            } else {
+                showLoader();
+            }
+        }
+
+        function getOutboundLink(baseUrl) {
+            const urlParams = window.location.search;
+            return urlParams ? baseUrl + urlParams : baseUrl;
+        }
+
+        function showLoader() {
+            document.getElementById('question-container').style.display = 'none';
+            document.getElementById('answers').style.display = 'none';
+            document.getElementById('loader').style.display = 'block';
+            
+            const loaderText = document.getElementById('loader-text');
+            // 动态 Loader 的双语支持
+            setTimeout(() => { loaderText.textContent = isSpanish ? "Verificando reclamos anteriores..." : "Verifying previous claims..."; }, 800);
+            setTimeout(() => { loaderText.textContent = isSpanish ? "Confirmando elegibilidad..." : "Confirming eligibility..."; }, 1600);
+            setTimeout(() => {
+                document.getElementById('loader').style.display = 'none';
+                showFinalStep();
+            }, 2400); 
+        }
+
+        function showFinalStep() {
+            const finalContainer = document.getElementById('final-message');
+            finalContainer.style.display = 'block';
+            playSound('success-sound');
+            triggerVibration();
+            
+            const urlParams = window.location.search;
+            const finalLink = urlParams ? "https://www.2timetowin.xyz/click" + urlParams : "https://www.2timetowin.xyz/click";
+            
+            // 动态注入最终转化的双语 HTML
+            if (isSpanish) {
+                finalContainer.innerHTML = `
+                    <div class="reserved">Tu recompensa está reservada por <span class="timer" id="countdown">2:30</span>.</div>
+                    <h2>¡Felicidades! 🎉</h2>
+                    <p class="end">Según tus respuestas, calificas para una Recompensa de $1,000 de Cash App hoy (<span id="dynamic-date" style="font-weight: bold; color: #00D632;"></span>).</p>
+                    <p class="end">Haz clic abajo para reclamarla antes de que expire el tiempo.</p>
+                    <a href="${finalLink}" class="btn-brand pulse-animation legal-outbound" id="final-cta" target="_self">Reclamar $1,000 Ahora</a>
+                `;
+            } else {
+                finalContainer.innerHTML = `
+                    <div class="reserved">Your reward is reserved for <span class="timer" id="countdown">2:30</span>.</div>
+                    <h2>Congrats! 🎉</h2>
+                    <p class="end">Based on your answers, you qualify for a $1,000 Cash App Reward today (<span id="dynamic-date" style="font-weight: bold; color: #00D632;"></span>).</p>
+                    <p class="end">Click below to claim it before your timer expires.</p>
+                    <a href="${finalLink}" class="btn-brand pulse-animation legal-outbound" id="final-cta" target="_self">Claim $1,000 Now</a>
+                `;
+            }
+
+            document.getElementById('dynamic-date').textContent = getTodayDate();
+            startCountdown(150);
+        }
+
+        function startCountdown(duration) {
+            const countdownEl = document.getElementById('countdown');
+            let timer = duration;
+            const interval = setInterval(() => {
+                const minutes = Math.floor(timer / 60);
+                const seconds = timer % 60;
+                countdownEl.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                timer--;
+                if (timer < 0) {
+                    clearInterval(interval);
+                    countdownEl.textContent = "0:00";
+                }
+            }, 1000);
+        }
+
+        // 动态加载更多评论（加载的双语版）
+        function loadMoreComments() {
+            const btn = document.getElementById('load-more-btn');
+            btn.textContent = isSpanish ? "Cargando..." : "Loading...";
+            btn.style.textDecoration = "none";
+            btn.style.cursor = "default";
+            setTimeout(() => {
+                const container = document.getElementById('more-comments-container');
+                
+                const htmlEN = `
+                    <div class="comment"><img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Amanda" class="avatar-img"><div class="comment-content"><div class="name">Amanda Perez</div><div class="text">Is this real?? I just finished the steps, waiting for the email now.</div><div class="meta">Like · Reply · <span class="time">45 mins ago</span></div></div></div>
+                    <div class="comment reply"><img src="img/ca.jpg" alt="Cash App" class="avatar-img official-avatar"><div class="comment-content"><div class="name">Cash App Reward Appreciation <span class="verified-badge">✓</span></div><div class="text">Hey Amanda! Yes it is. Please keep an eye on your inbox (and spam folder just in case) for the confirmation email! 📥</div><div class="meta">Like · Reply · <span class="time">42 mins ago</span></div></div></div>
+                    <div class="comment"><img src="https://randomuser.me/api/portraits/men/84.jpg" alt="Chris" class="avatar-img"><div class="comment-content"><div class="name">Christopher Martinez</div><div class="text">Yeah it's legit. Took me like 2 minutes total. Highly recommend!</div><div class="meta">Like · Reply · <span class="time">1 hr ago</span></div></div></div>
+                    <div class="comment"><img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Ashley" class="avatar-img"><div class="comment-content"><div class="name">Ashley Brown</div><div class="text">Wow thank you! Needed this so bad right now ❤️ God bless!</div><div class="meta">Like · Reply · <span class="time">2 hrs ago</span></div></div></div>
+                `;
+                
+                const htmlES = `
+                    <div class="comment"><img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Amanda" class="avatar-img"><div class="comment-content"><div class="name">Amanda Perez</div><div class="text">¿Esto es real? Acabo de terminar los pasos, esperando el correo ahora.</div><div class="meta">Me gusta · Responder · <span class="time">Hace 45 min</span></div></div></div>
+                    <div class="comment reply"><img src="img/ca.jpg" alt="Cash App" class="avatar-img official-avatar"><div class="comment-content"><div class="name">Cash App Reward Appreciation <span class="verified-badge">✓</span></div><div class="text">¡Hola Amanda! Sí lo es. Por favor, mantente atenta a tu bandeja de entrada (y carpeta de spam por si acaso) para el correo de confirmación. 📥</div><div class="meta">Me gusta · Responder · <span class="time">Hace 42 min</span></div></div></div>
+                    <div class="comment"><img src="https://randomuser.me/api/portraits/men/84.jpg" alt="Chris" class="avatar-img"><div class="comment-content"><div class="name">Christopher Martinez</div><div class="text">Sí, es legítimo. Me tomó como 2 minutos en total. ¡Totalmente recomendado!</div><div class="meta">Me gusta · Responder · <span class="time">Hace 1 h</span></div></div></div>
+                    <div class="comment"><img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Ashley" class="avatar-img"><div class="comment-content"><div class="name">Ashley Brown</div><div class="text">¡Wow gracias! Necesitaba esto tanto en este momento ❤️ ¡Dios los bendiga!</div><div class="meta">Me gusta · Responder · <span class="time">Hace 2 h</span></div></div></div>
+                `;
+                
+                container.innerHTML = isSpanish ? htmlES : htmlEN;
+                btn.style.display = 'none';
+            }, 600);
+        }
+    </script>
+</body>
 </html>
