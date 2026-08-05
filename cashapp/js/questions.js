@@ -21,8 +21,8 @@ const surveyQuestions = {
     ],
     finance: [
         `Have you used ${brandName} for sending or receiving money?`,
-        `Would you recommend ${brandName} to friends or family?`,
-        "Are you over the age of 18?"
+        "Are you 18 or older and currently living in the United States?",
+        "If eligible, are you ready to continue and complete your entry today?"
     ],
     fastfood: [
         `Do you visit ${brandName} more than once a month?`,

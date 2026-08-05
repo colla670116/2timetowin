@@ -90,8 +90,8 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
         </div>
         
         <div id="answers" class="answer-box">
-            <button class="btn-brand pulse-hover" onclick="nextQuestion()" data-es="Sí">Yes</button>
-            <button class="btn-brand pulse-hover" onclick="nextQuestion()" data-es="No">No</button>
+            <button id="answer-yes" class="btn-brand pulse-hover" onclick="answerQuestion(true)">Yes</button>
+            <button id="answer-no" class="btn-brand pulse-hover" onclick="answerQuestion(false)">No</button>
         </div>
         
         <div id="loader" class="loader-container">
@@ -217,14 +217,38 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
 
         const surveyQuestions = {
             en: [
-                `Have you used ${brandName} for sending or receiving money?`,
-                `Would you recommend ${brandName} to friends or family?`,
-                "Are you over the age of 18?"
+                {
+                    text: `Have you used ${brandName} for sending or receiving money?`,
+                    yesLabel: "Yes",
+                    noLabel: "No"
+                },
+                {
+                    text: "Are you 18 or older and currently living in the United States?",
+                    yesLabel: "Yes",
+                    noLabel: "No"
+                },
+                {
+                    text: "If eligible, are you ready to continue and complete your entry today?",
+                    yesLabel: "Yes, Continue",
+                    noLabel: "Not Right Now"
+                }
             ],
             es: [
-                `¿Has usado ${brandName} para enviar o recibir dinero?`,
-                `¿Recomendarías ${brandName} a amigos o familiares?`,
-                "¿Tienes más de 18 años?"
+                {
+                    text: `¿Has usado ${brandName} para enviar o recibir dinero?`,
+                    yesLabel: "Sí",
+                    noLabel: "No"
+                },
+                {
+                    text: "¿Tienes 18 años o más y vives actualmente en los Estados Unidos?",
+                    yesLabel: "Sí",
+                    noLabel: "No"
+                },
+                {
+                    text: "Si eres elegible, ¿estás listo para continuar y completar tu participación hoy?",
+                    yesLabel: "Sí, continuar",
+                    noLabel: "Ahora no"
+                }
             ]
         };
 
@@ -311,18 +335,57 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
         }
 
         function loadQuestion() {
-            document.getElementById('question').textContent = questions[current];
+            const currentQuestion = questions[current];
+            document.getElementById('question').textContent = currentQuestion.text;
+            document.getElementById('answer-yes').textContent = currentQuestion.yesLabel;
+            document.getElementById('answer-no').textContent = currentQuestion.noLabel;
         }
 
-        function nextQuestion() {
+        function answerQuestion(answer) {
             const stepCircle = document.getElementById(`step-${current + 1}`);
             if (stepCircle) stepCircle.classList.add('completed');
+
+            // Question 2 is the hard age/location qualifier. Question 3 confirms
+            // that the visitor is intentionally choosing to continue the entry.
+            if ((current === 1 || current === 2) && !answer) {
+                showExitMessage(current);
+                return;
+            }
+
             current++;
             if (current < questions.length) {
                 loadQuestion();
             } else {
                 showLoader();
             }
+        }
+
+        function showExitMessage(questionIndex) {
+            document.getElementById('question-container').style.display = 'none';
+            document.getElementById('answers').style.display = 'none';
+
+            const finalContainer = document.getElementById('final-message');
+            finalContainer.style.display = 'block';
+
+            if (isSpanish) {
+                finalContainer.innerHTML = questionIndex === 1
+                    ? `<h2>Gracias por tu interés</h2><p class="end">Esta oportunidad está disponible actualmente para adultos que viven en los Estados Unidos.</p><button type="button" class="btn-brand" onclick="restartQuiz()">Empezar de nuevo</button>`
+                    : `<h2>No hay problema</h2><p class="end">Puedes volver cuando estés listo para continuar con tu participación.</p><button type="button" class="btn-brand" onclick="restartQuiz()">Empezar de nuevo</button>`;
+            } else {
+                finalContainer.innerHTML = questionIndex === 1
+                    ? `<h2>Thanks for your interest</h2><p class="end">This opportunity is currently available to adults living in the United States.</p><button type="button" class="btn-brand" onclick="restartQuiz()">Start Over</button>`
+                    : `<h2>No problem</h2><p class="end">You can come back whenever you're ready to continue your entry.</p><button type="button" class="btn-brand" onclick="restartQuiz()">Start Over</button>`;
+            }
+        }
+
+        function restartQuiz() {
+            current = 0;
+            document.querySelectorAll('.step-circle').forEach(step => step.classList.remove('completed'));
+            document.getElementById('final-message').style.display = 'none';
+            document.getElementById('final-message').innerHTML = '';
+            document.getElementById('question-container').style.display = 'block';
+            document.getElementById('answers').style.display = 'block';
+            loadQuestion();
         }
 
         function getOutboundLink(baseUrl) {
@@ -336,8 +399,8 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
             document.getElementById('loader').style.display = 'block';
             
             const loaderText = document.getElementById('loader-text');
-            setTimeout(() => { loaderText.textContent = isSpanish ? "Verificando reclamos anteriores..." : "Verifying previous claims..."; }, 800);
-            setTimeout(() => { loaderText.textContent = isSpanish ? "Confirmando elegibilidad..." : "Confirming eligibility..."; }, 1600);
+            setTimeout(() => { loaderText.textContent = isSpanish ? "Revisando tus respuestas..." : "Reviewing your answers..."; }, 800);
+            setTimeout(() => { loaderText.textContent = isSpanish ? "Comprobando la elegibilidad inicial..." : "Checking initial eligibility..."; }, 1600);
             setTimeout(() => {
                 document.getElementById('loader').style.display = 'none';
                 showFinalStep();
@@ -354,19 +417,19 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
             
             if (isSpanish) {
                 finalContainer.innerHTML = `
-                    <div class="reserved">Tu recompensa está reservada por <span class="timer" id="countdown">2:30</span>.</div>
-                    <h2>¡Felicidades! 🎉</h2>
-                    <p class="end">Según tus respuestas, calificas para una Recompensa de $1,000 de Cash App hoy (<span id="dynamic-date" style="font-weight: bold; color: #00D632;"></span>).</p>
-                    <p class="end">Haz clic abajo para reclamarla antes de que expire el tiempo.</p>
-                    <a href="${finalLink}" class="btn-brand pulse-animation legal-outbound" id="final-cta" target="_self">Reclamar $1,000 Ahora</a>
+                    <div class="reserved">Tu resultado está disponible por <span class="timer" id="countdown">2:30</span>.</div>
+                    <h2>¡Buenas noticias! 🎉</h2>
+                    <p class="end">Según tus respuestas, puedes ser elegible para tener la oportunidad de recibir una Recompensa de $1,000 de Cash App (<span id="dynamic-date" style="font-weight: bold; color: #00D632;"></span>).</p>
+                    <p class="end">Continúa a la siguiente página para completar tu participación.</p>
+                    <a href="${finalLink}" class="btn-brand pulse-animation legal-outbound" id="final-cta" target="_self">Continuar mi participación</a>
                 `;
             } else {
                 finalContainer.innerHTML = `
-                    <div class="reserved">Your reward is reserved for <span class="timer" id="countdown">2:30</span>.</div>
-                    <h2>Congrats! 🎉</h2>
-                    <p class="end">Based on your answers, you qualify for a $1,000 Cash App Reward today (<span id="dynamic-date" style="font-weight: bold; color: #00D632;"></span>).</p>
-                    <p class="end">Click below to claim it before your timer expires.</p>
-                    <a href="${finalLink}" class="btn-brand pulse-animation legal-outbound" id="final-cta" target="_self">Claim $1,000 Now</a>
+                    <div class="reserved">Your result is available for <span class="timer" id="countdown">2:30</span>.</div>
+                    <h2>Good news! 🎉</h2>
+                    <p class="end">Based on your answers, you may be eligible for a chance to receive a $1,000 Cash App Reward (<span id="dynamic-date" style="font-weight: bold; color: #00D632;"></span>).</p>
+                    <p class="end">Continue to the next page to complete your entry.</p>
+                    <a href="${finalLink}" class="btn-brand pulse-animation legal-outbound" id="final-cta" target="_self">Continue My Entry</a>
                 `;
             }
 
