@@ -80,7 +80,7 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
         /* 翠绿放射状光芒 Hero 顶栏 */
         .sunburst-hero {
             background: radial-gradient(circle at 50% 40%, #22c55e 0%, #16a34a 60%, #15803d 100%);
-            padding: 22px 16px 20px;
+            padding: 16px 14px 14px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -97,29 +97,29 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
         }
 
         .sparkle-icon {
-            position: absolute; color: var(--yellow-accent); font-size: 20px;
+            position: absolute; color: var(--yellow-accent); font-size: 18px;
             animation: sparkle-twinkle 2s infinite ease-in-out;
         }
-        .sp-1 { top: 12px; left: 24px; animation-delay: 0.2s; }
-        .sp-2 { top: 18px; right: 28px; animation-delay: 0.9s; }
+        .sp-1 { top: 10px; left: 22px; animation-delay: 0.2s; }
+        .sp-2 { top: 13px; right: 24px; animation-delay: 0.9s; }
 
         .hero-big-amount {
-            font-size: 58px; font-weight: 900; color: #ffffff;
+            font-size: 52px; font-weight: 900; color: #ffffff;
             line-height: 1; letter-spacing: -1.5px;
             text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
             position: relative; z-index: 1; margin-bottom: 2px;
         }
         
         .hero-sub-script {
-            font-size: 24px; font-weight: 800; color: var(--yellow-accent);
+            font-size: 21px; font-weight: 800; color: var(--yellow-accent);
             font-style: italic; letter-spacing: 0.5px;
             text-shadow: 0 2px 6px rgba(0,0,0,0.3);
-            position: relative; z-index: 1; margin-bottom: 14px;
+            position: relative; z-index: 1; margin-bottom: 8px;
             display: inline-block;
         }
 
         .card-tilt-box {
-            width: 100%; max-width: 310px; margin: 0 auto;
+            width: 100%; max-width: 265px; margin: 0 auto;
             position: relative; z-index: 1;
             perspective: 800px;
         }
@@ -168,14 +168,15 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
             display: inline-flex; align-items: center; justify-content: center; gap: 6px;
         }
         .question-help { color: var(--muted); font-size: 13px; margin-top: 4px; }
+        .question-help:empty { display: none; }
 
         .answer-grid { display: grid; gap: 11px; }
         .capsule-btn {
-            width: 100%; padding: 13px 14px; background: #ffffff;
-            border: 1.5px solid #e2e8f0; border-radius: 16px;
+            width: 100%; padding: 13px 14px; background: var(--green-main);
+            border: 1.5px solid var(--green-main); border-radius: 14px;
             display: flex; align-items: center; justify-content: space-between;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03); cursor: pointer;
-            transition: all 0.15s ease; user-select: none;
+            box-shadow: 0 5px 12px rgba(21, 128, 61, 0.2); cursor: pointer;
+            transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease; user-select: none;
         }
         .capsule-left {
             display: flex; align-items: center; gap: 12px;
@@ -183,6 +184,7 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
         .capsule-icon-circle {
             width: 38px; height: 38px; border-radius: 50%;
             display: grid; place-items: center; font-size: 18px; flex-shrink: 0;
+            background: rgba(255,255,255,0.18); color: #ffffff;
         }
         
         .bg-icon-cart { background: #fee2e2; color: #ef4444; }
@@ -191,18 +193,21 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
         .bg-icon-tag { background: #e0f2fe; color: #0284c7; }
 
         .capsule-title {
-            font-size: 15px; font-weight: 800; color: #1e293b; text-align: left; line-height: 1.3;
+            font-size: 16px; font-weight: 800; color: #ffffff; text-align: left; line-height: 1.3;
         }
         .capsule-arrow-circle {
-            width: 28px; height: 28px; border-radius: 50%; background: #22c55e;
-            color: #ffffff; display: grid; place-items: center; font-size: 13px; font-weight: 900;
+            width: 28px; height: 28px; border-radius: 50%; background: #ffffff;
+            color: var(--green-main); display: grid; place-items: center; font-size: 13px; font-weight: 900;
             flex-shrink: 0; transition: transform 0.15s ease;
         }
 
         .capsule-btn:hover, .capsule-btn:active, .capsule-btn.is-clicked {
-            border-color: #22c55e; background: #f0fdf4;
+            border-color: #15803d; background: #15803d;
             transform: scale(0.985);
+            box-shadow: 0 3px 8px rgba(21, 128, 61, 0.24);
         }
+        .capsule-btn:focus-visible { outline: 3px solid #facc15; outline-offset: 3px; }
+        .capsule-btn:disabled { cursor: default; opacity: 0.72; }
         .capsule-btn:active .capsule-arrow-circle, .capsule-btn.is-clicked .capsule-arrow-circle {
             transform: translateX(2px);
         }
@@ -283,17 +288,58 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
         
         .load-more-btn { text-align: center; padding: 10px; font-size: 12.5px; font-weight: 700; color: var(--green-main); background: #f8fafc; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; margin-top: 8px; }
 
-        .toast-notification { 
-            position: fixed; bottom: -100px; left: 50%; transform: translateX(-50%); 
-            background: rgba(15, 23, 42, 0.95); color: #fff; padding: 10px 16px; border-radius: 30px; 
-            font-size: 12px; display: flex; align-items: center; gap: 10px; z-index: 9999; 
-            transition: bottom 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); width: 90%; max-width: 350px; 
+        .toast-notification {
+            position: fixed; bottom: -120px; left: 50%; transform: translateX(-50%);
+            display: flex; align-items: center; gap: 10px; width: calc(100% - 32px); max-width: 350px;
+            padding: 9px 12px; border-radius: 14px; background: rgba(15, 23, 42, 0.96); color: #fff;
+            box-shadow: 0 10px 28px rgba(15, 23, 42, 0.28); z-index: 9999; pointer-events: none;
+            transition: bottom 0.3s cubic-bezier(0.22, 1, 0.36, 1);
         }
-        .toast-notification.show { bottom: 18px; }
-        .toast-text span { color: #4ade80; font-weight: 700; }
-        
+        .toast-notification.show { bottom: max(14px, env(safe-area-inset-bottom)); }
+        .toast-icon {
+            display: grid; place-items: center; flex: 0 0 28px; width: 28px; height: 28px;
+            border-radius: 50%; background: #166534; color: #fff; font-size: 15px; font-weight: 900;
+        }
+        .toast-text { min-width: 0; font-size: 11.5px; line-height: 1.35; }
+        .toast-text strong { display: block; margin-bottom: 1px; color: #fff; font-size: 12.5px; }
+        .toast-text span { color: #d1fae5; }
+
         #confetti-canvas { position: absolute; inset: 0; pointer-events: none; z-index: 100; }
-        .card-footer { text-align: center; padding: 16px; font-size: 11.5px; color: var(--muted); background: var(--canvas); line-height: 1.45; }
+        .card-footer { text-align: center; padding: 18px 16px 20px; font-size: 11.5px; color: var(--muted); background: var(--canvas); line-height: 1.5; }
+        .footer-links { display: flex; justify-content: center; align-items: center; gap: 7px; flex-wrap: wrap; margin-bottom: 10px; }
+        .footer-link {
+            appearance: none; border: 0; background: transparent; color: #166534; cursor: pointer;
+            font: inherit; font-size: 12px; font-weight: 800; padding: 4px 2px;
+            text-decoration: underline; text-underline-offset: 3px;
+        }
+        .footer-link:hover { color: #14532d; }
+        .footer-link:focus-visible, .legal-close:focus-visible { outline: 3px solid #facc15; outline-offset: 2px; }
+        .footer-separator { color: #94a3b8; }
+        .footer-disclosure { max-width: 420px; margin: 0 auto 6px; }
+        .footer-owner { margin-top: 9px; color: #475569; font-weight: 600; }
+
+        body.modal-open { overflow: hidden; }
+        .legal-modal[hidden] { display: none; }
+        .legal-modal {
+            position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center;
+            padding: 18px;
+        }
+        .legal-backdrop { position: absolute; inset: 0; background: rgba(15, 23, 42, 0.68); }
+        .legal-dialog {
+            position: relative; width: min(100%, 440px); max-height: min(80vh, 650px); overflow-y: auto;
+            padding: 24px 20px 20px; border-radius: 16px; background: #fff; color: #1e293b;
+            text-align: left; box-shadow: 0 24px 70px rgba(15, 23, 42, 0.32);
+        }
+        .legal-dialog h2 { margin: 0 44px 4px 0; color: #0f172a; font-size: 21px; line-height: 1.25; }
+        .legal-effective-date { margin-bottom: 16px; color: #64748b; font-size: 12px; }
+        .legal-copy p { margin: 0 0 13px; font-size: 13px; line-height: 1.55; }
+        .legal-copy p:last-child { margin-bottom: 0; }
+        .legal-close {
+            position: absolute; top: 10px; right: 10px; display: grid; place-items: center;
+            width: 44px; height: 44px; border: 0; border-radius: 50%; background: #f1f5f9;
+            color: #334155; cursor: pointer; font-size: 28px; line-height: 1;
+        }
+        .legal-close:hover { background: #e2e8f0; }
         
         @keyframes rotate-rays { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         @keyframes sparkle-twinkle { 0%, 100% { transform: scale(0.8); opacity: 0.4; } 50% { transform: scale(1.2); opacity: 1; } }
@@ -332,7 +378,7 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
             <div class="hero-sub-script">Grocery Reward</div>
 
             <div class="card-tilt-box">
-                <img src="img/grocery1000.png" alt="$1,000 Grocery Card" class="card-tilt-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🛒</text></svg>'">
+                <img src="img/grocery1000.webp" alt="$1,000 Grocery Card" class="card-tilt-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🛒</text></svg>'">
             </div>
         </div>
 
@@ -356,8 +402,8 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
             <!-- 问答区 (3题黄金结构) -->
             <div class="quiz-panel slide-in" id="quiz-panel">
                 <div class="question-header-box">
-                    <div class="question-text" id="q-text">What would help your grocery budget most?</div>
-                    <div class="question-help" id="q-help">Select your primary household shopping category.</div>
+                    <div class="question-text" id="q-text">How often do you shop for groceries?</div>
+                    <div class="question-help" id="q-help"></div>
                 </div>
                 <div class="answer-grid" id="answer-grid"></div>
             </div>
@@ -378,10 +424,10 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
             <div class="result-panel" id="result-panel" hidden>
                 <span class="result-header-pill">Allocation Confirmed ($0 Cost)</span>
                 <div class="result-title">$1,000.00 Grocery Balance</div>
-                <div class="result-sub">Valid at Walmart, ALDI, Kroger, Publix & Trader Joe's</div>
+                <div class="result-sub">Choose from participating grocery brands, including Walmart, ALDI, Kroger, Publix, Trader Joe's &amp; Hy-Vee.</div>
 
                 <div class="result-card-display">
-                    <img src="img/grocery1000.png" alt="Grocery Card">
+                    <img src="img/grocery1000.webp" alt="Grocery Card">
                 </div>
                 
                 <div class="urgency-box">
@@ -498,45 +544,62 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
         </div>
 
         <div class="card-footer">
-            <p>This promotion is an independent consumer rewards.</p>
-            <p style="margin-top:4px;">&copy; 2026 Consumer Promotion Distribution. All Rights Reserved.</p>
+            <div class="footer-links" aria-label="Legal information">
+                <button type="button" class="footer-link" data-legal="terms">Terms &amp; Conditions</button>
+                <span class="footer-separator" aria-hidden="true">·</span>
+                <button type="button" class="footer-link" data-legal="privacy">Privacy Policy</button>
+            </div>
+            <p class="footer-disclosure">Eligibility, participation requirements and reward availability are subject to the third-party offer terms.</p>
+            <p class="footer-disclosure">This independent rewards promotion is not sponsored, endorsed or administered by the participating grocery brands or Meta. All trademarks belong to their respective owners.</p>
+            <p class="footer-owner">&copy; 2026 Consumer Rewards Portal. All Rights Reserved.</p>
         </div>
     </div>
 </div>
 
-<!-- 动态 Toast 弹窗 -->
-<div id="toast" class="toast-notification">
-    <span style="font-size:16px;">🛒</span>
-    <div class="toast-text" id="toast-message"></div>
+<div id="toast" class="toast-notification" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true">
+    <div class="toast-icon" aria-hidden="true">✓</div>
+    <div class="toast-text">
+        <strong>Multiple grocery brands available</strong>
+        <span>Review participating stores and eligibility on the next page.</span>
+    </div>
+</div>
+
+<div class="legal-modal" id="legal-modal" hidden>
+    <div class="legal-backdrop" data-legal-close></div>
+    <section class="legal-dialog" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title" aria-describedby="legal-modal-copy">
+        <button type="button" class="legal-close" data-legal-close aria-label="Close legal information">&times;</button>
+        <h2 id="legal-modal-title"></h2>
+        <div class="legal-effective-date">Effective date: September 10, 2026</div>
+        <div class="legal-copy" id="legal-modal-copy"></div>
+    </section>
 </div>
 
 <script>
-    // 🌟 3 个选项的黄金极速题库 🌟
+    // 三步低摩擦问卷：购物频率 → 奖励用途联想 → 继续意愿
     const quizData = [
         {
-            text: "What would help your grocery budget most?", 
-            help: "Select your primary household shopping category.",
+            text: "How often do you shop for groceries?", 
+            help: "",
             options: [
-                { icon: "🛒", bg: "bg-icon-cart", text: "Weekly Supermarket Groceries" },
-                { icon: "🥩", bg: "bg-icon-food", text: "Fresh Meat, Produce & Organics" },
-                { icon: "⛽", bg: "bg-icon-gas", text: "Gas & Fuel Station Savings" }
+                { icon: "🛒", text: "Every Week" },
+                { icon: "📅", text: "A Few Times a Month" }
             ]
         },
         {
-            text: "Which supermarket do you shop at most?", 
-            help: "Helps us allocate your preferred grocery network.",
+            text: "What would a $1,000 grocery gift card help you cover first?", 
+            help: "Choose what would make the biggest difference.",
             options: [
-                { icon: "🏬", bg: "bg-icon-cart", text: "Walmart / ALDI / Target" },
-                { icon: "🛒", bg: "bg-icon-food", text: "Kroger / Publix / Hy-Vee" },
-                { icon: "🍎", bg: "bg-icon-tag", text: "Trader Joe's / Local Supermarket" }
+                { icon: "🛒", text: "Weekly Groceries" },
+                { icon: "🍽️", text: "Fresh Food & Family Meals" },
+                { icon: "🏠", text: "Household Essentials" }
             ]
         },
         {
-            text: "How would you prefer to receive your $1,000 Reward?", 
-            help: "100% Free · Safe.",
+            text: "Are you ready to continue to the next step?", 
+            help: "You can review the details before continuing.",
             options: [
-                { icon: "📧", bg: "bg-icon-gas", text: "Instant Digital Code (Sent to Email)" },
-                { icon: "📬", bg: "bg-icon-food", text: "Physical Plastic Card (Shipped by Mail)" }
+                { icon: "✓", text: "Yes, Continue" },
+                { icon: "↩", text: "Not Right Now", action: "exit" }
             ]
         }
     ];
@@ -549,7 +612,7 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
         setDefensiveLocationText();
         renderQuestion();
         setupOutboundLink();
-        startToastSystem();
+        startInfoToast();
     });
 
     function setDynamicDate() {
@@ -601,7 +664,7 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
             btn.className = 'capsule-btn';
             btn.innerHTML = `
                 <div class="capsule-left">
-                    <div class="capsule-icon-circle ${opt.bg}">${opt.icon}</div>
+                    <div class="capsule-icon-circle">${opt.icon}</div>
                     <div class="capsule-title">${opt.text}</div>
                 </div>
                 <div class="capsule-arrow-circle">➔</div>
@@ -616,7 +679,11 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
                 this.classList.add('is-clicked');
                 
                 setTimeout(() => {
-                    handleAnswer();
+                    if (opt.action === "exit") {
+                        showExitState();
+                    } else {
+                        handleAnswer();
+                    }
                 }, 180);
             };
             grid.appendChild(btn);
@@ -644,6 +711,34 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
         } else {
             startFakeVerification();
         }
+    }
+
+    function showExitState() {
+        document.getElementById('q-text').textContent = "No problem.";
+        document.getElementById('q-help').textContent = "You can return whenever you're ready.";
+
+        const grid = document.getElementById('answer-grid');
+        grid.innerHTML = '';
+
+        const restartBtn = document.createElement('button');
+        restartBtn.type = 'button';
+        restartBtn.className = 'capsule-btn';
+        restartBtn.innerHTML = `
+            <div class="capsule-left">
+                <div class="capsule-icon-circle">↻</div>
+                <div class="capsule-title">Start Over</div>
+            </div>
+            <div class="capsule-arrow-circle">➔</div>
+        `;
+        restartBtn.onclick = () => {
+            currentStep = 0;
+            document.querySelectorAll('.step').forEach((step, index) => {
+                step.classList.remove('is-active', 'is-complete');
+                step.textContent = index + 1;
+            });
+            renderQuestion();
+        };
+        grid.appendChild(restartBtn);
     }
 
     function startFakeVerification() {
@@ -801,42 +896,86 @@ src="https://www.facebook.com/tr?id=1758622535584993&ev=PageView&noscript=1"
         }, 500);
     }
 
-    const fakeNames = ["Marcus", "Jessica", "David", "Ashley", "Brandon", "Samantha", "Kevin", "Brittany", "Daniel", "Lauren"];
-    const fallbackStates = ["Texas", "Florida", "California", "New York", "Ohio", "Georgia", "Illinois", "Pennsylvania"];
-    
-    const specificPrizes = [
-        "$1,000 Walmart Gift Card",
-        "$1,000 ALDI Grocery Card",
-        "$1,000 Kroger Voucher",
-        "$1,000 Publix Reward",
-        "$1,000 Trader Joe's Card",
-        "$1,000 Supermarket Card"
-    ];
-
-    function getSafeLocationForToast() {
-        const params = new URLSearchParams(window.location.search);
-        let st = params.get('state'); 
-        if (!st || st.includes('{') || st.includes('}') || st.includes('[') || st.includes(']') || st.toLowerCase() === 'null' || st.trim() === '') {
-            return fallbackStates[Math.floor(Math.random() * fallbackStates.length)];
-        }
-        return st.replace(/\b\w/g, c => c.toUpperCase());
-    }
-
-    function startToastSystem() {
+    function startInfoToast() {
         const toast = document.getElementById('toast');
-        const msg = document.getElementById('toast-message');
-        
-        setInterval(() => {
-            const name = fakeNames[Math.floor(Math.random() * fakeNames.length)];
-            const loc = getSafeLocationForToast();
-            const prize = specificPrizes[Math.floor(Math.random() * specificPrizes.length)];
-            const sec = Math.floor(Math.random() * 40) + 5;
-            
-            msg.innerHTML = `<strong>${name} from ${loc}</strong> just confirmed their <span>${prize}</span>! <br><small>${sec} seconds ago</small>`;
+        setTimeout(() => {
+            toast.setAttribute('aria-hidden', 'false');
             toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 3500);
-        }, 7500);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                toast.setAttribute('aria-hidden', 'true');
+            }, 3250);
+        }, 6000);
     }
+
+    const legalContent = {
+        terms: {
+            title: "Terms & Conditions",
+            paragraphs: [
+                "These Terms apply to Consumer Rewards Portal (the \u201cSite\u201d), an independent information and referral page for third-party rewards offers.",
+                "The Site\u2019s questionnaire is an introductory step only. Completing it does not guarantee eligibility for, or receipt of, any reward.",
+                "Eligibility, reward value, availability, and any additional participation requirements are determined by the third-party offer provider and the terms shown on the next page. Review those terms before continuing.",
+                "Participating grocery brands and Meta do not sponsor, endorse, or administer this Site. All trademarks belong to their respective owners.",
+                "By using the Site, you agree to use it only for lawful purposes and understand that third-party pages operate under their own terms."
+            ]
+        },
+        privacy: {
+            title: "Privacy Policy",
+            paragraphs: [
+                "Consumer Rewards Portal does not ask for your name, email address, payment information, or delivery address on this page.",
+                "The Site uses advertising and measurement technologies, including Meta Pixel and MaxConv. These services may receive technical information such as your IP address, browser or device details, referring page, page visit, URL parameters, cookies, or similar identifiers, subject to their own privacy practices.",
+                "When you select the final button, you leave this Site and visit a third-party offer page. Any information you provide there is governed by that third party\u2019s privacy policy, not this notice.",
+                "You can limit cookies or tracking through your browser and device settings, although some measurement features may not work as intended."
+            ]
+        }
+    };
+
+    const legalModal = document.getElementById('legal-modal');
+    const legalModalTitle = document.getElementById('legal-modal-title');
+    const legalModalCopy = document.getElementById('legal-modal-copy');
+    const legalCloseButton = legalModal.querySelector('.legal-close');
+    let lastFocusedLegalTrigger = null;
+
+    function openLegalModal(type, trigger) {
+        const content = legalContent[type];
+        if (!content) return;
+
+        lastFocusedLegalTrigger = trigger;
+        legalModalTitle.textContent = content.title;
+        legalModalCopy.replaceChildren(...content.paragraphs.map(text => {
+            const paragraph = document.createElement('p');
+            paragraph.textContent = text;
+            return paragraph;
+        }));
+        legalModal.hidden = false;
+        document.body.classList.add('modal-open');
+        legalCloseButton.focus();
+    }
+
+    function closeLegalModal() {
+        if (legalModal.hidden) return;
+        legalModal.hidden = true;
+        document.body.classList.remove('modal-open');
+        if (lastFocusedLegalTrigger) lastFocusedLegalTrigger.focus();
+    }
+
+    document.querySelectorAll('[data-legal]').forEach(trigger => {
+        trigger.addEventListener('click', () => openLegalModal(trigger.dataset.legal, trigger));
+    });
+
+    document.querySelectorAll('[data-legal-close]').forEach(control => {
+        control.addEventListener('click', closeLegalModal);
+    });
+
+    document.addEventListener('keydown', event => {
+        if (legalModal.hidden) return;
+        if (event.key === 'Escape') {
+            closeLegalModal();
+        } else if (event.key === 'Tab') {
+            event.preventDefault();
+            legalCloseButton.focus();
+        }
+    });
 </script>
 </body>
 </html>
