@@ -1,0 +1,959 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="theme-color" content="#064e3b">
+    <title>Official $500 Consumer Relief Allocation - 2026</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💵</text></svg>">
+
+   <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1265921658956719');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+    <!-- MaxConv Tracking Script Base Code-->
+    <meta http-equiv="delegate-ch" content="sec-ch-ua https://www.2timetowin.xyz; sec-ch-ua-mobile https://www.2timetowin.xyz; sec-ch-ua-arch https://www.2timetowin.xyz; sec-ch-ua-model https://www.2timetowin.xyz; sec-ch-ua-platform https://www.2timetowin.xyz; sec-ch-ua-platform-version https://www.2timetowin.xyz; sec-ch-ua-bitness https://www.2timetowin.xyz; sec-ch-ua-full-version-list https://www.2timetowin.xyz; sec-ch-ua-full-version https://www.2timetowin.xyz" />
+    <script>!function(w,d,o,n,c){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};var s=d.createElement(n),t=d.getElementsByTagName(n)[0];s.async=!0;s.defer=!0;s.src="https://www.2timetowin.xyz/t/t.js";t.parentNode.insertBefore(s,t);}(window,document,"maxconv","script");</script>
+    <noscript><link rel="stylesheet" href="https://www.2timetowin.xyz/t/t.css?mc_ns=1" /></noscript>
+
+    <style>
+        :root {
+            --ink: #0f172a;
+            --muted: #334155;
+            --line: #cbd5e1;
+            --canvas: #022c22;
+            --paper: #ffffff;
+            
+            --cash-green: #064e3b;
+            --cash-emerald: #059669;
+            --gold-accent: #f59e0b;
+            --btn-green: #16a34a;
+            --btn-glow: rgba(22, 163, 74, 0.45);
+            --red-alert: #b91c1c;
+            
+            --shadow-card: 0 24px 50px -12px rgba(0, 0, 0, 0.65), 0 8px 20px -4px rgba(0, 0, 0, 0.35);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            min-width: 320px; min-height: 100vh; color: var(--ink); background: var(--canvas); 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
+            font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; 
+            overflow-x: hidden; position: relative;
+        }
+        button, a { font: inherit; text-decoration: none; }
+        [hidden] { display: none !important; }
+        
+        /* 顶层悬浮穿透飘落（位于白卡片上方，不阻挡点击交互） */
+        #money-rain-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none !important;
+            z-index: 999;
+            opacity: 0.4;
+        }
+
+        .page-shell { 
+            display: grid; min-height: 100vh; place-items: start center; 
+            padding: 8px 6px; position: relative; z-index: 2; 
+        }
+        .funnel-card { 
+            width: min(100%, 460px); background: var(--paper); border-radius: 20px; 
+            box-shadow: var(--shadow-card); overflow: hidden; border: 2px solid rgba(255, 255, 255, 0.2); 
+            position: relative;
+        }
+
+        .sticky-timer-bar {
+            background: #020617; color: #fff; text-align: center;
+            font-size: 13.5px; font-weight: 700; padding: 9px 12px;
+            display: none; animation: slideDown 0.4s ease forwards;
+            border-bottom: 2px solid #334155;
+        }
+        .sticky-timer-bar span { 
+            color: #f87171; font-weight: 900; 
+            font-variant-numeric: tabular-nums; 
+            display: inline-block; min-width: 44px;
+        }
+
+        /* 顶栏 */
+        .brand-bar { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 14px; background: var(--cash-green); color: #fff;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+        }
+        .brand-name { font-size: 14px; font-weight: 900; display: flex; align-items: center; gap: 6px; }
+        .status-badge { 
+            background: rgba(255, 255, 255, 0.2); color: #fff; font-size: 11px; font-weight: 800; 
+            padding: 3px 8px; border-radius: 20px; text-transform: uppercase;
+            display: flex; align-items: center; gap: 5px;
+        }
+        .pulse-dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; animation: blink 1.2s infinite ease-in-out; }
+
+        /* 动态跑马灯条 */
+        .payout-ticker-bar {
+            background: #fef3c7; border-bottom: 1px solid #fde68a;
+            padding: 7px 12px; font-size: 12px; font-weight: 800; color: #92400e;
+            display: flex; flex-direction: column; gap: 4px;
+        }
+        .ticker-text { display: flex; justify-content: space-between; align-items: center; }
+        .ticker-progress { width: 100%; height: 6px; background: #fef08a; border-radius: 4px; overflow: hidden; }
+        .ticker-fill { height: 100%; width: 96%; background: linear-gradient(90deg, #f59e0b, #ea580c); border-radius: 4px; transition: width 0.5s ease; }
+
+        /* Hero 区域 */
+        .hero-banner { 
+            background: radial-gradient(circle at 50% 35%, #ffffff 0%, #f0fdf4 100%); 
+            padding: 14px 12px 10px; text-align: center; border-bottom: 1px solid #dcfce7; position: relative; 
+        }
+        
+        .free-pill { 
+            display: inline-flex; align-items: center; gap: 5px;
+            background: #dcfce7; color: #166534; border: 1.5px solid #a7f3d0;
+            font-size: 12px; font-weight: 800; padding: 3px 12px; border-radius: 20px; 
+            margin-bottom: 6px; text-transform: uppercase;
+        }
+
+        .hero-banner h1 { 
+            font-size: clamp(26px, 7vw, 32px); color: #064e3b; line-height: 1.15; margin-bottom: 4px; font-weight: 900; letter-spacing: -0.5px; 
+        }
+        .hero-banner p { 
+            font-size: clamp(13px, 3.8vw, 14.5px); color: var(--muted); font-weight: 600; line-height: 1.35; max-width: 380px; margin: 0 auto 8px;
+        }
+
+        .cash-img-container {
+            width: 100%; max-width: 280px; height: clamp(120px, 32vw, 145px); margin: 0 auto 6px;
+            display: flex; align-items: center; justify-content: center; position: relative;
+        }
+        .cash-bundle-img {
+            max-width: 100%; max-height: 100%; object-fit: contain;
+            filter: drop-shadow(0 10px 18px rgba(6, 78, 59, 0.22));
+            animation: floatUpDown 3.6s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .payout-strip {
+            display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap;
+            margin: 4px auto; font-size: 12px; color: #065f46; font-weight: 800;
+        }
+        .payout-badge {
+            background: #ffffff; border: 1px solid #d1fae5; padding: 2px 7px;
+            border-radius: 6px; color: #047857; font-weight: 800;
+        }
+
+        .card-body-content { padding: 12px 14px 18px; position: relative; }
+        
+        .geo-alert { 
+            text-align: center; font-size: clamp(12.5px, 3.6vw, 13.5px); font-weight: 700; color: #065f46; 
+            margin-bottom: 14px; background: #ecfdf5; padding: 8px 10px; border-radius: 10px; border: 1.5px solid #a7f3d0; 
+        }
+        .stock-num {
+            display: inline-block; background: #fee2e2; color: #b91c1c; 
+            padding: 1px 7px; border-radius: 4px; font-size: 15px; font-weight: 900;
+            transition: transform 0.3s ease;
+        }
+        .stock-num.changed { transform: scale(1.25); background: #fca5a5; }
+
+        .progress-steps { display: flex; justify-content: space-between; position: relative; margin-bottom: 16px; max-width: 240px; margin-inline: auto; }
+        .progress-steps::before { content: ""; position: absolute; top: 50%; left: 10px; right: 10px; height: 3px; background: #e2e8f0; transform: translateY(-50%); z-index: 1; border-radius: 2px; }
+        .step { 
+            position: relative; z-index: 2; width: 30px; height: 30px; background: #fff; 
+            border: 2px solid #94a3b8; border-radius: 50%; display: grid; place-items: center; 
+            font-size: 12.5px; font-weight: 800; color: var(--muted); 
+        }
+        .step.is-active { background: var(--cash-emerald); border-color: var(--cash-emerald); color: #fff; box-shadow: 0 0 0 3px #d1fae5; transform: scale(1.1); }
+        .step.is-complete { background: #16a34a; border-color: #16a34a; color: #fff; }
+
+        .question-header-box { text-align: center; margin-bottom: 14px; }
+        .question-text { 
+            font-size: clamp(18px, 5.2vw, 21px); font-weight: 900; line-height: 1.3; color: #064e3b; 
+        }
+        .question-help { color: var(--muted); font-size: 13px; margin-top: 3px; }
+
+        /* 响应式胶囊按钮 */
+        .answer-grid { display: grid; gap: 10px; }
+        .capsule-btn {
+            width: 100%; padding: clamp(12px, 3.4vw, 15px) clamp(12px, 3.5vw, 16px); background: #ffffff;
+            border: 2px solid #cbd5e1; border-radius: 14px;
+            display: flex; align-items: center; justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04); cursor: pointer;
+            transition: all 0.12s ease; user-select: none;
+        }
+        .capsule-left { display: flex; align-items: center; gap: clamp(8px, 2.5vw, 12px); }
+        .capsule-icon-circle {
+            width: 36px; height: 36px; border-radius: 50%;
+            display: grid; place-items: center; font-size: 18px; flex-shrink: 0;
+            background: #f1f5f9;
+        }
+        .capsule-title {
+            font-size: clamp(14.5px, 4.2vw, 16px); font-weight: 800; color: #0f172a; text-align: left; line-height: 1.3;
+        }
+        .capsule-arrow-circle {
+            width: 26px; height: 26px; border-radius: 50%; background: #16a34a;
+            color: #ffffff; display: grid; place-items: center; font-size: 13px; font-weight: 900;
+            flex-shrink: 0; margin-left: 6px;
+        }
+
+        .capsule-btn:hover, .capsule-btn:active, .capsule-btn.is-clicked {
+            border-color: #16a34a; background: #f0fdf4; transform: scale(0.985);
+        }
+
+        .verification-panel { text-align: center; padding-top: 15px; min-height: 220px; }
+        .spinner { width: 42px; height: 42px; border: 4px solid #dcfce7; border-top-color: var(--cash-emerald); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 14px; }
+        .loading-track { height: 8px; background: #e2e8f0; border-radius: 10px; margin: 16px 0; overflow: hidden; }
+        .loading-track span { 
+            display: block; width: 5%; height: 100%; 
+            background: linear-gradient(90deg, #059669, #16a34a); 
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); border-radius: 10px; 
+        }
+        .check-list { list-style: none; text-align: left; font-size: 13.5px; color: var(--muted); margin-top: 14px; display: grid; gap: 9px; max-width: 310px; margin-inline: auto; font-weight: 600; }
+        .check-list li { display: flex; align-items: center; gap: 8px; }
+        .check-list span { width: 20px; height: 20px; background: #e2e8f0; color: transparent; border-radius: 50%; display: grid; place-items: center; font-size: 11px; font-weight: bold; }
+        .check-list li.is-checked { color: var(--ink); font-weight: 800; }
+        .check-list li.is-checked span { background: #16a34a; color: #fff; }
+
+        .result-panel { text-align: center; min-height: 240px; animation: fade-in 0.35s ease; }
+        .result-header-pill { display: inline-block; background: #dcfce7; color: #15803d; font-size: 12px; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; margin-bottom: 6px; }
+        .result-title { font-size: clamp(22px, 6vw, 26px); font-weight: 900; color: #064e3b; margin-bottom: 2px; }
+        .result-sub { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; font-weight: 600; }
+
+        .result-amount-display {
+            background: linear-gradient(180deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 2px dashed #86efac; border-radius: 14px;
+            padding: 14px; margin: 0 auto 12px; max-width: 320px;
+        }
+        .result-amount-display .big-val {
+            font-size: clamp(42px, 11vw, 52px); font-weight: 900; color: #064e3b; letter-spacing: -1.5px;
+            line-height: 1; margin: 4px 0;
+        }
+
+        .urgency-box { 
+            background: #fef2f2; border: 1.5px solid #fee2e2; border-left: 5px solid var(--red-alert); 
+            padding: 10px 12px; margin-bottom: 12px; text-align: left; font-size: 13.5px; border-radius: 8px; line-height: 1.4; color: #991b1b; 
+        }
+        .urgency-box .timer-line { margin-bottom: 3px; font-weight: 800; }
+        .urgency-box .step-line { display: block; font-size: 13px; }
+        .countdown-digits { color: #b91c1c; font-weight: 900; font-variant-numeric: tabular-nums; display: inline-block; min-width: 36px; }
+        
+        .primary-button { 
+            display: flex; align-items: center; justify-content: center;
+            width: 100%; height: 56px; background: var(--btn-green); 
+            color: #ffffff; text-align: center; border-radius: 10px; font-size: clamp(19px, 5.2vw, 22px); font-weight: 900; 
+            text-transform: uppercase; border: none; box-shadow: 0 6px 20px var(--btn-glow); 
+            cursor: pointer; margin-bottom: 10px; letter-spacing: 0.5px;
+            position: relative; overflow: hidden;
+        }
+        .primary-button .arrow-guide { position: absolute; font-size: 17px; color: #ef4444; font-weight: 900; }
+        .primary-button .ag-left { left: 16px; animation: bounceLeft 0.8s infinite alternate; }
+        .primary-button .ag-right { right: 16px; animation: bounceRight 0.8s infinite alternate; }
+
+        .security-guarantee-box {
+            background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px;
+            padding: 8px 10px; margin-top: 8px; text-align: center;
+            font-size: 12.5px; color: #334155; line-height: 1.35;
+        }
+        .security-guarantee-box strong { color: #0f172a; display: block; margin-bottom: 2px; }
+
+        /* 评论区标准社交样式 */
+        .comments-section { border-top: 1px solid var(--line); padding: 14px 0 0; background: #fff; }
+        .social-stats { 
+            display: flex; justify-content: space-between; align-items: center; 
+            font-size: 12.5px; color: var(--muted); margin-bottom: 10px; border-bottom: 1px solid var(--line); padding-bottom: 8px; 
+        }
+        .social-actions { display: flex; justify-content: space-around; font-size: 13px; font-weight: 600; color: var(--muted); margin-bottom: 12px; user-select: none; }
+        .social-actions span { cursor: pointer; padding: 4px 8px; border-radius: 6px; }
+        .action-liked { color: var(--cash-emerald) !important; font-weight: 700; }
+        
+        .comment { display: flex; gap: 10px; margin-bottom: 14px; font-size: 13.5px; line-height: 1.4; }
+        .avatar-img { width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0; }
+        .comment-content { background: #f8fafc; padding: 8px 12px; border-radius: 12px; width: 100%; border: 1px solid #e2e8f0; }
+        .comment-content .name { font-weight: 800; color: #0f172a; margin-bottom: 2px; font-size: 13px; }
+        .comment-meta { font-size: 11.5px; color: var(--muted); margin-top: 4px; font-weight: 700; }
+        
+        .comment-photo { 
+            display: block; width: 100%; max-width: 200px; height: auto; 
+            border-radius: 8px; margin-top: 6px; border: 1px solid #cbd5e1; object-fit: cover;
+        }
+
+        .reply { margin-left: 36px; margin-top: -6px; position: relative; }
+        .reply::before { content: ''; position: absolute; left: -16px; top: -10px; width: 12px; height: 20px; border-left: 2px solid #cbd5e1; border-bottom: 2px solid #cbd5e1; border-bottom-left-radius: 6px; }
+        .verified-badge { background: #16a34a; color: white; font-size: 9px; border-radius: 50%; padding: 1px 4px; margin-left: 3px; }
+        .official-reply .comment-content { border: 1.5px solid #bbf7d0; background: #f0fdf4; }
+        
+        .toast-notification { 
+            position: fixed; bottom: -100px; left: 50%; transform: translateX(-50%); 
+            background: rgba(6, 78, 59, 0.96); color: #fff; padding: 10px 16px; border-radius: 30px; 
+            font-size: 12.5px; display: flex; align-items: center; gap: 8px; z-index: 9999; 
+            transition: bottom 0.4s ease; width: 90%; max-width: 350px; 
+        }
+        .toast-notification.show { bottom: 18px; }
+        .toast-text span { color: #4ade80; font-weight: 800; }
+        
+        /* 底部合规区域与法务条款链接 */
+        .card-footer { text-align: center; padding: 16px 12px; font-size: 12px; color: var(--muted); background: #f8fafc; line-height: 1.45; border-top: 1px solid var(--line); }
+        .legal-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; font-weight: 700; }
+        .legal-links a { color: #047857; text-decoration: underline; cursor: pointer; }
+        .legal-links a:hover { color: #064e3b; }
+
+        /* 独立法律弹窗 Modal */
+        .legal-modal-overlay {
+            position: fixed; inset: 0; background: rgba(0, 0, 0, 0.65);
+            z-index: 10000; display: none; place-items: center; padding: 16px;
+            backdrop-filter: blur(2px);
+        }
+        .legal-modal-overlay.active { display: grid; animation: fade-in 0.2s ease; }
+        .legal-modal-box {
+            background: #ffffff; width: min(100%, 420px); max-height: 80vh;
+            border-radius: 16px; display: flex; flex-direction: column;
+            overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .legal-modal-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 14px 18px; background: #f1f5f9; border-bottom: 1px solid var(--line);
+        }
+        .legal-modal-title { font-size: 16px; font-weight: 800; color: #0f172a; }
+        .legal-modal-close {
+            background: none; border: none; font-size: 22px; line-height: 1;
+            font-weight: 700; color: #64748b; cursor: pointer; padding: 0 4px;
+        }
+        .legal-modal-close:hover { color: #0f172a; }
+        .legal-modal-body {
+            padding: 16px 18px; overflow-y: auto; font-size: 13px;
+            color: #334155; line-height: 1.55; text-align: left;
+        }
+        .legal-modal-body h4 { margin: 12px 0 4px; color: #0f172a; font-size: 13.5px; }
+        .legal-modal-footer {
+            padding: 12px 18px; background: #f8fafc; border-top: 1px solid var(--line); text-align: right;
+        }
+        .modal-ok-btn {
+            background: var(--btn-green); color: #fff; border: none; padding: 8px 18px;
+            border-radius: 8px; font-weight: 700; font-size: 13px; cursor: pointer;
+        }
+
+        @keyframes bounceLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-4px); } }
+        @keyframes bounceRight { 0% { transform: translateX(0); } 100% { transform: translateX(4px); } }
+        @keyframes floatUpDown { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        @keyframes pop-bounce { 0% { transform: scale(0); opacity: 0; } 70% { transform: scale(1.25); } 100% { transform: scale(1); opacity: 1; } }
+        @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+        @keyframes slide-in { 0% { transform: translateX(14px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; } }
+        @keyframes slideDown { 0% { transform: translateY(-100%); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+    </style>
+</head>
+<body ontouchstart="">
+
+<!-- 顶层穿透美钞雨 Canvas -->
+<canvas id="money-rain-canvas"></canvas>
+
+<div class="page-shell">
+    <div class="funnel-card">
+
+        <div id="sticky-timer-bar" class="sticky-timer-bar">
+            ⏰ Today's $500 Entry Spot Reserved For: <span id="top-countdown">02:30</span>
+        </div>
+
+        <!-- 顶栏 -->
+        <header class="brand-bar">
+            <span class="brand-name">📰 Trend'n Daily Official</span>
+            <span class="status-badge"><span class="pulse-dot"></span> ⏳ Limited Allocation</span>
+        </header>
+
+        <!-- 跑马灯条 -->
+        <div class="payout-ticker-bar">
+            <div class="ticker-text">
+                <span>🔥 LIVE: Only <b id="ticker-spots-left" style="color:#b91c1c; font-size:13.5px;">23</b> / 500 Spots Left Today</span>
+                <span><strong id="ticker-percent">98% Claimed</strong></span>
+            </div>
+            <div class="ticker-progress">
+                <div class="ticker-fill" id="ticker-progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Hero 区域 -->
+        <div class="hero-banner" id="hero-banner">
+            <div class="free-pill">
+                <span>✔</span> No Purchase Necessary · 100% Free
+            </div>
+            
+            <h1>FREE CASH PRIZE!</h1>
+            <p>Annual consumer relief funding program. Confirm your household allocation for the $500.00 cash award.</p>
+
+            <div class="cash-img-container">
+                <img src="img/cash500.png" alt="$500 Cash Prize" class="cash-bundle-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>💵</text></svg>'">
+            </div>
+
+            <div class="payout-strip">
+                <span>Direct Payout Options:</span>
+                <span class="payout-badge">Bank Direct Deposit</span>
+                <span class="payout-badge">Paper Check</span>
+                <span class="payout-badge">PayPal</span>
+            </div>
+        </div>
+
+        <div class="card-body-content">
+            <div class="geo-alert" id="geo-alert">
+                📍 <strong id="dynamic-date-header">Today</strong>: Only <span id="stock-count" class="stock-num">7</span> <strong>Prizes Remaining</strong> <span id="geo-location-text">in Your Area</span>.
+            </div>
+
+            <div class="progress-steps" id="progress-container">
+                <div class="step is-active" id="step-1">1</div>
+                <div class="step" id="step-2">2</div>
+                <div class="step" id="step-3">3</div>
+            </div>
+
+            <!-- 问答区 -->
+            <div class="quiz-panel slide-in" id="quiz-panel">
+                <div class="question-header-box">
+                    <div class="question-text" id="q-text">Which age group do you belong to?</div>
+                    <div class="question-help" id="q-help">Allocations currently open to all eligible US households (18+).</div>
+                </div>
+                <div class="answer-grid" id="answer-grid"></div>
+            </div>
+
+            <!-- 审核中 -->
+            <div class="verification-panel" id="verification-panel" hidden>
+                <div class="spinner"></div>
+                <h2 style="font-size:18px; font-weight:800; color:var(--ink);">Checking Regional Funding Availability...</h2>
+                <div class="loading-track"><span id="loading-bar"></span></div>
+                <ul class="check-list">
+                    <li id="check-1"><span>✓</span> Verifying regional household quota</li>
+                    <li id="check-2"><span>✓</span> Confirming 1 entry per household rule</li>
+                    <li id="check-3"><span>✓</span> Securing $500.00 Direct Payout Spot</li>
+                </ul>
+            </div>
+
+            <!-- 最终结果区 -->
+            <div class="result-panel" id="result-panel" hidden>
+                <span class="result-header-pill">Spot Reserved ($0 Cost)</span>
+                <div class="result-title">You Qualify for $500.00!</div>
+                <div class="result-sub">Strictly Limited To One Entry Per Household</div>
+
+                <div class="result-amount-display">
+                    <div style="font-size:12px; font-weight:800; color:var(--muted); text-transform:uppercase;">Confirmed Award Amount</div>
+                    <div class="big-val">$500.00</div>
+                    <div style="font-size:12.5px; color:#15803d; font-weight:800;">Direct Deposit · Check by Mail · PayPal</div>
+                </div>
+                
+                <div class="urgency-box">
+                    <div class="timer-line">
+                        ⏰ Today's Spot Held For: <span class="countdown-digits" id="countdown">2:30</span>
+                    </div>
+                    <span class="step-line">
+                        Please confirm your valid email on the next page to register your official entry.
+                    </span>
+                </div>
+                
+                <a href="#" class="primary-button" id="final-cta">
+                    <span class="arrow-guide ag-left">➤</span>
+                    Continue
+                    <span class="arrow-guide ag-right">◀</span>
+                </a>
+
+                <div class="security-guarantee-box">
+                    <strong>🔒 Safe & Verified Consumer Allocation</strong>
+                    We will NEVER ask for your credit card number, banking password, or social security details to claim this prize.
+                </div>
+            </div>
+        </div>
+
+        <!-- 评论区 -->
+        <div class="comments-section" id="comments-section">
+            <div class="social-stats">
+                <div>👍 ❤️ 😯 <span id="like-count">31,248</span> Likes</div>
+                <div>6.4K Comments · 2.1K Shares</div>
+            </div>
+            <div class="social-actions">
+                <span id="like-btn" onclick="toggleLike()">👍 Like</span>
+                <span>💬 Comment</span>
+                <span>↗️ Share</span>
+            </div>
+            
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/men/68.jpg" class="avatar-img" alt="Harold">
+                <div>
+                    <div class="comment-content">
+                        <div class="name">Harold Jenkins (Retired)</div>
+                        <div>Is there any fee or postage required to receive the check? I am on a fixed income and cannot pay hidden costs.</div>
+                    </div>
+                    <div class="comment-meta">Like · Reply · 1 hr ago</div>
+                </div>
+            </div>
+            
+            <div class="comment reply official-reply">
+                <div class="avatar-img" style="background:#064e3b; color:#fff; display:grid; place-items:center; font-weight:bold; font-size: 14px;">📰</div>
+                <div>
+                    <div class="comment-content">
+                        <div class="name">Trend'n Daily Official <span class="verified-badge">✓</span></div>
+                        <div>Hi Harold! There are absolutely NO fees, no postage charges, and no credit card required. Everything is 100% covered by our corporate sponsors. Simply enter your email on the next step to confirm your spot.</div>
+                    </div>
+                    <div class="comment-meta">Like · Reply · 45 mins ago</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" class="avatar-img" alt="Barbara">
+                <div>
+                    <div class="comment-content">
+                        <div class="name">Barbara Ann Miller</div>
+                        <div>Got my notification confirmation email within 2 minutes after clicking continue. Covered our whole month's grocery prescription bill! A real blessing. 👵❤️💵</div>
+                        <img src="img/proof1.png" class="comment-photo" alt="Payment Confirmation Proof" onerror="this.style.display='none'">
+                    </div>
+                    <div class="comment-meta">Like · Reply · 25 mins ago</div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img src="https://randomuser.me/api/portraits/men/59.jpg" class="avatar-img" alt="Richard">
+                <div>
+                    <div class="comment-content">
+                        <div class="name">Richard Foster</div>
+                        <div>Very easy process on my iPad. Glad I took the 1 minute to complete the entry.</div>
+                    </div>
+                    <div class="comment-meta">Like · Reply · 12 mins ago</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部合规区域与法务条款链接 -->
+        <div class="card-footer">
+            <div class="legal-links">
+                <a onclick="openLegalModal('rules')">Official Rules</a>
+                <a onclick="openLegalModal('terms')">Terms & Conditions</a>
+                <a onclick="openLegalModal('privacy')">Privacy Policy</a>
+            </div>
+            <p>This independent consumer promotion is not affiliated with Facebook, Google, or governmental agencies. No purchase necessary. Void where prohibited.</p>
+            <p style="margin-top:4px;">&copy; 2026 Trend'n Daily Official. Limited To One Entry Per Household.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 动态 Toast 弹窗 -->
+<div id="toast" class="toast-notification">
+    <span style="font-size:17px;">💵</span>
+    <div class="toast-text" id="toast-message"></div>
+</div>
+
+<!-- 独立合规条款弹出层 Modal -->
+<div id="legal-modal-overlay" class="legal-modal-overlay" onclick="handleModalOverlayClick(event)">
+    <div class="legal-modal-box">
+        <div class="legal-modal-header">
+            <div class="legal-modal-title" id="modal-title">Terms & Conditions</div>
+            <button class="legal-modal-close" onclick="closeLegalModal()">&times;</button>
+        </div>
+        <div class="legal-modal-body" id="modal-body-content"></div>
+        <div class="legal-modal-footer">
+            <button class="modal-ok-btn" onclick="closeLegalModal()">Close</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 🌟 舒缓轻柔版钞票雨（不遮挡视线、慢速微风感） 🌟
+    (function initMoneyRain() {
+        const canvas = document.getElementById('money-rain-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        
+        let width = 0;
+        let height = 0;
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+        window.addEventListener('orientationchange', () => setTimeout(resize, 200));
+
+        const bills = [];
+        const billCount = 11; // 仅保留 11 枚粒子，极其干净通透
+
+        for (let i = 0; i < billCount; i++) {
+            bills.push({
+                x: Math.random() * width,
+                y: Math.random() * height - height,
+                w: Math.random() * 6 + 14,   // 缩小尺寸
+                h: Math.random() * 3 + 8,
+                speedY: Math.random() * 0.5 + 0.45, // 大幅减速，缓缓飘落
+                speedX: (Math.random() - 0.5) * 0.35,
+                angle: Math.random() * 360,
+                angleSpeed: (Math.random() - 0.5) * 0.8, // 减慢旋转频率
+                opacity: Math.random() * 0.25 + 0.35     // 半透明
+            });
+        }
+
+        function drawBills() {
+            ctx.clearRect(0, 0, width, height);
+
+            bills.forEach(b => {
+                ctx.save();
+                ctx.translate(b.x, b.y);
+                ctx.rotate(b.angle * Math.PI / 180);
+                ctx.globalAlpha = b.opacity;
+
+                // 钞票主体与内框
+                ctx.fillStyle = '#10b981';
+                ctx.fillRect(-b.w / 2, -b.h / 2, b.w, b.h);
+
+                ctx.strokeStyle = '#064e3b';
+                ctx.lineWidth = 0.8;
+                ctx.strokeRect(-b.w / 2 + 1, -b.h / 2 + 1, b.w - 2, b.h - 2);
+
+                ctx.restore();
+
+                b.y += b.speedY;
+                b.x += b.speedX;
+                b.angle += b.angleSpeed;
+
+                if (b.y > height + 20) {
+                    b.y = -20;
+                    b.x = Math.random() * width;
+                }
+            });
+
+            requestAnimationFrame(drawBills);
+        }
+        drawBills();
+    })();
+    // 跑马灯递减逻辑
+    (function initTickerCountdown() {
+        let currentSpots = 23;
+        const spotsEl = document.getElementById('ticker-spots-left');
+        const progressFill = document.getElementById('ticker-progress-fill');
+        const percentEl = document.getElementById('ticker-percent');
+
+        function dropSpot() {
+            if (currentSpots > 18) {
+                currentSpots--;
+                spotsEl.textContent = currentSpots;
+                const pct = Math.min(99, 98 + (23 - currentSpots) * 0.2);
+                progressFill.style.width = pct + '%';
+                percentEl.textContent = Math.floor(pct) + '% Claimed';
+            }
+            setTimeout(dropSpot, Math.floor(Math.random() * 4000) + 5000);
+        }
+        setTimeout(dropSpot, 4000);
+    })();
+
+    // 题库配置
+    const quizData = [
+        {
+            text: "Which age group do you belong to?", 
+            help: "Allocations currently open to all eligible US households (18+).",
+            options: [
+                { icon: "🧑", text: "18 – 34 (Young Adult & Starter Relief)" },
+                { icon: "👨", text: "35 – 49 (Family & Working Household Relief)" },
+                { icon: "👴", text: "50 or Older (Mature Household & Senior Relief)" }
+            ]
+        },
+        {
+            text: "What would you use your $500 relief cash for first?", 
+            help: "Select your primary household living expense.",
+            options: [
+                { icon: "🛒", text: "Weekly Groceries & Supermarket Bill" },
+                { icon: "⚡", text: "Electricity, Utilities & Monthly Bills" },
+                { icon: "💊", text: "Prescriptions, Healthcare & Emergency Cash" }
+            ]
+        },
+        {
+            text: "Ready to confirm your $500 spot on the official registration page?", 
+            help: "100% Free · No credit card required.",
+            options: [
+                { icon: "👉", text: "Yes, Continue to Free Email Confirmation" },
+                { icon: "✅", text: "Yes, Lock In My Spot Before Quota Closes" }
+            ]
+        }
+    ];
+
+    let currentStep = 0;
+    let remainingStock = 7;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setDynamicDate();
+        setDefensiveLocationText();
+        renderQuestion();
+        setupOutboundLink();
+        startToastSystem();
+    });
+
+    function setDynamicDate() {
+        const options = { month: 'long', day: 'numeric' };
+        document.getElementById('dynamic-date-header').textContent = "Today, " + new Date().toLocaleDateString('en-US', options);
+    }
+
+    function setDefensiveLocationText() {
+        const params = new URLSearchParams(window.location.search);
+        let st = params.get('state'); 
+
+        if (!st || st.includes('{') || st.includes('}') || st.includes('[') || st.includes(']') || st.toLowerCase() === 'null' || st.trim() === '') {
+            document.getElementById('geo-location-text').textContent = "in Your Area";
+            return;
+        }
+
+        st = st.replace(/\b\w/g, c => c.toUpperCase());
+        document.getElementById('geo-location-text').textContent = `for ${st}`;
+    }
+
+    function decreaseStock(newCount) {
+        if (newCount < remainingStock) {
+            remainingStock = newCount;
+            const el = document.getElementById('stock-count');
+            el.classList.add('changed');
+            setTimeout(() => {
+                el.textContent = remainingStock;
+                el.classList.remove('changed');
+            }, 300);
+        }
+    }
+
+    function renderQuestion() {
+        const q = quizData[currentStep];
+        const panel = document.getElementById('quiz-panel');
+        
+        panel.classList.remove('slide-in');
+        void panel.offsetWidth; 
+        panel.classList.add('slide-in');
+
+        document.getElementById('q-text').textContent = q.text;
+        document.getElementById('q-help').textContent = q.help;
+        
+        const grid = document.getElementById('answer-grid');
+        grid.innerHTML = '';
+        
+        q.options.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'capsule-btn';
+            btn.innerHTML = `
+                <div class="capsule-left">
+                    <div class="capsule-icon-circle">${opt.icon}</div>
+                    <div class="capsule-title">${opt.text}</div>
+                </div>
+                <div class="capsule-arrow-circle">➔</div>
+            `;
+            
+            btn.onclick = function() {
+                if(navigator.vibrate) navigator.vibrate(50);
+                
+                const allBtns = document.querySelectorAll('.capsule-btn');
+                allBtns.forEach(b => b.disabled = true);
+                this.classList.add('is-clicked');
+                
+                setTimeout(() => {
+                    handleAnswer();
+                }, 160);
+            };
+            grid.appendChild(btn);
+        });
+
+        document.getElementById(`step-${currentStep + 1}`).classList.add('is-active');
+    }
+
+    function handleAnswer() {
+        const currentStepEl = document.getElementById(`step-${currentStep + 1}`);
+        currentStepEl.classList.remove('is-active');
+        currentStepEl.classList.add('is-complete');
+        currentStepEl.innerHTML = "✓";
+
+        currentStep++;
+        
+        if (currentStep === 1) decreaseStock(6);
+        if (currentStep === 2) decreaseStock(5);
+
+        if (currentStep < quizData.length) {
+            renderQuestion();
+        } else {
+            startFakeVerification();
+        }
+    }
+
+    function startFakeVerification() {
+        document.getElementById('quiz-panel').hidden = true;
+        document.getElementById('verification-panel').hidden = false;
+        
+        const bar = document.getElementById('loading-bar');
+        
+        setTimeout(() => { bar.style.width = '35%'; document.getElementById('check-1').classList.add('is-checked'); }, 600);
+        setTimeout(() => { bar.style.width = '70%'; document.getElementById('check-2').classList.add('is-checked'); }, 1200);
+        setTimeout(() => { 
+            bar.style.width = '100%'; 
+            document.getElementById('check-3').classList.add('is-checked'); 
+            
+            setTimeout(() => {
+                showFinalResult();
+            }, 400);
+        }, 1800);
+    }
+
+    function showFinalResult() {
+        document.getElementById('hero-banner').style.display = 'none';
+        document.getElementById('verification-panel').hidden = true;
+        document.getElementById('result-panel').hidden = false;
+        document.getElementById('geo-alert').hidden = true; 
+        document.getElementById('progress-container').hidden = true;
+        
+        document.getElementById('sticky-timer-bar').style.display = 'block';
+        
+        if(navigator.vibrate) navigator.vibrate(200);
+        
+        startTimestampTimer(150);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function startTimestampTimer(seconds) {
+        const targetTime = Date.now() + seconds * 1000;
+        const display = document.getElementById('countdown');
+        const topDisplay = document.getElementById('top-countdown');
+        
+        const interval = setInterval(() => {
+            const remaining = Math.max(0, Math.floor((targetTime - Date.now()) / 1000));
+            let m = Math.floor(remaining / 60);
+            let s = remaining % 60;
+            const timeFormatted = `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+            
+            display.textContent = `${m}:${s < 10 ? '0' : ''}${s}`;
+            topDisplay.textContent = timeFormatted;
+            
+            if (remaining <= 0) {
+                clearInterval(interval);
+            }
+        }, 1000);
+    }
+
+    function setupOutboundLink() {
+        const cta = document.getElementById('final-cta');
+        const searchParams = window.location.search;
+        cta.href = "https://www.2timetowin.xyz/click" + searchParams;
+    }
+
+    let isLiked = false;
+    function toggleLike() {
+        const btn = document.getElementById('like-btn');
+        const count = document.getElementById('like-count');
+        if(!isLiked) {
+            btn.classList.add('action-liked');
+            btn.textContent = '👍 Liked';
+            count.textContent = '31,249';
+            isLiked = true;
+            if(navigator.vibrate) navigator.vibrate(40);
+        } else {
+            btn.classList.remove('action-liked');
+            btn.textContent = '👍 Like';
+            count.textContent = '31,248';
+            isLiked = false;
+        }
+    }
+
+    const boomerNames = ["Margaret", "Robert", "Patricia", "James", "Linda", "William", "Barbara", "Richard", "Susan", "Thomas"];
+    const fallbackStates = ["Florida", "Texas", "Ohio", "Pennsylvania", "Michigan", "North Carolina", "Georgia", "Arizona"];
+    
+    function getSafeLocationForToast() {
+        const params = new URLSearchParams(window.location.search);
+        let st = params.get('state'); 
+        if (!st || st.includes('{') || st.includes('}') || st.includes('[') || st.includes(']') || st.toLowerCase() === 'null' || st.trim() === '') {
+            return fallbackStates[Math.floor(Math.random() * fallbackStates.length)];
+        }
+        return st.replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    function startToastSystem() {
+        const toast = document.getElementById('toast');
+        const msg = document.getElementById('toast-message');
+        
+        setInterval(() => {
+            const name = boomerNames[Math.floor(Math.random() * boomerNames.length)];
+            const loc = getSafeLocationForToast();
+            const sec = Math.floor(Math.random() * 40) + 5;
+            
+            msg.innerHTML = `<strong>${name} from ${loc}</strong> just confirmed their <span>$500.00 Spot</span>! <br><small>${sec} seconds ago</small>`;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3500);
+        }, 8500);
+    }
+
+    // 法律条款内容与交互逻辑
+    const legalTexts = {
+        rules: {
+            title: "Official Promotion Rules",
+            content: `
+                <h4>1. Eligibility</h4>
+                <p>This promotional distribution is open exclusively to legal residents of the United States who are at least eighteen (18) years of age at the time of entry. Void where prohibited by law.</p>
+                <h4>2. No Purchase Necessary</h4>
+                <p>No purchase, payment, or credit card submission of any kind is necessary to enter or receive allocations. A purchase will not increase your chances of selection.</p>
+                <h4>3. Selection & Verification</h4>
+                <p>Allocation spots are limited to strictly one (1) per verified household. Participants must register a valid, deliverable email address on the subsequent sponsor confirmation page to qualify.</p>
+                <h4>4. Payout Methods</h4>
+                <p>Confirmed participants can select between direct electronic transfers (PayPal/Direct Deposit) or physical check distribution. Delivery times vary by provider.</p>
+            `
+        },
+        terms: {
+            title: "Terms & Conditions",
+            content: `
+                <h4>1. Acceptance of Terms</h4>
+                <p>By participating in this survey and proceeding through this website, you agree to comply with and be bound by all published terms, conditions, and sponsor requirements.</p>
+                <h4>2. Third-Party Redirection</h4>
+                <p>This pre-screening portal operates as an independent promotional connector. Upon completing preliminary questionnaire verification, users are directed to sponsored partner registration pages to finalize eligibility.</p>
+                <h4>3. Disclaimer of Warranties</h4>
+                <p>All materials and information are provided on an "as is" and "as available" basis without warranties of any kind, either expressed or implied.</p>
+            `
+        },
+        privacy: {
+            title: "Privacy Policy",
+            content: `
+                <h4>1. Information Collection</h4>
+                <p>We respect your privacy. This pre-screening survey collects anonymous general demographic answers (such as age group and expense categories) to customize regional routing.</p>
+                <h4>2. Personal Data Protection</h4>
+                <p>We do not collect or store your Social Security number, banking passwords, or credit card details on this website. Any contact information provided subsequently on partner websites is governed by their respective privacy statements.</p>
+                <h4>3. Cookies & Pixel Tracking</h4>
+                <p>We use standard first-party measurement cookies and analytics pixels solely for performance verification and traffic optimization.</p>
+            `
+        }
+    };
+
+    function openLegalModal(type) {
+        const modal = document.getElementById('legal-modal-overlay');
+        const titleEl = document.getElementById('modal-title');
+        const contentEl = document.getElementById('modal-body-content');
+        
+        if (legalTexts[type]) {
+            titleEl.textContent = legalTexts[type].title;
+            contentEl.innerHTML = legalTexts[type].content;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeLegalModal() {
+        const modal = document.getElementById('legal-modal-overlay');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function handleModalOverlayClick(e) {
+        if (e.target.id === 'legal-modal-overlay') {
+            closeLegalModal();
+        }
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLegalModal();
+    });
+</script>
+</body>
+</html>
