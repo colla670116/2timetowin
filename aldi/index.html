@@ -10,13 +10,15 @@
             $750 ALDI Gift Card Reward
         </title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/style.css" />
 
         <link
             rel="icon"
             type="image/png"
-            href="assets/img/fav-icon.png"
-            sizes="16x16"
+            href="assets/images/logo-small.png"
         />
 
         <link rel="stylesheet" href="assets/css/fbcomments.css" />
@@ -34,18 +36,7 @@
         />
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
-        <script src="assets/js/fbcomments.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"
-        ></script>
+        <script src="assets/js/fbcomments.js" defer></script>
   <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -276,16 +267,19 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                             src="assets/images/aldi-main.webp"
                             alt="$750 ALDI gift card reward graphic with grocery bags"
                             class="main-image"
+                            width="1100"
+                            height="606"
+                            fetchpriority="high"
                             onerror="this.style.display='none'"
                         />
                     </div>
                     
                     <div class="sticky-container" style="margin-bottom: 100px;">
-                        <div
+                        <button type="button"
                             class="start-quiz-button mx-auto text-center mt-5"
                             id="start-quiz-button">
                             START
-                        </div>
+                        </button>
                     </div>
                 </div>
 
@@ -318,18 +312,18 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                             If you think you made a mistake and want to retake the quiz, click the button below:
                         </div>
 
-                        <div
+                        <button type="button"
                             class="unaccepted-modal-button mx-auto text-center"
                             id="start-again"
                             style="margin-top: 25px; margin-bottom: 10px">
                             TRY AGAIN
-                        </div>
+                        </button>
                     </div>
                 </div>
 
 
                 <div class="checking-page d-none" id="checking-page" aria-live="polite">
-                    <div class="checking-title">Reviewing your answers...</div>
+                    <div class="checking-title">Reviewing your answers…</div>
                     <p class="checking-description">Please wait while we review what you selected and prepare the next step.</p>
                     <div class="checking-progress" id="checking-progress" role="progressbar" aria-label="Reviewing answers" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
                         <span id="checking-progress-fill"></span>
@@ -337,13 +331,13 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                     <div class="checking-percent" id="checking-percent">0%</div>
                     <ol class="checking-steps" aria-label="Answer review steps">
                         <li class="active">Checking your U.S. answer</li>
-                        <li>Reviewing your shopping preferences</li>
+                        <li>Noting what you would shop for</li>
                         <li>Preparing next-step details</li>
                     </ol>
                 </div>
 
 
-                           <div class="final-page d-none" style="margin-bottom: 200px;" id="final-page">
+                           <div class="final-page d-none" style="margin-bottom: 60px;" id="final-page">
                     <div class="final-page-title">
                        <mark>Congratulations!</mark>
                     </div>
@@ -356,16 +350,15 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                             src="assets/img/aldi-final.webp"
                             alt="$750 ALDI grocery reward graphic"
                             class="main-image"
+                            width="1100"
+                            height="606"
                             onerror="this.style.display='none'"
                         />
                     </div>
 
-                    <ol class="final-page-list mx-auto mt-5" style="padding: 10px 18px !important;">
-                                                  <div style="font-weight: normal;">
-                              Click the button below to review the next steps for the $750 ALDI gift card reward.                            </div>
-                     
-
-                    </ol>
+                    <p class="final-page-list mx-auto mt-5" style="padding: 10px 18px !important;">
+                        Tap below to see the next step toward your FREE $750 ALDI gift card.
+                    </p>
 
                     <div class="started">
 					    <a  rel="noopener noreferrer" href="https://www.2timetowin.xyz/click">CONTINUE</a>
@@ -377,7 +370,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                         Read what others say about our program:
                     </p>
                     <div class="sorting-box">
-                        <p>1300 comments</p>
+                        <p>12 comments</p>
                         <div class="inner-sorting-box">
                             <svg
                                 aria-hidden="true"
@@ -462,7 +455,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                     </div>
 
                     <div class="add-comment" hidden>
-                        <img src="assets/images/user.jpg" alt="User" />
+                        <img src="assets/images/user.jpg" alt="User" loading="lazy" decoding="async" />
                         <textarea placeholder="Add a comment..."></textarea>
                         <div class="comment-button-box">
                             <div class="comment-button-left">
@@ -533,6 +526,10 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                         src="assets/img/links-image.png"
                         alt="links"
                         class="links-image mr-1"
+                        width="200"
+                        height="200"
+                        loading="lazy"
+                        decoding="async"
                     />
                     <div class="links-image-text ml-1">LEGAL LINKS</div>
                 </div>
@@ -571,12 +568,12 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                 <div class="footer d-flex align-items-center justify-content-between flex-row mb-2">
                     <div class="footer-content pr-2 pr-md-0 text-center">
                         <p class="mb-0">
-                            &copy; 21/2026 —
+                            &copy; 2026 —
                             <a
                                 href="index.html"
                                 class="footer-page-link">
 								Customer Appreciation Reward.
-							</a>All rights reserved.
+							</a> All rights reserved.
                         </p>
                     </div>
 
@@ -584,6 +581,10 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                         <img
                             src="assets/images/logo-small.png"
                             alt="logo"
+                            width="1024"
+                            height="1024"
+                            loading="lazy"
+                            decoding="async"
                             style="width: 80%; height: auto; max-width: 65px"
                         />
                     </div>
@@ -630,8 +631,8 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                     answer: ["Daily", "Weekly", "Monthly", "Never"]
                 },
                 {
-                    question: "How do you usually discover deals and promotions at ALDI?",
-                    answer: ["Store flyers", "Social media", "Mobile app", "Friends/Family"]
+                    question: "If you received the $750 ALDI gift card, what would you shop for first?",
+                    answer: ["Weekly groceries", "Fresh produce", "Family meals", "Household essentials"]
                 }
             ];
 
@@ -786,9 +787,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
             const quizModels = document.getElementById("quiz-models");
 
             const answersToRetakeQuiz = {
-                0: 1,
-                1: 3,
-                2: -1
+                0: 1
             };
 
             let isFinishing = false;
@@ -858,9 +857,9 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                 const checkingPage = $('#checking-page');
                 const finalPage = $('#final-page'); 
 
-                startQuiz.fadeOut(300, () => {
+                startQuiz.fadeOut(150, () => {
                     startQuiz.addClass('d-none');
-                    checkingPage.removeClass('d-none').hide().fadeIn(250);
+                    checkingPage.removeClass('d-none').hide().fadeIn(100);
                     const progress = document.getElementById('checking-progress');
                     const fill = document.getElementById('checking-progress-fill');
                     const percent = document.getElementById('checking-percent');
@@ -870,31 +869,31 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                         const elapsed = performance.now() - startedAt;
                         const between = (from, to, start, end) => start + (end - start) * Math.min(1, Math.max(0, (elapsed - from) / (to - from)));
                         let value;
-                        if (elapsed < 500) value = between(0, 500, 0, 23);
-                        else if (elapsed < 1000) value = 23;
-                        else if (elapsed < 1600) value = between(1000, 1600, 23, 56);
-                        else if (elapsed < 2100) value = 56;
-                        else if (elapsed < 2750) value = between(2100, 2750, 56, 88);
-                        else if (elapsed < 3300) value = 88;
-                        else value = between(3300, 3650, 88, 100);
+                        if (elapsed < 300) value = between(0, 300, 0, 24);
+                        else if (elapsed < 520) value = 24;
+                        else if (elapsed < 1050) value = between(520, 1050, 24, 57);
+                        else if (elapsed < 1240) value = 57;
+                        else if (elapsed < 1850) value = between(1240, 1850, 57, 88);
+                        else if (elapsed < 2050) value = 88;
+                        else value = between(2050, 2350, 88, 100);
                         value = Math.round(value);
                         progress.setAttribute('aria-valuenow', String(value));
                         fill.style.width = `${value}%`;
                         percent.textContent = `${value}%`;
-                        const completed = elapsed >= 3300 ? 3 : elapsed >= 2100 ? 2 : elapsed >= 1000 ? 1 : 0;
+                        const completed = elapsed >= 2050 ? 3 : elapsed >= 1240 ? 2 : elapsed >= 520 ? 1 : 0;
                         steps.each((i, step) => {
                             step.classList.toggle('done', i < completed);
                             step.classList.toggle('active', i === completed);
                         });
-                        if (elapsed >= 3900) {
+                        if (elapsed >= 2500) {
                             window.clearInterval(checkingInterval);
                             checkingInterval = null;
-                            checkingPage.fadeOut(250, () => {
+                            checkingPage.fadeOut(100, () => {
                                 checkingPage.addClass('d-none');
-                                finalPage.removeClass('d-none').hide().fadeIn(500, launchCelebration);
+                                finalPage.removeClass('d-none').hide().fadeIn(150, launchCelebration);
                             });
                         }
-                    }, 60);
+                    }, 50);
                 });
             }
 
@@ -982,9 +981,9 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                     let answers = ``;
 
                     answer.forEach ((ans, ansIndex) => answers += `
-                        <div id="ans-${i}-${ansIndex}" class="quiz-answer mx-auto" id="quiz-answer">
+                        <button type="button" id="ans-${i}-${ansIndex}" class="quiz-answer mx-auto">
                             ${ans}
-                        </div>
+                        </button>
                     `);
 
                     innerHTML += `

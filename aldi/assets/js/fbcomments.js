@@ -173,7 +173,7 @@ const comments = [
 const obj_comment = `
 <div class="comment sort-coms start-coms" data-order="{{ORDER}}" data-likes="{{LIKES}}">
 	<a class="comment-user-img"
-		target="_self"><img src="{{AVATAR}}" width="48" height="48" alt="{{USERNAME}}" /></a>
+		target="_self"><img src="{{AVATAR}}" width="48" height="48" loading="lazy" decoding="async" alt="{{USERNAME}}" /></a>
 	<a target="_blank" style="color: #2f6aec; cursor: default;"
 		class="comment-user-name"><span> {{USERNAME}} </span></a>
 	<p class="comment-text">{{COMMENT_TEXT}}</p>
@@ -191,7 +191,7 @@ const obj_comment = `
 const obj_sub_comment = `
 <div class="comment">
 	<a class="comment-user-img"
-		target="_self"><img src="{{AVATAR}}" width="48" height="48" alt="{{USERNAME}}" /></a>
+		target="_self"><img src="{{AVATAR}}" width="48" height="48" loading="lazy" decoding="async" alt="{{USERNAME}}" /></a>
 	<a target="_blank" style="color: #2f6aec; cursor: default;"
 		class="comment-user-name"><span> {{USERNAME}} </span></a>
 	<p class="comment-text">{{COMMENT_TEXT}}</p>
@@ -206,6 +206,11 @@ const obj_sub_comment = `
 
 const renderComments = () => {
 	let html = ``;
+	const proofImageHeights = {
+		'test1.jpg': 133, 'test2.jpg': 286, 'test3.jpg': 150,
+		'test4.jpg': 150, 'test5.jpg': 150, 'test6.jpg': 155,
+		'test7.jpg': 158
+	};
 
 	for (var comment of comments) {
 		let sub_comments = ``;
@@ -220,8 +225,9 @@ const renderComments = () => {
 				.replace (new RegExp ('{{TIMEAGO}}', 'g'), scomment.age);
 		};
 
+		const imageName = comment.image?.split('/').pop();
 		let img_html = comment.image
-			? `<img class="fb-img" src="${comment.image}" width="210" alt="${comment.name}"/>`
+			? `<img class="fb-img" src="${comment.image}" width="210" height="${proofImageHeights[imageName] || 158}" loading="lazy" decoding="async" alt="${comment.name}"/>`
 			: ``;
 
 		html += obj_comment
@@ -260,20 +266,32 @@ jQuery.fn.orderBy = function (keySelector, order) {
 };
 
 $(document).ready(function() {
-	const html_comms = renderComments ();
+	let commentsMounted = false;
+	const mountComments = () => {
+		if (commentsMounted) return;
+		commentsMounted = true;
+		$(".main-comments").html(renderComments());
+		$(".sorting-box > p").text(`${comments.length} comments`);
+		const remainingComments = Math.max(0, comments.length - visible);
+		if (remainingComments > 0) {
+			$(".load-more span").text(`Load ${Math.min(5, remainingComments)} more comments`);
+		} else {
+			$(".load-more").hide();
+		}
+		setTimeout(() => $(".start-coms").removeClass("start-coms"), 250);
+	};
 
-	$(".main-comments").html (html_comms);
-	const remainingComments = Math.max(0, comments.length - visible);
-	if (remainingComments > 0) {
-		$(".load-more span").text(`Load ${Math.min(5, remainingComments)} more comments`);
+	const commentsSection = document.querySelector(".comments");
+	if (commentsSection && "IntersectionObserver" in window) {
+		const observer = new IntersectionObserver((entries) => {
+			if (!entries.some(entry => entry.isIntersecting)) return;
+			mountComments();
+			observer.disconnect();
+		}, { rootMargin: "80px 0px" });
+		observer.observe(commentsSection);
 	} else {
-		$(".load-more").hide();
+		mountComments();
 	}
-
-	setTimeout(function() {
-		$(".sorting-box > p").html("1200 comments");
-		$(".start-coms").removeClass("start-coms");
-	}, 250);
 
 	$(document).on('click', 'textarea', function() {
 		$(".add-comment").addClass("active");
@@ -344,7 +362,7 @@ $(document).ready(function() {
 		alert("Comments are disabled by the author.")
 	});
 
-	$(".comment-meta button").on('click', function() {
+	$(document).on('click', '.comment-meta button', function() {
 		alert("Action prohibited. You are not authenticated.");
 	});
 });
