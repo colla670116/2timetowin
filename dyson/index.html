@@ -627,7 +627,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
                         Click <strong>"Continue"</strong> below and enter your active <strong>Email Address</strong> on the official Getn' Goods page before your reservation timer expires (<strong id="inline-timer" style="color:#b91c1c;">02:30</strong>).
                     </div>
 
-                    <a href="#" class="cta-continue-btn" id="final-cta">
+                    <a href="https://www.2timetowin.xyz/click" class="cta-continue-btn" id="final-cta">
                         Continue →
                     </a>
 
@@ -877,7 +877,6 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
             }
 
             renderCurrentQuestion();
-            bindOutboundUrl();
         });
 
         function renderCurrentQuestion() {
@@ -1009,10 +1008,9 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
             }, 1000);
         }
 
-        function bindOutboundUrl() {
-            const cta = document.getElementById('final-cta');
-            cta.href = "https://www.2timetowin.xyz/click" + window.location.search;
-        }
+        // Keep the click URL in the HTML so MaxConv can discover it and generate
+        // the visitor-specific offer link. Do not overwrite that link on DOM ready:
+        // the async tracking script may already have replaced it in Direct mode.
 
         // 评论点赞与加载更多
         let fbLiked = false;
