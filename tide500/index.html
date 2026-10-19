@@ -1446,13 +1446,6 @@ window.TIDE_REWARD_CONFIG = {
       if (title) title.focus({ preventScroll: true });
     }, 80);
   }
-
-  function claim() {
-    track("Lead", { content_name: "Tide $500 Reward" });
-    // No preventDefault: normal anchor navigation is most reliable in in-app browsers.
-  }
-
-  /* ---------- sticky CTA ---------- */
   function updateSticky() {
     if (!sticky) return;
     var nearBottom = window.scrollY + window.innerHeight > document.documentElement.scrollHeight - 170;
