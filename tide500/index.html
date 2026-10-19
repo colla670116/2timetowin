@@ -1224,6 +1224,9 @@ window.TIDE_REWARD_CONFIG = {
   }
 
   function updateHold() {
+    // 计时尚未启动时（例如页面被浏览器预渲染/预取，或初始化顺序异常）
+    // 绝不把界面渲染成 "00:00 / Hold expired"，保持 HTML 里的初始文案。
+    if (!state.holdEndsAt) return;
     var left = Math.max(0, Math.ceil((state.holdEndsAt - Date.now()) / 1000));
     var bar = $("#holdBar");
     var label = $("#holdLabel");
@@ -1254,6 +1257,9 @@ window.TIDE_REWARD_CONFIG = {
 
   /* ---------- view switching ---------- */
   function showView(name) {
+    // 兜底：若初始化阶段计时器没能启动（脚本中途报错、被构建/缓存替换等），
+    // 那么第一次进入任意视图时就地补启动，避免 "03:00 静态停着 → 一点击就跳 00:00"。
+    if (!state.holdEndsAt) startHold();
     Object.keys(views).forEach(function (key) {
       if (views[key]) views[key].hidden = key !== name;
     });
@@ -1446,6 +1452,15 @@ window.TIDE_REWARD_CONFIG = {
       if (title) title.focus({ preventScroll: true });
     }, 80);
   }
+
+  function claim() {
+    // 转化发生在 offer 页，Lead 由 MaxConv 的 conversion 回传(CAPI)上报。
+    // 这里不再发送标准 Lead，避免与 CAPI 重复计数（Meta 侧会算成两倍）。
+    // 若要观察落地页 CTR，请在 MaxConv 里看，不要用 fbq 的 Lead。
+    // No preventDefault: normal anchor navigation is most reliable in in-app browsers.
+  }
+
+  /* ---------- sticky CTA ---------- */
   function updateSticky() {
     if (!sticky) return;
     var nearBottom = window.scrollY + window.innerHeight > document.documentElement.scrollHeight - 170;
@@ -1534,7 +1549,22 @@ window.TIDE_REWARD_CONFIG = {
   /* ---------- init ---------- */
   var claimLink = $("#claimBtn");
   if (claimLink) claimLink.href = buildOfferUrl();
-  startHold();
+
+  // 计时器启动：若页面是被浏览器/内置浏览器预渲染或预取(prefetch/prerender)，
+  // 等它真正展示时才开始倒数；从 bfcache 返回时也重新起算。
+  // 这样不会出现"人刚进来，3 分钟已经走完"的 00:00。
+  function armHold() {
+    if (document.prerendering) {
+      document.addEventListener("prerenderingchange", function () { startHold(); }, { once: true });
+      return;
+    }
+    startHold();
+  }
+  armHold();
+  window.addEventListener("pageshow", function (e) {
+    if (e.persisted) startHold();
+  });
+
   updateSticky();
 
   if (window.location.hash === "#reviews") {
