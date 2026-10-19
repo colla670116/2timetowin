@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>$500 Tide Reward | 2026 Customer Appreciation</title>
+<meta name="description" content="Answer 3 quick questions about your laundry routine to see if you qualify for a $500 Tide Reward. Free to check, about 30 seconds. U.S. residents 18+.">
+<meta property="og:title" content="See If You Qualify for a $500 Tide Reward">
+<meta property="og:description" content="Answer 3 quick questions about your laundry routine. Free to check, about 30 seconds. U.S. residents 18+.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A2A5E">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="assets/tide-logo.webp" type="image/webp">
+<link rel="preload" as="image" href="assets/tide-family-flat.webp" fetchpriority="high">
+<style>
+/* ============================================================
+   $500 Tide Reward — editorial mobile prelander
+   One HTML file + local WebP images. No external fonts or CSS.
+   Meta Pixel + MaxConv base code are in <head>.
+   ============================================================ */
+
+:root{
+  --navy:#0A2A5E;
+  --blue:#104CA0;
+  --red:#D9431D;
+  --red-dark:#B83210;
+  --cta:#CF3B16;
+  --yellow:#FFF301;
+  --cream:#FFF9EE;
+  --cream-2:#FFF2DC;
+  --paper:#F4EEE2;
+  --white:#FFFFFF;
+  --ink:#14213B;
+  --body:#3F4B61;
+  --muted:#5F6B7F;
+  --line:#E6DCCB;
+  --line-soft:#EFE7DA;
+  --green:#0E7C5A;
+  --green-soft:#E9F7F1;
+  --display:Georgia, "Times New Roman", serif;
+  --font:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --shadow:0 12px 34px rgba(10,42,94,.10), 0 2px 6px rgba(10,42,94,.05);
+  --shadow-soft:0 6px 18px rgba(10,42,94,.06);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;padding-top:40px;
+  color:var(--ink);font-family:var(--font);font-size:16.5px;line-height:1.6;
+  background:var(--paper);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+body.is-locked{overflow:hidden}
+img,svg{display:block;max-width:100%}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+p,h1,h2,h3,ol,ul,figure{margin:0}
+ol,ul{padding:0;list-style:none}
+[hidden]{display:none !important}
+::selection{background:#FFE7B0;color:var(--navy)}
+.skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--navy);color:#fff;padding:12px 16px;border-radius:0 0 8px 0}
+.skip:focus{left:0}
+
+/* ---------- fixed hold bar ---------- */
+.holdbar{
+  position:fixed;left:0;right:0;top:0;z-index:90;height:40px;
+  background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.12);
+  box-shadow:0 2px 10px rgba(6,26,58,.18);
+}
+.holdbar-inner{
+  max-width:560px;height:100%;margin:0 auto;padding:0 16px;
+  display:flex;align-items:center;gap:8px;min-width:0;
+}
+.hold-label{
+  display:inline-flex;align-items:center;gap:5px;flex:0 0 auto;
+  font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#D8E4F4;
+}
+.hold-label svg{width:13px;height:13px;color:var(--yellow)}
+.hold-time{
+  font-size:16px;line-height:1;font-weight:900;color:var(--yellow);
+  letter-spacing:.02em;font-variant-numeric:tabular-nums;flex:0 0 auto;
+}
+.hold-note{
+  font-size:10px;font-weight:600;color:#A8BFDD;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;min-width:0;
+}
+.hold-ad{
+  margin-left:auto;flex:0 0 auto;font-size:8.5px;font-weight:800;letter-spacing:.1em;
+  color:#A8BFDD;border:1px solid rgba(255,255,255,.24);border-radius:3px;padding:2px 4px;
+}
+.holdbar.is-expired{background:#3A4556;border-bottom-color:rgba(255,255,255,.08)}
+.holdbar.is-expired .hold-time{color:#DDE3EC;font-size:13px;letter-spacing:0}
+.holdbar.is-expired .hold-label{color:#DDE3EC}
+.holdbar.is-expired .hold-note{color:#C7D2E2}
+
+/* ---------- header ---------- */
+.site-header{background:var(--white);border-bottom:1px solid var(--line)}
+.header-inner{
+  max-width:560px;min-height:76px;margin:0 auto;padding:0 18px;
+  display:flex;align-items:center;gap:10px;
+}
+.brand{display:flex;align-items:center;gap:9px;min-width:0}
+.brand-logo{width:54px;height:54px;flex:0 0 auto;filter:drop-shadow(0 2px 3px rgba(10,42,94,.10))}
+.brand-copy{min-width:0;line-height:1.15}
+.brand-copy b{display:block;font-size:13px;font-weight:900;color:var(--navy);letter-spacing:-.01em;white-space:nowrap}
+.brand-copy span{display:block;margin-top:3px;font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.02em;white-space:nowrap}
+.header-badge{
+  margin-left:auto;flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;
+  border:1px solid #D8E3F1;background:#F7FAFE;border-radius:999px;padding:6px 8px;
+  font-size:10px;font-weight:900;letter-spacing:.02em;color:var(--navy);white-space:nowrap;
+}
+.header-badge svg{width:13px;height:13px;color:var(--green);flex:0 0 auto}
+.header-badge span b{font-weight:900}
+
+/* ---------- sheet ---------- */
+.sheet{max-width:560px;margin:0 auto;background:var(--white);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+
+/* ---------- hero ---------- */
+.hero{padding:22px 20px 0}
+.kicker{
+  display:block;font-size:10.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--red);margin-bottom:8px;
+}
+.hero h1{
+  font-family:var(--display);font-size:clamp(32px,8.6vw,43px);line-height:1.06;
+  letter-spacing:-.022em;font-weight:700;color:var(--navy);text-wrap:balance;
+}
+.hero h1 em{
+  font-style:normal;color:var(--red);
+  text-decoration:underline;text-decoration-color:var(--yellow);
+  text-decoration-thickness:.16em;text-underline-offset:.07em;
+  box-decoration-break:clone;-webkit-box-decoration-break:clone;
+}
+.nowrap{white-space:nowrap}
+.hero .lede{margin-top:12px;font-size:17px;line-height:1.58;color:var(--body);max-width:46ch}
+.hero .lede b{color:var(--navy);font-weight:800}
+
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  width:100%;min-height:62px;padding:14px 16px;border-radius:12px;
+  font-size:19.5px;line-height:1.15;font-weight:900;letter-spacing:-.01em;
+  text-align:center;text-decoration:none;touch-action:manipulation;
+  transition:transform .14s ease,box-shadow .14s ease,background .14s ease;
+}
+.btn svg{width:20px;height:20px;flex:0 0 auto}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.btn-primary{
+  background:var(--cta);color:#fff;
+  box-shadow:0 8px 20px rgba(184,50,16,.22),inset 0 1px 0 rgba(255,255,255,.18);
+}
+.btn-primary:hover{background:var(--red-dark)}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:0 8px 20px rgba(10,42,94,.18)}
+.btn-navy:hover{background:#071F47}
+.btn-ghost{background:var(--cream);color:var(--navy);border:1.5px solid var(--line);box-shadow:none}
+.btn-ghost:hover{background:#FFF2DC}
+.btn-hero{margin-top:20px}
+.cta-note{
+  display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 9px;
+  margin-top:9px;font-size:12px;line-height:1.35;font-weight:700;color:var(--muted);text-align:center;
+}
+.cta-note span{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}
+.cta-note svg{width:12px;height:12px;color:var(--green)}
+.cta-note span+span::before{content:"";display:inline-block;width:3px;height:3px;border-radius:50%;background:#B8C0CC;margin-right:5px}
+
+.hero-figure{
+  margin:20px -20px 0;background:var(--cream);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.hero-figure img{width:100%;height:auto;display:block}
+.assurance{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:5px;
+  padding:12px 0;border-bottom:1px solid var(--line);
+}
+.assurance span{
+  display:flex;align-items:center;justify-content:center;gap:4px;
+  font-size:10px;font-weight:800;letter-spacing:.02em;color:var(--muted);white-space:nowrap;
+}
+.assurance svg{width:13px;height:13px;color:var(--blue);flex:0 0 auto}
+
+/* ---------- rating line ---------- */
+.rating-line{
+  display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;
+  padding:11px 20px;border-bottom:1px solid var(--line);
+  font-size:12.5px;font-weight:700;color:var(--body);text-decoration:none;
+}
+.rating-line:hover{background:#FFFBEF}
+.rating-line:focus-visible{outline:3px solid var(--navy);outline-offset:-3px}
+.rating-line b{color:var(--navy);font-weight:900}
+.rating-line .verified{display:inline-flex;align-items:center;gap:3px;color:var(--green);font-size:9.5px;text-transform:uppercase;letter-spacing:.04em}
+.rating-line .verified svg{width:11px;height:11px}
+.stars{display:inline-flex;align-items:center;gap:1px;color:#F0A500;line-height:1}
+.stars svg{width:13px;height:13px;flex:0 0 auto}
+
+/* ---------- sections ---------- */
+.section{padding:26px 20px;border-bottom:1px solid var(--line)}
+.eyebrow{
+  display:block;font-size:10.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--red);margin-bottom:6px;
+}
+.section h2, .final-cta h2{
+  font-family:var(--display);font-size:27px;line-height:1.14;letter-spacing:-.02em;
+  font-weight:700;color:var(--navy);text-wrap:balance;
+}
+.section .sub{margin-top:8px;font-size:15px;line-height:1.55;color:var(--body)}
+.section .sub b{color:var(--navy);font-weight:800}
+
+/* steps */
+.steps{margin-top:7px}
+.step{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;padding:15px 0;border-top:1px solid var(--line-soft)}
+.step:first-child{border-top:0;padding-top:13px}
+.step-num{
+  display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;
+  background:var(--cream-2);border:1px solid #F2D8B7;color:var(--red);font-size:14px;font-weight:900;line-height:1;
+}
+.step h3{font-size:16px;line-height:1.3;font-weight:900;color:var(--navy);margin:2px 0 3px}
+.step p{font-size:14.5px;line-height:1.5;color:var(--muted)}
+.step-note{
+  display:flex;align-items:center;gap:6px;margin-top:2px;padding-top:12px;
+  border-top:1px dashed var(--line);font-size:12px;font-weight:700;color:var(--muted);
+}
+.step-note svg{width:13px;height:13px;color:var(--green);flex:0 0 auto}
+
+/* value band */
+.value-band{
+  position:relative;overflow:hidden;padding:30px 20px;background:var(--navy);color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.value-band::before{display:none}
+.value-band::after{
+  content:"";position:absolute;right:-160px;bottom:-190px;width:300px;height:300px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.09);
+}
+.value-band .eyebrow{color:var(--yellow);position:relative;z-index:1}
+.value-band h2{
+  font-family:var(--display);font-size:27px;line-height:1.14;letter-spacing:-.02em;font-weight:700;
+  color:#fff;position:relative;z-index:1;
+}
+.value-band .sub{color:#D2DFF1;position:relative;z-index:1;max-width:40ch}
+.band-list{position:relative;z-index:1;display:grid;gap:8px;margin-top:14px}
+.band-list li{display:flex;align-items:flex-start;gap:7px;font-size:14.5px;line-height:1.45;color:#EDF3FA;font-weight:600}
+.band-list svg{width:16px;height:16px;flex:0 0 auto;color:var(--yellow);margin-top:1px}
+.value-band .btn{position:relative;z-index:1;margin-top:18px;min-height:58px;font-size:18.5px}
+.band-note{position:relative;z-index:1;margin-top:8px;text-align:center;font-size:10.5px;font-weight:600;color:#AFC4DF}
+
+/* reviews */
+.reviews-head{display:block}
+#reviews{scroll-margin-top:56px}
+.review-score{
+  display:inline-flex;align-items:center;gap:6px;margin-top:9px;padding:5px 9px;
+  border:1px solid var(--line);border-radius:999px;background:#FFFBEF;
+}
+.review-score b{font-size:15px;line-height:1;font-weight:900;color:var(--navy)}
+.review-score small{font-size:9.5px;font-weight:700;color:var(--muted)}
+.review-score .stars svg{width:11px;height:11px}
+.comment{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:16px 0;border-top:1px solid var(--line-soft)}
+.comment:first-of-type{border-top:0;padding-top:14px}
+.avatar{
+  width:44px;height:44px;border-radius:50%;overflow:hidden;background:var(--cream-2);
+  border:1px solid var(--line);flex:0 0 auto;
+}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.c-head{display:flex;align-items:center;gap:5px;flex-wrap:wrap;min-width:0}
+.c-name{font-size:14px;line-height:1.2;font-weight:900;color:var(--navy)}
+.c-check{display:inline-flex;align-items:center;gap:2px;font-size:9px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:var(--green);background:var(--green-soft);border-radius:999px;padding:2px 5px}
+.c-check svg{width:9px;height:9px}
+.c-time{font-size:10.5px;color:var(--muted);font-weight:600}
+.c-text{margin-top:5px;font-size:15.5px;line-height:1.55;color:#334055}
+.c-text b{color:var(--navy)}
+.c-photo{
+  display:block;width:100%;height:auto;margin-top:9px;border-radius:10px;
+  border:1px solid var(--line);background:var(--cream);
+}
+.c-actions{display:flex;align-items:center;gap:12px;margin-top:7px;font-size:11px;font-weight:700;color:var(--muted)}
+.c-actions span{display:inline-flex;align-items:center;gap:3px}
+.c-actions svg{width:12px;height:12px}
+.comment.reply{
+  margin:0 0 0 22px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;
+  background:var(--cream);grid-template-columns:32px 1fr;gap:8px;
+}
+.comment.reply .avatar{width:32px;height:32px;border:0;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:900}
+.comment.reply .c-name{font-size:12.5px}
+.comment.reply .c-text{font-size:13px;line-height:1.5}
+
+/* FAQ */
+.faq-list{margin-top:5px}
+details{border-top:1px solid var(--line-soft)}
+details:first-child{border-top:0}
+summary{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:15px 1px;cursor:pointer;list-style:none;
+  font-size:15.5px;line-height:1.35;font-weight:800;color:var(--navy);
+}
+summary::-webkit-details-marker{display:none}
+summary:focus-visible{outline:3px solid var(--navy);outline-offset:2px;border-radius:5px}
+.plus{position:relative;width:19px;height:19px;flex:0 0 auto;border-radius:50%;background:var(--cream-2)}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;background:var(--red);border-radius:2px;transform:translate(-50%,-50%);transition:transform .2s ease,opacity .2s ease}
+.plus::before{width:9px;height:2px}
+.plus::after{width:2px;height:9px}
+details[open] .plus::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+.faq-a{padding:0 1px 15px;font-size:14.5px;line-height:1.6;color:var(--body);max-width:46ch}
+.faq-a b{color:var(--navy)}
+
+/* final CTA */
+.final-cta{
+  margin:24px 20px;padding:24px 18px;text-align:center;
+  background:var(--cream);border:1px solid var(--line);border-radius:14px;
+}
+.final-cta .eyebrow{margin-bottom:6px}
+.final-cta h2{font-size:26px}
+.final-cta p{margin-top:8px;font-size:14px;line-height:1.5;color:var(--muted)}
+.final-cta .btn{margin-top:16px;min-height:60px;font-size:18.5px}
+.final-note{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:8px;font-size:10.5px;font-weight:700;color:var(--muted)}
+.final-note svg{width:12px;height:12px;color:var(--green)}
+
+/* footer */
+.site-footer{background:var(--white);border-top:1px solid var(--line);padding:22px 20px 36px}
+.footer-inner{max-width:560px;margin:0 auto}
+.footer-brand{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.footer-brand img{width:30px;height:30px}
+.footer-brand b{font-size:13px;font-weight:900;color:var(--navy)}
+.footer-brand span{font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-left:1px solid var(--line);padding-left:7px}
+.disclaimer{font-size:11px;line-height:1.6;color:#667082}
+.disclaimer b{color:#4C586C}
+.footer-links{display:flex;flex-wrap:wrap;align-items:center;gap:5px 14px;margin:13px 0 10px}
+.linklike{padding:4px 0;font-size:11.5px;font-weight:800;color:var(--navy);text-decoration:underline;text-underline-offset:2px}
+.linklike:hover{color:var(--red)}
+.linklike:focus-visible{outline:3px solid var(--navy);outline-offset:2px;border-radius:3px}
+.copyright{font-size:10px;color:#667082}
+
+/* ---------- sticky bottom CTA ---------- */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  padding:8px 12px calc(8px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.98);border-top:1px solid var(--line);
+  box-shadow:0 -8px 26px rgba(10,42,94,.12);
+  transform:translateY(120%);visibility:hidden;
+  transition:transform .26s ease,visibility .26s ease;
+}
+.sticky-cta.is-visible{transform:translateY(0);visibility:visible}
+.sticky-inner{max-width:560px;margin:0 auto;display:flex;align-items:center;gap:8px}
+.sticky-copy{min-width:0;flex:1;line-height:1.12}
+.sticky-copy b{display:block;font-size:12px;font-weight:900;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky-copy span{display:block;margin-top:2px;font-size:9.5px;font-weight:700;color:var(--muted);white-space:nowrap}
+.btn-sticky{flex:0 0 auto;width:auto;min-width:154px;min-height:48px;padding:9px 13px;border-radius:10px;font-size:14.5px;gap:6px}
+.btn-sticky svg{width:16px;height:16px}
+.sticky-close{
+  flex:0 0 auto;width:34px;height:34px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#7D8797;background:#F2EEE6;font-size:20px;line-height:1;
+}
+.sticky-close:hover{background:#E9E3D8;color:var(--navy)}
+.sticky-close:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+
+/* ---------- flow ---------- */
+.flow-wrap{max-width:560px;margin:0 auto;padding:16px 14px 40px}
+.flow-card{
+  background:var(--white);border:1px solid var(--line);border-radius:14px;
+  padding:20px 18px 22px;box-shadow:var(--shadow);min-height:520px;
+  display:flex;flex-direction:column;animation:cardIn .2s ease both;
+}
+@keyframes cardIn{from{transform:translateY(6px)}to{transform:none}}
+.flow-top{display:flex;align-items:center;gap:8px}
+.back-btn{width:40px;height:40px;flex:0 0 auto;border-radius:10px;background:var(--cream);display:flex;align-items:center;justify-content:center;color:var(--navy)}
+.back-btn:hover{background:var(--cream-2)}
+.back-btn:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.back-btn svg{width:18px;height:18px}
+.flow-label{font-size:10.5px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
+.secure-chip{
+  display:inline-flex;align-items:center;gap:4px;margin-left:auto;flex:0 0 auto;
+  font-size:8.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--green);
+  background:var(--green-soft);border:1px solid #CBE8DD;border-radius:999px;padding:4px 7px;
+}
+.secure-chip svg{width:10px;height:10px}
+.segbar{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:14px}
+.segbar span{height:5px;border-radius:99px;background:#EEE7DB;transition:background .2s ease}
+.segbar span.on{background:var(--cta)}
+.segbar span.done{background:var(--green)}
+.quiz-body{display:flex;flex-direction:column;flex:1;padding-top:20px}
+.q-meta{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#quizStepLabel{font-size:10.5px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:var(--red)}
+.q-time{font-size:9.5px;font-weight:700;color:var(--muted);background:var(--cream);border-radius:999px;padding:3px 7px}
+.q-title{
+  font-family:var(--font);font-size:clamp(23px,6.6vw,28px);line-height:1.2;
+  letter-spacing:-.02em;font-weight:900;color:var(--navy);margin-top:12px;text-wrap:balance;
+}
+.q-title:focus{outline:none}
+.q-help{margin-top:7px;font-size:14px;line-height:1.5;color:var(--muted);max-width:40ch}
+.q-options{display:grid;gap:8px;margin-top:20px}
+.q-option{
+  display:flex;align-items:center;gap:10px;width:100%;min-height:58px;
+  padding:11px 13px;background:#fff;border:1.5px solid #DDE3EC;border-radius:10px;
+  font-size:16.5px;line-height:1.25;font-weight:800;color:var(--navy);text-align:left;
+  transition:border-color .14s ease,background .14s ease,transform .1s ease;
+  touch-action:manipulation;
+}
+.q-option:hover{border-color:#ED9A7F;background:#FFFAF5}
+.q-option:active{transform:scale(.996)}
+.q-option:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.q-option .radio{
+  width:20px;height:20px;flex:0 0 auto;border-radius:50%;border:2px solid #C9D2E0;
+  display:flex;align-items:center;justify-content:center;background:#fff;
+}
+.q-option .radio::after{content:"";width:8px;height:8px;border-radius:50%;background:transparent}
+.q-option .q-text{flex:1;min-width:0}
+.q-chev{flex:0 0 auto;color:#8B96A7}
+.q-chev svg{width:15px;height:15px}
+.q-option.selected{border-color:var(--cta);background:#FFF3EC}
+.q-option.selected .radio{border-color:var(--cta);background:var(--cta)}
+.q-option.selected .radio::after{background:#fff}
+.q-option.selected .q-chev{color:var(--cta)}
+.q-option.dim{opacity:.55}
+.quiz-foot{
+  display:flex;align-items:center;justify-content:center;gap:5px;
+  margin-top:auto;padding-top:20px;font-size:10.5px;line-height:1.4;font-weight:600;color:var(--muted);text-align:center;
+}
+.quiz-foot svg{width:12px;height:12px;flex:0 0 auto;color:var(--green)}
+
+/* loading */
+.loading-card{align-items:center;justify-content:center;text-align:center;padding-top:36px;padding-bottom:32px}
+.spinner{
+  width:54px;height:54px;border-radius:50%;
+  background:conic-gradient(var(--cta) 0 28%,#F1E7D8 28% 100%);
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 7px),#000 calc(100% - 6px));
+  mask:radial-gradient(farthest-side,transparent calc(100% - 7px),#000 calc(100% - 6px));
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-card h2{margin-top:17px;font-family:var(--display);font-size:23px;line-height:1.2;color:var(--navy)}
+.loading-card > p{margin-top:6px;font-size:13.5px;line-height:1.5;color:var(--muted);max-width:34ch}
+.load-progress{width:100%;height:8px;border-radius:99px;background:#F0E9DD;margin-top:22px;overflow:hidden}
+.load-progress span{display:block;height:100%;width:0;border-radius:99px;background:var(--cta);transition:width .45s ease}
+.load-percent{margin-top:5px;font-size:10.5px;font-weight:900;color:var(--red);font-variant-numeric:tabular-nums}
+.load-list{width:100%;margin-top:18px;display:grid;gap:8px;text-align:left}
+.load-list li{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:#6B7688;transition:color .2s ease}
+.load-list li.active{color:var(--navy)}
+.load-list li.done{color:var(--green)}
+.tick{width:18px;height:18px;flex:0 0 auto;border-radius:50%;background:#EFE9DE;display:flex;align-items:center;justify-content:center}
+.tick::before{content:"";width:6px;height:6px;border-radius:50%;background:#B4BCC8}
+.load-list li.active .tick{background:var(--cream-2)}
+.load-list li.active .tick::before{width:7px;height:7px;background:var(--red)}
+.load-list li.done .tick{background:var(--green)}
+.load-list li.done .tick::before{width:7px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;background:none;border-radius:0;transform:rotate(-45deg) translate(0,-1px)}
+
+/* exit */
+.exit-card{align-items:center;justify-content:center;text-align:center;padding:38px 22px 30px}
+.exit-icon{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--cream-2);color:var(--red);border:1px solid #F2D8B7}
+.exit-icon svg{width:26px;height:26px}
+.exit-card h1{font-family:var(--display);font-size:25px;line-height:1.2;font-weight:700;color:var(--navy);margin-top:15px;max-width:20ch;text-wrap:balance}
+.exit-card h1:focus{outline:none}
+.exit-card p{margin-top:8px;font-size:14px;line-height:1.55;color:var(--muted);max-width:34ch}
+.exit-card .btn{margin-top:17px}
+.exit-card .btn+.btn{margin-top:8px}
+
+/* result */
+.result-card{padding-top:22px}
+.result-hero{text-align:center}
+.success-mark{
+  position:relative;width:54px;height:54px;margin:0 auto;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;background:var(--green);color:#fff;
+  box-shadow:0 0 0 7px var(--green-soft);animation:pop .4s cubic-bezier(.2,.9,.3,1.25) both;
+}
+.success-mark svg{width:25px;height:25px}
+@keyframes pop{0%{transform:scale(.7);opacity:0}70%{transform:scale(1.05)}100%{transform:scale(1)}}
+.result-eyebrow{display:block;margin-top:13px;font-size:9.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.result-card h1{
+  font-family:var(--display);font-size:clamp(26px,7vw,32px);line-height:1.1;
+  letter-spacing:-.025em;font-weight:700;color:var(--navy);margin-top:6px;text-wrap:balance;
+}
+.result-card h1 em{font-style:normal;color:var(--red)}
+.result-card h1:focus{outline:none}
+.result-lede{margin-top:8px;font-size:14.5px;line-height:1.55;color:var(--body);max-width:38ch;margin-left:auto;margin-right:auto}
+.result-lede b{color:var(--navy);font-weight:900}
+.stockchip{
+  display:inline-flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:center;
+  margin-top:9px;padding:5px 9px;border-radius:999px;background:var(--cream);
+  border:1px solid var(--line);font-size:10.5px;font-weight:700;color:var(--muted);
+}
+.stockchip b{color:var(--navy);font-weight:900}
+.result-card-img{width:100%;max-width:340px;height:auto;margin:14px auto 0;filter:drop-shadow(0 12px 22px rgba(10,42,94,.20))}
+.claim-summary{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:left;
+  margin:13px 0 0;padding:11px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.claim-summary span{display:block;font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.claim-summary b{display:block;margin-top:3px;font-size:12.5px;line-height:1.3;font-weight:900;color:var(--navy)}
+.claim-summary b.green{color:var(--green)}
+.btn-claim{margin-top:13px;min-height:60px;font-size:19px}
+.claim-note{margin-top:7px;text-align:center;font-size:10.5px;line-height:1.45;font-weight:600;color:var(--muted)}
+.next-box{margin-top:15px;padding:13px;border-radius:10px;background:var(--cream);border:1px solid var(--line)}
+.next-box h2{font-size:10px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:var(--navy)}
+.next-box ol{margin-top:8px;display:grid;gap:7px}
+.next-box li{display:flex;align-items:flex-start;gap:6px;font-size:12.5px;line-height:1.45;font-weight:600;color:#435067}
+.next-box li svg{width:14px;height:14px;flex:0 0 auto;color:var(--green);margin-top:1px}
+.result-legal{margin-top:12px;text-align:center;font-size:10.5px;line-height:1.5;color:#667082}
+.result-links{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:2px;font-size:9.5px;color:#9AA2AE}
+.result-links button{padding:4px 0;font-size:9.5px;font-weight:700;color:#6D7787;text-decoration:underline;text-underline-offset:2px}
+.result-links button:hover{color:var(--navy)}
+.result-links button:focus-visible{outline:3px solid var(--navy);outline-offset:2px;border-radius:3px}
+.result-back{
+  display:flex;align-items:center;justify-content:center;gap:5px;width:100%;min-height:42px;
+  margin-top:1px;font-size:11px;font-weight:700;color:#6D7787;text-decoration:underline;text-underline-offset:2px;
+}
+.result-back:hover{color:var(--navy)}
+.result-back:focus-visible{outline:3px solid var(--navy);outline-offset:2px;border-radius:5px}
+.result-back svg{width:12px;height:12px}
+
+/* ---------- modal ---------- */
+.modal{position:fixed;inset:0;z-index:200;display:flex;align-items:flex-end;justify-content:center;padding:14px}
+.modal-backdrop{position:absolute;inset:0;background:rgba(4,18,38,.58)}
+.modal-panel{
+  position:relative;width:100%;max-width:460px;max-height:82vh;overflow:auto;
+  background:#fff;border-radius:16px;padding:22px 19px 24px;box-shadow:0 24px 70px rgba(0,0,0,.28);
+  animation:sheetUp .24s ease both;
+}
+@keyframes sheetUp{from{transform:translateY(20px);opacity:0}to{transform:none;opacity:1}}
+.modal-close{position:absolute;right:11px;top:11px;width:40px;height:40px;border-radius:50%;background:#F4F0E8;color:#5D697B;font-size:20px;display:flex;align-items:center;justify-content:center}
+.modal-close:hover{background:#EBE4D7;color:var(--navy)}
+.modal-close:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.modal-panel h2{font-family:var(--display);font-size:22px;font-weight:700;color:var(--navy);padding-right:40px}
+.legal-body{margin-top:11px;font-size:13px;line-height:1.6;color:var(--body)}
+.legal-body p{margin-top:8px}
+.legal-body b{color:var(--navy)}
+.legal-body .legal-updated{margin-top:14px;font-size:10px;color:#667082}
+
+/* ---------- responsive ---------- */
+@media (max-width:359px){
+  .holdbar-inner{padding:0 12px;gap:6px}
+  .hold-label{font-size:9.5px}
+  .hold-time{font-size:15px}
+  .hold-note{display:none}
+  .header-inner{padding:0 14px;gap:8px}
+  .brand-logo{width:48px;height:48px}
+  .brand-copy b{font-size:12px}
+  .brand-copy span{font-size:9.5px}
+  .header-badge{padding:5px 6px;font-size:9px}
+  .hero{padding:20px 16px 0}
+  .hero h1{font-size:31px}
+  .hero .lede{font-size:16px}
+  .hero-figure{margin-left:-16px;margin-right:-16px}
+  .assurance span{font-size:9px}
+  .assurance svg{width:11px;height:11px}
+  .cta-note{font-size:11.5px;gap:4px 8px}
+  .cta-note span+span::before{display:none}
+  .rating-line .verified{display:none}
+  .section{padding:23px 16px}
+  .value-band{padding:26px 16px}
+  .final-cta{margin:22px 16px}
+  .sticky-copy{display:none}
+  .btn-sticky{flex:1;min-width:0}
+  .flow-wrap{padding-left:10px;padding-right:10px}
+  .flow-card{padding:18px 15px 20px}
+  .q-option{font-size:16px;min-height:56px}
+  .result-card-img{max-width:280px}
+}
+@media (min-width:620px){
+  .hero{padding:28px 28px 0}
+  .section{padding:30px 28px}
+  .value-band{padding:34px 28px}
+  .hero-figure{margin-left:-28px;margin-right:-28px}
+  .final-cta{margin:28px 28px}
+  .flow-wrap{padding-top:22px}
+  .flow-card{padding:24px 24px 26px}
+}
+@media (min-width:760px){
+  body{background:
+    radial-gradient(900px 520px at 50% -160px, #FFF0D6 0%, rgba(255,240,214,0) 70%),
+    var(--paper);
+  }
+  .sheet{border:1px solid var(--line);box-shadow:0 20px 60px rgba(10,42,94,.08)}
+  .sticky-cta{display:none}
+  .site-footer{padding-bottom:48px}
+}
+@media (max-height:800px){
+  .result-card{padding-top:16px}
+  .success-mark{width:46px;height:46px;box-shadow:0 0 0 6px var(--green-soft)}
+  .success-mark svg{width:22px;height:22px}
+  .result-eyebrow{margin-top:10px}
+  .result-card h1{font-size:24px}
+  .result-lede{font-size:13.5px;line-height:1.45;margin-top:6px}
+  .result-card-img{max-width:240px;margin-top:10px}
+  .claim-summary{margin-top:10px;padding:8px 0}
+  .btn-claim{min-height:56px;margin-top:10px;font-size:18px}
+  .claim-note{font-size:10px;margin-top:5px}
+  .next-box{margin-top:11px;padding:11px}
+  .next-box li{font-size:12px}
+  .result-legal{margin-top:9px}
+}
+@media (max-height:700px){
+  .result-card-img{max-width:225px}
+}
+@media (max-height:660px){
+  .result-card{padding-top:12px}
+  .result-eyebrow{margin-top:8px}
+  .result-lede{font-size:12.8px;line-height:1.4}
+  .stockchip{font-size:9.5px;padding:4px 7px}
+  .result-card-img{max-width:180px}
+  .claim-summary{padding:6px 0}
+  .btn-claim{min-height:52px;font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+}
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1265921658956719');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- MaxConv Tracking Script Base Code -->
+<meta http-equiv="delegate-ch" content="sec-ch-ua https://www.2timetowin.xyz; sec-ch-ua-mobile https://www.2timetowin.xyz; sec-ch-ua-arch https://www.2timetowin.xyz; sec-ch-ua-model https://www.2timetowin.xyz; sec-ch-ua-platform https://www.2timetowin.xyz; sec-ch-ua-platform-version https://www.2timetowin.xyz; sec-ch-ua-bitness https://www.2timetowin.xyz; sec-ch-ua-full-version-list https://www.2timetowin.xyz; sec-ch-ua-full-version https://www.2timetowin.xyz" />
+<script>!function(w,d,o,n,c){w[o]=w[o]||function(){(w[o].q=w[o].q||[]).push(arguments)};var s=d.createElement(n),t=d.getElementsByTagName(n)[0];s.async=!0;s.defer=!0;s.src="https://www.2timetowin.xyz/t/t.js";t.parentNode.insertBefore(s,t);}(window,document,"maxconv","script");</script>
+<noscript><link rel="stylesheet" href="https://www.2timetowin.xyz/t/t.css?mc_ns=1" /></noscript>
+<!-- End MaxConv Tracking Script Base Code -->
+</head>
+<body id="top">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= FIXED HOLD BAR ================= -->
+<div class="holdbar" id="holdBar" role="status" aria-live="off">
+  <div class="holdbar-inner">
+    <span class="hold-label">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span id="holdLabel">Your $500 hold</span>
+    </span>
+    <span class="hold-time" id="holdTime">03:00</span>
+    <span class="hold-note" id="holdNote">Complete the check</span>
+    <span class="hold-ad">AD</span>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand" aria-label="Tide Reward Program">
+      <img class="brand-logo" src="assets/tide-logo.webp" width="54" height="54" alt="Tide">
+      <div class="brand-copy">
+        <b>Tide Reward Program</b>
+        <span>Independent promotion</span>
+      </div>
+    </div>
+    <div class="header-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-3 8.3-7 10-4-1.7-7-5.6-7-10V6l7-3z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>U.S. <b>18+</b></span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================================================
+     LANDING
+     ============================================================ -->
+<div id="landingView">
+
+  <div class="sheet">
+
+    <!-- hero -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <span class="kicker">2026 Tide Customer Appreciation</span>
+      <h1 id="heroTitle">See if you qualify for a <em>$500 Tide Reward</em>.</h1>
+      <p class="lede">Answer 3 quick questions about your laundry routine. If you qualify, you could claim a <b>$500 reward card</b> for Tide detergent and everyday essentials.</p>
+      <button type="button" class="btn btn-primary btn-hero" data-start>
+        <span>Check My Eligibility</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="cta-note">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> About 30 seconds</span>
+        <span>Free to check</span>
+        <span>No card needed</span>
+      </p>
+
+      <figure class="hero-figure">
+        <img src="assets/tide-family-flat.webp" width="1200" height="800" alt="Tide detergent, Pods, stain remover and a $500 Tide Reward Card" fetchpriority="high" decoding="async">
+      </figure>
+
+      <div class="assurance" aria-label="Page assurances">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3" stroke-linecap="round"/></svg> Secure SSL</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-3 8.3-7 10-4-1.7-7-5.6-7-10V6l7-3z" stroke-linejoin="round"/></svg> U.S. 18+</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4" stroke-linecap="round"/></svg> No card to check</span>
+      </div>
+    </section>
+
+    <a class="rating-line" href="#reviews" aria-label="4.8 out of 5 from 2,914 participant ratings. Jump to reviews.">
+      <span class="stars" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+      </span>
+      <span><b>4.8</b> · 2,914 participant ratings</span>
+      <span class="verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified</span>
+    </a>
+
+    <!-- how it works -->
+    <section class="section" aria-labelledby="howTitle">
+      <span class="eyebrow">How it works</span>
+      <h2 id="howTitle">Three quick questions. One clear answer.</h2>
+      <p class="sub">No phone calls, no paperwork, and <b>no credit card</b> needed to check your eligibility.</p>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <div>
+            <h3>Answer 3 quick questions</h3>
+            <p>Tell us about your laundry routine and what you'd stock up on.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <div>
+            <h3>We check today's availability</h3>
+            <p>Your answers are matched against the program requirements.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <div>
+            <h3>Claim on the next page</h3>
+            <p>If you qualify, you'll confirm your details and finish the final step.</p>
+          </div>
+        </li>
+      </ol>
+      <p class="step-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        The eligibility check takes about 30 seconds.
+      </p>
+    </section>
+
+    <!-- value band -->
+    <section class="value-band" aria-labelledby="valueTitle">
+      <span class="eyebrow">The $500 reward</span>
+      <h2 id="valueTitle">More Tide. Less worry.</h2>
+      <p class="sub">Use your $500 reward card toward Tide detergent and the household essentials you buy every month.</p>
+      <ul class="band-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Stock up on the laundry products you already trust</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Put a little room back in the monthly budget</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> One simple check — it takes about 30 seconds</li>
+      </ul>
+      <button type="button" class="btn btn-primary" data-start>
+        <span>See If I Qualify</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="band-note">Free to check · U.S. residents 18+</p>
+    </section>
+
+    <!-- reviews -->
+    <section class="section" id="reviews" aria-labelledby="reviewsTitle">
+      <div class="reviews-head">
+        <span class="eyebrow">Community</span>
+        <h2 id="reviewsTitle">What Tide shoppers are saying</h2>
+        <div class="review-score">
+          <b>4.8</b>
+          <span class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+          </span>
+          <small>2,914 ratings</small>
+        </div>
+      </div>
+
+      <article class="comment">
+        <span class="avatar" aria-hidden="true"><img src="assets/avatars/margaret.webp" width="44" height="44" alt="" loading="lazy"></span>
+        <div>
+          <div class="c-head">
+            <span class="c-name">Margaret H.</span>
+            <span class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified</span>
+            <span class="c-time">Ohio · 2 hours ago</span>
+          </div>
+          <p class="c-text">“I've used Tide for over 30 years. The questions were simple, and my $500 reward card came this week. I stocked up for the whole family.”</p>
+          <img class="c-photo" src="assets/comment-card.webp" width="900" height="700" alt="A $500 Tide Reward Card with a Tide Pods tub and detergent" loading="lazy">
+          <div class="c-actions"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 10v10H4V10h3zm3 10h7.2a2 2 0 001.9-1.5l1.5-5A2 2 0 0018.7 11H14V7a2 2 0 00-2-2l-2 5v10z" stroke-linejoin="round"/></svg> 47</span><span>Helpful</span><span>Reply</span></div>
+        </div>
+      </article>
+
+      <article class="comment">
+        <span class="avatar" aria-hidden="true"><img src="assets/avatars/robert.webp" width="44" height="44" alt="" loading="lazy"></span>
+        <div>
+          <div class="c-head">
+            <span class="c-name">Robert D.</span>
+            <span class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified</span>
+            <span class="c-time">Florida · 5 hours ago</span>
+          </div>
+          <p class="c-text">“I was skeptical, but there was no credit card screen. I used it to fill up the laundry room — the pods alone will last us months.”</p>
+          <img class="c-photo" src="assets/comment-shelf.webp" width="900" height="620" alt="Tide detergent, Pods and stain remover stocked on a laundry shelf" loading="lazy">
+          <div class="c-actions"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 10v10H4V10h3zm3 10h7.2a2 2 0 001.9-1.5l1.5-5A2 2 0 0018.7 11H14V7a2 2 0 00-2-2l-2 5v10z" stroke-linejoin="round"/></svg> 32</span><span>Helpful</span><span>Reply</span></div>
+        </div>
+      </article>
+
+      <article class="comment">
+        <span class="avatar" aria-hidden="true"><img src="assets/avatars/linda.webp" width="44" height="44" alt="" loading="lazy"></span>
+        <div>
+          <div class="c-head">
+            <span class="c-name">Linda M.</span>
+            <span class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified</span>
+            <span class="c-time">Texas · 1 day ago</span>
+          </div>
+          <p class="c-text">“I almost skipped it because I thought it was another fake pop-up. The page explained every step and didn't ask for a card just to check.”</p>
+          <div class="c-actions"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 10v10H4V10h3zm3 10h7.2a2 2 0 001.9-1.5l1.5-5A2 2 0 0018.7 11H14V7a2 2 0 00-2-2l-2 5v10z" stroke-linejoin="round"/></svg> 18</span><span>Helpful</span><span>Reply</span></div>
+        </div>
+      </article>
+
+      <div class="comment reply">
+        <span class="avatar" aria-hidden="true">RS</span>
+        <div>
+          <div class="c-head">
+            <span class="c-name">Reward Support</span>
+            <span class="c-time">Page team · 1 day ago</span>
+          </div>
+          <p class="c-text">Thanks for giving it a chance, Linda. We keep the eligibility check free and explain every step before you continue.</p>
+        </div>
+      </div>
+
+      <article class="comment">
+        <span class="avatar" aria-hidden="true"><img src="assets/avatars/diane.webp" width="44" height="44" alt="" loading="lazy"></span>
+        <div>
+          <div class="c-head">
+            <span class="c-name">Diane W.</span>
+            <span class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified</span>
+            <span class="c-time">Pennsylvania · 2 days ago</span>
+          </div>
+          <p class="c-text">“I've been buying Tide for my grandchildren's clothes for years. This is the first reward program that didn't make me squint at the fine print.”</p>
+          <div class="c-actions"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 10v10H4V10h3zm3 10h7.2a2 2 0 001.9-1.5l1.5-5A2 2 0 0018.7 11H14V7a2 2 0 00-2-2l-2 5v10z" stroke-linejoin="round"/></svg> 12</span><span>Helpful</span><span>Reply</span></div>
+        </div>
+      </article>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" aria-labelledby="faqTitle">
+      <span class="eyebrow">Questions</span>
+      <h2 id="faqTitle">Good to know</h2>
+      <p class="sub">Straight answers before you start.</p>
+      <div class="faq-list" style="margin-top:10px">
+        <details open>
+          <summary>Is this a real $500 Tide reward?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-a">Yes. This is an independent 2026 customer appreciation promotion. U.S. residents 18 or older can check whether they qualify for a $500 Tide reward card. This page is not operated by Procter &amp; Gamble — please read the disclaimer below.</div>
+        </details>
+        <details>
+          <summary>Who can participate?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-a">U.S. residents who are <b>18 or older</b>. One entry per person or household. Eligibility is confirmed on the next page.</div>
+        </details>
+        <details>
+          <summary>What does it cost?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-a">Nothing to check your eligibility, and no credit card is needed on this page. If you continue, the final claim step may include sponsored offers; the terms are shown before you agree.</div>
+        </details>
+        <details>
+          <summary>How long does it take?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-a">About <b>30 seconds</b> for the three questions. The final claim step usually takes 2–3 minutes.</div>
+        </details>
+        <details>
+          <summary>What happens after I qualify?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-a">You'll see a confirmation and a button to continue. The next page explains exactly what to confirm and how the reward is processed.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- final CTA -->
+    <section class="final-cta" id="finalCta" aria-labelledby="finalTitle">
+      <span class="eyebrow">2026 Customer Appreciation</span>
+      <h2 id="finalTitle">See if you qualify for your $500 Tide Reward.</h2>
+      <p>Three questions. About 30 seconds. Free to check.</p>
+      <button type="button" class="btn btn-primary" data-start>
+        <span>Check My Eligibility</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </button>
+      <div class="final-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3" stroke-linecap="round"/></svg>
+        Secure · U.S. 18+ · No card needed
+      </div>
+    </section>
+
+  </div><!-- /sheet -->
+</div><!-- /landingView -->
+
+<!-- ============================================================
+     QUIZ
+     ============================================================ -->
+<div id="quizView" class="flow-wrap" hidden>
+  <div class="flow-card" id="quizCard">
+    <div class="flow-top">
+      <button type="button" class="back-btn" id="backBtn" aria-label="Go back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>
+      </button>
+      <span class="flow-label">Eligibility check</span>
+      <span class="secure-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3" stroke-linecap="round"/></svg>
+        Secure
+      </span>
+    </div>
+
+    <div class="segbar" aria-hidden="true">
+      <span class="on" data-seg="0"></span>
+      <span data-seg="1"></span>
+      <span data-seg="2"></span>
+    </div>
+
+    <div class="quiz-body">
+      <div class="q-meta">
+        <span id="quizStepLabel">Question 1 of 3</span>
+        <span class="q-time">~30 sec</span>
+      </div>
+
+      <div id="quizQuestionWrap" aria-live="polite">
+        <h1 class="q-title" id="quizTitle" tabindex="-1">Do you live in the United States?</h1>
+        <p class="q-help" id="quizHelp">This reward is for U.S. residents 18 and older.</p>
+      </div>
+
+      <div class="q-options" id="answers"></div>
+
+      <p class="quiz-foot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3" stroke-linecap="round"/></svg>
+        Your answers are private. No credit card needed.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CHECKING
+     ============================================================ -->
+<div id="loadingView" class="flow-wrap" hidden>
+  <div class="flow-card loading-card" role="status" aria-live="polite">
+    <div class="spinner" aria-hidden="true"></div>
+    <h2 id="loadingTitle">Checking today's availability…</h2>
+    <p>Please wait while we review your answers.</p>
+    <div class="load-progress" role="progressbar" aria-label="Checking eligibility" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="loadProgress">
+      <span id="loadingBar"></span>
+    </div>
+    <div class="load-percent" id="loadingPercent">0%</div>
+    <ul class="load-list" id="loadingList">
+      <li data-load="0"><span class="tick" aria-hidden="true"></span> U.S. location confirmed</li>
+      <li data-load="1"><span class="tick" aria-hidden="true"></span> Age requirement checked</li>
+      <li data-load="2"><span class="tick" aria-hidden="true"></span> Reward availability reviewed</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================
+     EXIT
+     ============================================================ -->
+<div id="exitView" class="flow-wrap" hidden>
+  <div class="flow-card exit-card">
+    <div class="exit-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>
+    </div>
+    <h1 id="exitTitle" tabindex="-1">This reward is for U.S. residents.</h1>
+    <p id="exitText">Thanks for stopping by. This customer appreciation event is currently open to people living in the United States.</p>
+    <button type="button" class="btn btn-primary" id="exitRestart">Start Over</button>
+    <button type="button" class="btn btn-ghost" id="exitHome">Back to Page</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     RESULT
+     ============================================================ -->
+<div id="resultView" class="flow-wrap" hidden>
+  <div class="flow-card result-card">
+    <div class="result-hero">
+      <div class="success-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <span class="result-eyebrow">Pre-qualified</span>
+      <h1 id="resultTitle" tabindex="-1">You're <span class="nowrap">pre-qualified</span> for <em>$500</em>.</h1>
+      <p class="result-lede">Your answers matched. Complete the final step now to claim your <b>$500 Tide Reward Card</b>.</p>
+      <div class="stockchip">Your $500 stock-up: <b id="stockUpText">The whole laundry room</b></div>
+    </div>
+
+    <img class="result-card-img" src="assets/tide-card.webp" width="1000" height="620" alt="$500 Tide Reward Card" decoding="async">
+
+    <div class="claim-summary">
+      <div><span>Reward</span><b>$500 Tide Reward Card</b></div>
+      <div><span>Status</span><b class="green">Pre-qualified</b></div>
+    </div>
+
+    <a class="btn btn-primary btn-claim" id="claimBtn" href="https://www.2timetowin.xyz/click" rel="noopener">
+      <span>Claim My $500 Now</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+    </a>
+    <p class="claim-note">Final eligibility is confirmed on the next page.</p>
+
+    <div class="next-box">
+      <h2>What happens next</h2>
+      <ol>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Confirm your household details on the next page.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Complete the final reward step shown there.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Follow the claim instructions to finish.</li>
+      </ol>
+    </div>
+
+    <p class="result-legal">Eligibility isn't final until the next page is completed. Reward availability is limited. U.S. residents 18+.</p>
+    <p class="result-links">
+      <button type="button" data-legal="terms">Terms</button>
+      <span aria-hidden="true">·</span>
+      <button type="button" data-legal="privacy">Privacy</button>
+    </p>
+    <button type="button" class="result-back" id="resultBack">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>
+      Back to the page
+    </button>
+  </div>
+</div>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer" id="siteFooter">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/tide-logo.webp" width="30" height="30" alt="Tide">
+      <b>Tide Reward Program</b>
+      <span>Independent promotion</span>
+    </div>
+    <p class="disclaimer">
+      <b>Important:</b> This is an independent promotional page and is not affiliated with, endorsed by, or sponsored by Procter &amp; Gamble. TIDE is a trademark of The Procter &amp; Gamble Company. Reward availability, eligibility, and fulfillment are subject to the terms shown on the offer page. Participation may require completing sponsor offers. Testimonials reflect individual experiences; results are not guaranteed. This page is not part of Facebook or Meta.
+    </p>
+    <div class="footer-links">
+      <button type="button" class="linklike" data-legal="terms">Terms &amp; Conditions</button>
+      <button type="button" class="linklike" data-legal="privacy">Privacy Policy</button>
+      <button type="button" class="linklike" data-legal="donotsell">Do Not Sell or Share My Info</button>
+    </div>
+    <p class="copyright">© 2026 Tide Reward Program. All rights reserved. Offer ends December 31, 2026.</p>
+  </div>
+</footer>
+
+<!-- ================= STICKY CTA ================= -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <div class="sticky-inner">
+    <div class="sticky-copy"><b>$500 Tide Reward</b><span>30-second check</span></div>
+    <button type="button" class="btn btn-primary btn-sticky" data-start>
+      <span>Check Eligibility</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+    </button>
+    <button type="button" class="sticky-close" id="stickyClose" aria-label="Dismiss this bar">×</button>
+  </div>
+</div>
+
+<!-- ================= LEGAL MODAL ================= -->
+<div class="modal" id="legalModal" hidden>
+  <div class="modal-backdrop" id="legalBackdrop"></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
+    <button type="button" class="modal-close" id="legalClose" aria-label="Close">×</button>
+    <h2 id="legalTitle">Terms &amp; Conditions</h2>
+    <div class="legal-body" id="legalBody"></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     CONFIG
+     ============================================================ -->
+<script>
+window.TIDE_REWARD_CONFIG = {
+  // Your affiliate / offer link. Query parameters from the ad click are forwarded.
+  offerUrl: "https://www.2timetowin.xyz/click",
+
+  // Meta Pixel is installed in the <head>. MaxConv base code is also in the <head>.
+  // The top hold timer starts on page load and runs across all steps.
+  holdSeconds: 180
+};
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  var CONFIG = window.TIDE_REWARD_CONFIG || {};
+  var OFFER_URL = CONFIG.offerUrl || "https://www.2timetowin.xyz/click";
+  var HOLD_SECONDS = Number(CONFIG.holdSeconds) || 180;
+
+  var $ = function (sel, root) { return (root || document).querySelector(sel); };
+  var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
+
+  var views = {
+    landing: $("#landingView"),
+    quiz: $("#quizView"),
+    loading: $("#loadingView"),
+    exit: $("#exitView"),
+    result: $("#resultView")
+  };
+  var footer = $("#siteFooter");
+  var sticky = $("#stickyCta");
+  var finalCta = $("#finalCta");
+
+  var state = {
+    view: "landing",
+    step: 0,
+    answers: [],
+    locked: false,
+    loadingTimers: [],
+    holdEndsAt: 0,
+    holdId: null,
+    holdExpired: false,
+    stickyDismissed: false,
+    lastFocus: null
+  };
+
+  var QUESTIONS = [
+    {
+      title: "Do you live in the United States?",
+      help: "This reward is for U.S. residents 18 and older.",
+      options: [
+        { label: "Yes, I live in the U.S.", value: "yes" },
+        { label: "No", value: "no" }
+      ],
+      exitOn: "no"
+    },
+    {
+      title: "How many loads of laundry do you do in a typical week?",
+      help: "There's no wrong answer — this helps us understand your household.",
+      options: [
+        { label: "1–2 loads", value: "1–2 loads" },
+        { label: "3–4 loads", value: "3–4 loads" },
+        { label: "5 or more", value: "5 or more" }
+      ]
+    },
+    {
+      title: "If you had $500 in Tide rewards, what would you stock up on first?",
+      help: "Pick the one that sounds best to you.",
+      options: [
+        { label: "Detergent & pods", value: "Detergent & pods" },
+        { label: "Stain fighters & boosters", value: "Stain fighters & boosters" },
+        { label: "The whole laundry room", value: "The whole laundry room" }
+      ]
+    }
+  ];
+
+  var EXIT_COPY = {
+    us: {
+      title: "This reward is for U.S. residents.",
+      text: "Thanks for stopping by. This customer appreciation event is currently open to people living in the United States."
+    }
+  };
+
+  var LEGAL = {
+    terms: {
+      title: "Terms & Conditions",
+      body:
+        "<p><b>1. Eligibility.</b> This promotion is open to legal residents of the 50 United States and the District of Columbia who are 18 years of age or older at the time of entry. One entry per person or household.</p>" +
+        "<p><b>2. No purchase necessary to check.</b> You do not need to buy anything or provide a credit card to use this eligibility check. The final claim step may include sponsored offers; any requirement to complete an offer will be disclosed on the offer page before you agree.</p>" +
+        "<p><b>3. Reward.</b> The advertised reward is a $500 Tide reward card, subject to eligibility, availability, and the terms shown on the offer page. Rewards are limited and are not guaranteed.</p>" +
+        "<p><b>4. Independent promotion.</b> This page is operated by an independent promoter. It is not affiliated with, endorsed by, or sponsored by Procter &amp; Gamble. TIDE is a trademark of The Procter &amp; Gamble Company.</p>" +
+        "<p><b>5. Privacy.</b> Information you provide is used to determine eligibility and to improve this page. See the Privacy Policy for details.</p>" +
+        "<p><b>6. Limitation.</b> This page is for informational and promotional purposes. Full offer terms, including fulfillment timing, are provided by the offer provider on the next page.</p>" +
+        "<p class=\"legal-updated\">Last updated: January 2026</p>"
+    },
+    privacy: {
+      title: "Privacy Policy",
+      body:
+        "<p><b>What we collect.</b> We collect the answers you select on this page and basic technical information such as your browser type and the page you arrived from. We do not ask for a credit card or Social Security number on this page.</p>" +
+        "<p><b>How we use it.</b> Your answers are used to determine whether you meet the basic eligibility requirements and to improve the page experience. If you continue to the offer page, the offer provider's privacy policy applies to information you submit there.</p>" +
+        "<p><b>Cookies and measurement.</b> This page may use cookies or pixels to measure traffic and conversions. You can block cookies in your browser settings; the eligibility check will still work.</p>" +
+        "<p><b>Sharing.</b> We do not sell your answers. Information may be shared with service providers who help operate this page or with the offer provider after you choose to continue.</p>" +
+        "<p><b>Your choices.</b> You can close this page at any time. To ask a privacy question, use the contact details shown on the offer page.</p>" +
+        "<p><b>Trademarks.</b> TIDE is a trademark of The Procter &amp; Gamble Company. This page is independent and is not affiliated with Procter &amp; Gamble.</p>" +
+        "<p class=\"legal-updated\">Last updated: January 2026</p>"
+    },
+    donotsell: {
+      title: "Do Not Sell or Share My Personal Information",
+      body:
+        "<p><b>We do not sell personal information.</b> This page does not sell, rent, or trade the answers you provide. The answers are used only to determine basic eligibility and to measure the performance of this page.</p>" +
+        "<p><b>Sharing with service providers.</b> Limited technical information may be processed by service providers that help operate or measure this page. They are not permitted to use it for their own marketing.</p>" +
+        "<p><b>Offer page.</b> If you choose to continue, the offer provider's privacy policy and opt-out choices apply to information you submit on the next page.</p>" +
+        "<p><b>Questions.</b> Use the contact details shown on the offer page to make a privacy request.</p>" +
+        "<p class=\"legal-updated\">Last updated: January 2026</p>"
+    }
+  };
+
+  /* ---------- Meta Pixel is installed in the <head> ---------- */
+
+  function track(event, params, isCustom) {
+    try {
+      if (typeof window.fbq === "function") {
+        window.fbq(isCustom ? "trackCustom" : "track", event, params || {});
+      }
+    } catch (err) { /* tracking must never break the funnel */ }
+  }
+
+  function buildOfferUrl() {
+    try {
+      var url = new URL(OFFER_URL, window.location.href);
+      var incoming = new URLSearchParams(window.location.search);
+      incoming.forEach(function (value, key) {
+        if (key && value) url.searchParams.set(key, value);
+      });
+      return url.toString();
+    } catch (err) {
+      return OFFER_URL;
+    }
+  }
+
+  function formatTime(seconds) {
+    var s = Math.max(0, seconds);
+    var m = Math.floor(s / 60);
+    var rem = s % 60;
+    return (m < 10 ? "0" : "") + m + ":" + (rem < 10 ? "0" : "") + rem;
+  }
+
+  /* ---------- persistent hold timer ---------- */
+  function startHold() {
+    state.holdEndsAt = Date.now() + HOLD_SECONDS * 1000;
+    state.holdExpired = false;
+    updateHold();
+    if (state.holdId) window.clearInterval(state.holdId);
+    state.holdId = window.setInterval(updateHold, 1000);
+  }
+
+  function updateHold() {
+    var left = Math.max(0, Math.ceil((state.holdEndsAt - Date.now()) / 1000));
+    var bar = $("#holdBar");
+    var label = $("#holdLabel");
+    var time = $("#holdTime");
+    var note = $("#holdNote");
+    if (!bar || !time) return;
+
+    if (left <= 0 && !state.holdExpired) {
+      state.holdExpired = true;
+      bar.classList.add("is-expired");
+      if (label) label.textContent = "Hold expired";
+      time.textContent = "00:00";
+      if (note) note.textContent = "You can still continue";
+      if (state.holdId) {
+        window.clearInterval(state.holdId);
+        state.holdId = null;
+      }
+      return;
+    }
+
+    if (!state.holdExpired) {
+      bar.classList.remove("is-expired");
+      if (label) label.textContent = "Your $500 hold";
+      time.textContent = formatTime(left);
+      if (note) note.textContent = "Complete the check";
+    }
+  }
+
+  /* ---------- view switching ---------- */
+  function showView(name) {
+    Object.keys(views).forEach(function (key) {
+      if (views[key]) views[key].hidden = key !== name;
+    });
+    state.view = name;
+    if (footer) footer.hidden = name !== "landing";
+    if (name !== "landing") {
+      var root = document.documentElement;
+      var prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = "auto";
+      window.scrollTo(0, 0);
+      root.style.scrollBehavior = prev;
+    }
+    updateSticky();
+    updateHold();
+  }
+
+  function startCheck() {
+    clearLoadingTimers();
+    state.step = 0;
+    state.answers = [];
+    state.locked = false;
+    renderQuestion();
+    showView("quiz");
+    track("StartCheck", { content_name: "Tide $500 Reward" }, true);
+    window.setTimeout(function () {
+      var title = $("#quizTitle");
+      if (title) title.focus({ preventScroll: true });
+    }, 80);
+  }
+
+  function goHome() {
+    clearLoadingTimers();
+    showView("landing");
+    window.scrollTo(0, 0);
+  }
+
+  /* ---------- quiz ---------- */
+  function renderQuestion() {
+    var q = QUESTIONS[state.step];
+    if (!q) return;
+
+    $("#quizStepLabel").textContent = "Question " + (state.step + 1) + " of 3";
+    $("#quizTitle").textContent = q.title;
+    $("#quizHelp").textContent = q.help;
+
+    $$(".segbar span").forEach(function (seg, i) {
+      seg.classList.toggle("on", i === state.step);
+      seg.classList.toggle("done", i < state.step);
+    });
+
+    var wrap = $("#answers");
+    wrap.innerHTML = q.options.map(function (opt) {
+      return '<button type="button" class="q-option" data-value="' + opt.value + '" data-label="' + opt.label + '">' +
+        '<span class="radio" aria-hidden="true"></span>' +
+        '<span class="q-text">' + opt.label + '</span>' +
+        '<span class="q-chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></span>' +
+        '</button>';
+    }).join("");
+
+    state.locked = false;
+    var card = $("#quizCard");
+    card.style.animation = "none";
+    void card.offsetWidth;
+    card.style.animation = "";
+
+    if (state.view === "quiz") {
+      window.setTimeout(function () {
+        var title = $("#quizTitle");
+        if (title) title.focus({ preventScroll: true });
+      }, 30);
+    }
+  }
+
+  function answer(value, label) {
+    if (state.locked) return;
+    state.locked = true;
+
+    var buttons = $$(".q-option");
+    buttons.forEach(function (btn) {
+      if (btn.getAttribute("data-value") === value) btn.classList.add("selected");
+      else btn.classList.add("dim");
+      btn.disabled = true;
+    });
+
+    if (navigator.vibrate) {
+      try { navigator.vibrate(8); } catch (err) {}
+    }
+
+    window.setTimeout(function () {
+      if (state.step === 0 && value === "no") {
+        showExit();
+        return;
+      }
+      state.answers[state.step] = label;
+      if (state.step < QUESTIONS.length - 1) {
+        state.step += 1;
+        renderQuestion();
+      } else {
+        showLoading();
+      }
+    }, 240);
+  }
+
+  function goBack() {
+    if (state.step > 0) {
+      state.step -= 1;
+      renderQuestion();
+    } else {
+      goHome();
+    }
+  }
+
+  /* ---------- exit ---------- */
+  function showExit() {
+    var copy = EXIT_COPY.us;
+    $("#exitTitle").textContent = copy.title;
+    $("#exitText").textContent = copy.text;
+    showView("exit");
+    track("Disqualified", { reason: "us" }, true);
+    window.setTimeout(function () {
+      var title = $("#exitTitle");
+      if (title) title.focus({ preventScroll: true });
+    }, 60);
+  }
+
+  /* ---------- loading ---------- */
+  function clearLoadingTimers() {
+    state.loadingTimers.forEach(function (id) { window.clearTimeout(id); });
+    state.loadingTimers = [];
+  }
+
+  function setLoadProgress(percent) {
+    var bar = $("#loadingBar");
+    var progress = $("#loadProgress");
+    var label = $("#loadingPercent");
+    if (bar) bar.style.width = percent + "%";
+    if (label) label.textContent = percent + "%";
+    if (progress) progress.setAttribute("aria-valuenow", String(percent));
+  }
+
+  function showLoading() {
+    clearLoadingTimers();
+    showView("loading");
+    setLoadProgress(0);
+    $$("#loadingList li").forEach(function (li) { li.classList.remove("active", "done"); });
+    $("#loadingTitle").textContent = "Checking today's availability…";
+    track("CompleteCheck", { content_name: "Tide $500 Reward" }, true);
+
+    state.loadingTimers.push(window.setTimeout(function () {
+      setLoadProgress(34);
+      $("#loadingTitle").textContent = "Reviewing your answers…";
+      var li = $('#loadingList li[data-load="0"]');
+      if (li) li.classList.add("done");
+      var next = $('#loadingList li[data-load="1"]');
+      if (next) next.classList.add("active");
+    }, 350));
+
+    state.loadingTimers.push(window.setTimeout(function () {
+      setLoadProgress(72);
+      $("#loadingTitle").textContent = "Checking reward availability…";
+      var li = $('#loadingList li[data-load="1"]');
+      if (li) li.classList.add("done");
+      var next = $('#loadingList li[data-load="2"]');
+      if (next) next.classList.add("active");
+    }, 900));
+
+    state.loadingTimers.push(window.setTimeout(function () {
+      setLoadProgress(100);
+      $("#loadingTitle").textContent = "Preparing your result…";
+      var li = $('#loadingList li[data-load="2"]');
+      if (li) li.classList.add("done");
+    }, 1450));
+
+    state.loadingTimers.push(window.setTimeout(function () {
+      showResult();
+    }, 1800));
+  }
+
+  /* ---------- result ---------- */
+  function showResult() {
+    clearLoadingTimers();
+    showView("result");
+    var stock = $("#stockUpText");
+    if (stock) stock.textContent = state.answers[2] || "The whole laundry room";
+    var claim = $("#claimBtn");
+    if (claim) claim.href = buildOfferUrl();
+    track("Qualified", { content_name: "Tide $500 Reward", value: 500, currency: "USD" }, true);
+    window.setTimeout(function () {
+      var title = $("#resultTitle");
+      if (title) title.focus({ preventScroll: true });
+    }, 80);
+  }
+
+  function claim() {
+    track("Lead", { content_name: "Tide $500 Reward" });
+    // No preventDefault: normal anchor navigation is most reliable in in-app browsers.
+  }
+
+  /* ---------- sticky CTA ---------- */
+  function updateSticky() {
+    if (!sticky) return;
+    var nearBottom = window.scrollY + window.innerHeight > document.documentElement.scrollHeight - 170;
+    var finalVisible = false;
+    if (finalCta) {
+      var rect = finalCta.getBoundingClientRect();
+      finalVisible = rect.top < window.innerHeight - 40 && rect.bottom > 80;
+    }
+    var show = state.view === "landing" && !state.stickyDismissed && window.scrollY > 620 && !nearBottom && !finalVisible;
+    sticky.classList.toggle("is-visible", show);
+    sticky.setAttribute("aria-hidden", show ? "false" : "true");
+    try { sticky.inert = !show; } catch (err) {}
+  }
+
+  var scrollTick = false;
+  window.addEventListener("scroll", function () {
+    if (scrollTick) return;
+    scrollTick = true;
+    window.requestAnimationFrame(function () {
+      updateSticky();
+      scrollTick = false;
+    });
+  }, { passive: true });
+  window.addEventListener("resize", updateSticky, { passive: true });
+  document.addEventListener("visibilitychange", updateHold);
+
+  $("#stickyClose").addEventListener("click", function () {
+    state.stickyDismissed = true;
+    updateSticky();
+  });
+
+  /* ---------- modal ---------- */
+  function openLegal(kind) {
+    var data = LEGAL[kind] || LEGAL.terms;
+    state.lastFocus = document.activeElement;
+    $("#legalTitle").textContent = data.title;
+    $("#legalBody").innerHTML = data.body;
+    $("#legalModal").hidden = false;
+    document.body.classList.add("is-locked");
+    window.setTimeout(function () { $("#legalClose").focus(); }, 30);
+  }
+
+  function closeLegal() {
+    $("#legalModal").hidden = true;
+    document.body.classList.remove("is-locked");
+    if (state.lastFocus && state.lastFocus.focus) state.lastFocus.focus();
+  }
+
+  $("#legalClose").addEventListener("click", closeLegal);
+  $("#legalBackdrop").addEventListener("click", closeLegal);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !$("#legalModal").hidden) closeLegal();
+    if (e.key !== "Tab" || $("#legalModal").hidden) return;
+    var focusables = $$('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])', $("#legalModal"));
+    if (!focusables.length) return;
+    var first = focusables[0];
+    var last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+
+  $$("[data-legal]").forEach(function (btn) {
+    btn.addEventListener("click", function () { openLegal(btn.getAttribute("data-legal")); });
+  });
+
+  /* ---------- bindings ---------- */
+  $$("[data-start]").forEach(function (btn) {
+    btn.addEventListener("click", startCheck);
+  });
+  $("#answers").addEventListener("click", function (e) {
+    var btn = e.target.closest(".q-option");
+    if (!btn) return;
+    answer(btn.getAttribute("data-value"), btn.getAttribute("data-label"));
+  });
+  $("#backBtn").addEventListener("click", goBack);
+  $("#exitRestart").addEventListener("click", startCheck);
+  $("#exitHome").addEventListener("click", goHome);
+  $("#resultBack").addEventListener("click", goHome);
+  $("#claimBtn").addEventListener("click", claim);
+
+  /* ---------- init ---------- */
+  var claimLink = $("#claimBtn");
+  if (claimLink) claimLink.href = buildOfferUrl();
+  startHold();
+  updateSticky();
+
+  if (window.location.hash === "#reviews") {
+    var reviews = $("#reviews");
+    if (reviews) window.setTimeout(function () { reviews.scrollIntoView({ behavior: "smooth", block: "start" }); }, 60);
+  }
+})();
+</script>
+</body>
+</html>
