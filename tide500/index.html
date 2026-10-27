@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>$500 Tide Reward | 2026 Customer Appreciation</title>
-<meta name="description" content="Answer 3 quick questions about your laundry routine to see if you qualify for a $500 Tide Reward. Free to check, about 30 seconds. U.S. residents 18+.">
-<meta property="og:title" content="See If You Qualify for a $500 Tide Reward">
-<meta property="og:description" content="Answer 3 quick questions about your laundry routine. Free to check, about 30 seconds. U.S. residents 18+.">
+<title>Get a FREE Tide Sample | 2026 Tide Sample Program</title>
+<meta name="description" content="Answer 3 quick questions to see if you qualify for a FREE Tide sample. Free to check, about 30 seconds. U.S. residents 18+.">
+<meta property="og:title" content="Get a FREE Tide Sample">
+<meta property="og:description" content="Answer 3 quick questions to see if you qualify for a FREE Tide sample. Free to check, about 30 seconds. U.S. residents 18+.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0A2A5E">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="assets/tide-logo.webp" type="image/webp">
-<link rel="preload" as="image" href="assets/tide-family-flat.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/tidep.webp" fetchpriority="high">
 <style>
 /* ============================================================
-   $500 Tide Reward — editorial mobile prelander
+   Get a FREE Tide Sample — editorial mobile prelander
    One HTML file + local WebP images. No external fonts or CSS.
    Meta Pixel + MaxConv base code are in <head>.
    ============================================================ */
@@ -166,10 +166,10 @@ ol,ul{padding:0;list-style:none}
 .cta-note span+span::before{content:"";display:inline-block;width:3px;height:3px;border-radius:50%;background:#B8C0CC;margin-right:5px}
 
 .hero-figure{
-  margin:20px -20px 0;background:var(--cream);
+  margin:20px -20px 0;background:#fff;
   border-top:1px solid var(--line);border-bottom:1px solid var(--line);
 }
-.hero-figure img{width:100%;height:auto;display:block}
+.hero-figure img{width:100%;height:auto;display:block;padding:8px 10px}
 .assurance{
   display:grid;grid-template-columns:repeat(3,1fr);gap:5px;
   padding:12px 0;border-bottom:1px solid var(--line);
@@ -479,7 +479,16 @@ details[open] .plus::after{transform:translate(-50%,-50%) rotate(90deg);opacity:
   border:1px solid var(--line);font-size:10.5px;font-weight:700;color:var(--muted);
 }
 .stockchip b{color:var(--navy);font-weight:900}
-.result-card-img{width:100%;max-width:340px;height:auto;margin:14px auto 0;filter:drop-shadow(0 12px 22px rgba(10,42,94,.20))}
+.result-sample{
+  position:relative;max-width:340px;margin:14px auto 0;padding:8px;background:#fff;
+  border:1px solid var(--line);border-radius:12px;filter:drop-shadow(0 10px 18px rgba(10,42,94,.12));
+}
+.result-sample img{width:100%;height:auto;display:block}
+.free-stamp{
+  position:absolute;top:14px;left:14px;background:var(--red);color:#fff;
+  font-size:10px;font-weight:900;letter-spacing:.08em;padding:5px 8px;border-radius:4px;
+  transform:rotate(-3deg);box-shadow:0 4px 12px rgba(184,50,16,.28);
+}
 .claim-summary{
   display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:left;
   margin:13px 0 0;padding:11px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
@@ -553,7 +562,6 @@ details[open] .plus::after{transform:translate(-50%,-50%) rotate(90deg);opacity:
   .flow-wrap{padding-left:10px;padding-right:10px}
   .flow-card{padding:18px 15px 20px}
   .q-option{font-size:16px;min-height:56px}
-  .result-card-img{max-width:280px}
 }
 @media (min-width:620px){
   .hero{padding:28px 28px 0}
@@ -580,7 +588,7 @@ details[open] .plus::after{transform:translate(-50%,-50%) rotate(90deg);opacity:
   .result-eyebrow{margin-top:10px}
   .result-card h1{font-size:24px}
   .result-lede{font-size:13.5px;line-height:1.45;margin-top:6px}
-  .result-card-img{max-width:240px;margin-top:10px}
+  .result-sample{max-width:300px}
   .claim-summary{margin-top:10px;padding:8px 0}
   .btn-claim{min-height:56px;margin-top:10px;font-size:18px}
   .claim-note{font-size:10px;margin-top:5px}
@@ -589,14 +597,15 @@ details[open] .plus::after{transform:translate(-50%,-50%) rotate(90deg);opacity:
   .result-legal{margin-top:9px}
 }
 @media (max-height:700px){
-  .result-card-img{max-width:225px}
+  .result-card{padding-top:16px}
+  .result-sample{max-width:240px}
 }
 @media (max-height:660px){
   .result-card{padding-top:12px}
   .result-eyebrow{margin-top:8px}
   .result-lede{font-size:12.8px;line-height:1.4}
   .stockchip{font-size:9.5px;padding:4px 7px}
-  .result-card-img{max-width:180px}
+  .result-sample{max-width:220px}
   .claim-summary{padding:6px 0}
   .btn-claim{min-height:52px;font-size:17px}
 }
@@ -638,7 +647,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
   <div class="holdbar-inner">
     <span class="hold-label">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span id="holdLabel">Your $500 hold</span>
+      <span id="holdLabel">Your FREE sample hold</span>
     </span>
     <span class="hold-time" id="holdTime">03:00</span>
     <span class="hold-note" id="holdNote">Complete the check</span>
@@ -649,10 +658,10 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="header-inner">
-    <div class="brand" aria-label="Tide Reward Program">
+    <div class="brand" aria-label="Tide Sample Program">
       <img class="brand-logo" src="assets/tide-logo.webp" width="54" height="54" alt="Tide">
       <div class="brand-copy">
-        <b>Tide Reward Program</b>
+        <b>Tide Sample Program</b>
         <span>Independent promotion</span>
       </div>
     </div>
@@ -674,11 +683,11 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
 
     <!-- hero -->
     <section class="hero" aria-labelledby="heroTitle">
-      <span class="kicker">2026 Tide Customer Appreciation</span>
-      <h1 id="heroTitle">See if you qualify for a <em>$500 Tide Reward</em>.</h1>
-      <p class="lede">Answer 3 quick questions about your laundry routine. If you qualify, you could claim a <b>$500 reward card</b> for Tide detergent and everyday essentials.</p>
+      <span class="kicker">2026 Tide Sample Program</span>
+      <h1 id="heroTitle">Get Your <em>FREE</em> Tide&reg; Sample.</h1>
+      <p class="lede">See if you qualify for a <b>FREE Tide sample box</b> with some of your favorite Tide products. It takes about 30 seconds.</p>
       <button type="button" class="btn btn-primary btn-hero" data-start>
-        <span>Check My Eligibility</span>
+        <span>Get My FREE Sample</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
       </button>
       <p class="cta-note">
@@ -688,7 +697,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
       </p>
 
       <figure class="hero-figure">
-        <img src="assets/tide-family-flat.webp" width="1200" height="800" alt="Tide detergent, Pods, stain remover and a $500 Tide Reward Card" fetchpriority="high" decoding="async">
+        <img src="assets/tidep.webp" width="924" height="456" alt="A selection of FREE Tide samples including Tide Original, Pods, Free & Gentle and stain remover" fetchpriority="high" decoding="async">
       </figure>
 
       <div class="assurance" aria-label="Page assurances">
@@ -698,7 +707,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
       </div>
     </section>
 
-    <a class="rating-line" href="#reviews" aria-label="4.8 out of 5 from 2,914 participant ratings. Jump to reviews.">
+    <a class="rating-line" href="#reviews" aria-label="4.8 out of 5 from 2,914 sample ratings. Jump to reviews.">
       <span class="stars" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
@@ -706,7 +715,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
       </span>
-      <span><b>4.8</b> · 2,914 participant ratings</span>
+      <span><b>4.8</b> · 2,914 sample ratings</span>
       <span class="verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified</span>
     </a>
 
@@ -720,7 +729,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
           <span class="step-num" aria-hidden="true">1</span>
           <div>
             <h3>Answer 3 quick questions</h3>
-            <p>Tell us about your laundry routine and what you'd stock up on.</p>
+            <p>Tell us about your laundry routine and which sample you'd like.</p>
           </div>
         </li>
         <li class="step">
@@ -733,7 +742,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
         <li class="step">
           <span class="step-num" aria-hidden="true">3</span>
           <div>
-            <h3>Claim on the next page</h3>
+            <h3>Claim your FREE sample</h3>
             <p>If you qualify, you'll confirm your details and finish the final step.</p>
           </div>
         </li>
@@ -746,16 +755,16 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
 
     <!-- value band -->
     <section class="value-band" aria-labelledby="valueTitle">
-      <span class="eyebrow">The $500 reward</span>
-      <h2 id="valueTitle">More Tide. Less worry.</h2>
-      <p class="sub">Use your $500 reward card toward Tide detergent and the household essentials you buy every month.</p>
+      <span class="eyebrow">The FREE sample</span>
+      <h2 id="valueTitle">FREE means free.</h2>
+      <p class="sub">See if you qualify for a FREE Tide sample box with some of your favorite Tide products. No credit card needed to check.</p>
       <ul class="band-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Stock up on the laundry products you already trust</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Put a little room back in the monthly budget</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> One simple check — it takes about 30 seconds</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Try Tide Original, Pods, Free &amp; Gentle, and more</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> A sample box for your laundry room</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> No credit card to check — it takes about 30 seconds</li>
       </ul>
       <button type="button" class="btn btn-primary" data-start>
-        <span>See If I Qualify</span>
+        <span>Get My FREE Sample</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
       </button>
       <p class="band-note">Free to check · U.S. residents 18+</p>
@@ -775,7 +784,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
           </span>
-          <small>2,914 ratings</small>
+          <small>2,914 sample ratings</small>
         </div>
       </div>
 
@@ -787,8 +796,8 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
             <span class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified</span>
             <span class="c-time">Ohio · 2 hours ago</span>
           </div>
-          <p class="c-text">“I've used Tide for over 30 years. The questions were simple, and my $500 reward card came this week. I stocked up for the whole family.”</p>
-          <img class="c-photo" src="assets/comment-card.webp" width="900" height="700" alt="A $500 Tide Reward Card with a Tide Pods tub and detergent" loading="lazy">
+          <p class="c-text">“I've used Tide for over 30 years. The questions were simple, and my free sample box came this week. I got the Pods and Original—perfect for our laundry room.”</p>
+          <img class="c-photo" src="assets/comment-card.webp" width="1168" height="880" alt="Tide products from a free sample box on a kitchen table" loading="lazy">
           <div class="c-actions"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 10v10H4V10h3zm3 10h7.2a2 2 0 001.9-1.5l1.5-5A2 2 0 0018.7 11H14V7a2 2 0 00-2-2l-2 5v10z" stroke-linejoin="round"/></svg> 47</span><span>Helpful</span><span>Reply</span></div>
         </div>
       </article>
@@ -801,8 +810,8 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
             <span class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified</span>
             <span class="c-time">Florida · 5 hours ago</span>
           </div>
-          <p class="c-text">“I was skeptical, but there was no credit card screen. I used it to fill up the laundry room — the pods alone will last us months.”</p>
-          <img class="c-photo" src="assets/comment-shelf.webp" width="900" height="620" alt="Tide detergent, Pods and stain remover stocked on a laundry shelf" loading="lazy">
+          <p class="c-text">“I was skeptical, but there was no credit card screen. I got the Free &amp; Gentle sample and the pods—they lasted us a week.”</p>
+          <img class="c-photo" src="assets/comment-shelf.webp" width="1168" height="880" alt="Tide detergent, Pods and stain remover stocked on a laundry shelf" loading="lazy">
           <div class="c-actions"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 10v10H4V10h3zm3 10h7.2a2 2 0 001.9-1.5l1.5-5A2 2 0 0018.7 11H14V7a2 2 0 00-2-2l-2 5v10z" stroke-linejoin="round"/></svg> 32</span><span>Helpful</span><span>Reply</span></div>
         </div>
       </article>
@@ -824,10 +833,10 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
         <span class="avatar" aria-hidden="true">RS</span>
         <div>
           <div class="c-head">
-            <span class="c-name">Reward Support</span>
+            <span class="c-name">Sample Support</span>
             <span class="c-time">Page team · 1 day ago</span>
           </div>
-          <p class="c-text">Thanks for giving it a chance, Linda. We keep the eligibility check free and explain every step before you continue.</p>
+          <p class="c-text">Thanks for giving it a chance, Linda. We keep the sample check free and explain every step before you continue.</p>
         </div>
       </div>
 
@@ -839,7 +848,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
             <span class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Verified</span>
             <span class="c-time">Pennsylvania · 2 days ago</span>
           </div>
-          <p class="c-text">“I've been buying Tide for my grandchildren's clothes for years. This is the first reward program that didn't make me squint at the fine print.”</p>
+          <p class="c-text">“I've been buying Tide for my grandchildren's clothes for years. This is the first sample program that didn't make me squint at the fine print.”</p>
           <div class="c-actions"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 10v10H4V10h3zm3 10h7.2a2 2 0 001.9-1.5l1.5-5A2 2 0 0018.7 11H14V7a2 2 0 00-2-2l-2 5v10z" stroke-linejoin="round"/></svg> 12</span><span>Helpful</span><span>Reply</span></div>
         </div>
       </article>
@@ -852,12 +861,16 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
       <p class="sub">Straight answers before you start.</p>
       <div class="faq-list" style="margin-top:10px">
         <details open>
-          <summary>Is this a real $500 Tide reward?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="faq-a">Yes. This is an independent 2026 customer appreciation promotion. U.S. residents 18 or older can check whether they qualify for a $500 Tide reward card. This page is not operated by Procter &amp; Gamble — please read the disclaimer below.</div>
+          <summary>Is this really a FREE Tide sample?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-a">Yes. This is an independent 2026 Tide sample program. U.S. residents 18 or older can check whether they qualify for a free Tide sample box. This page is not operated by Procter &amp; Gamble — please read the disclaimer below.</div>
+        </details>
+        <details>
+          <summary>What's in the free sample?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-a">A selection of Tide products, such as Original liquid, Pods, or Free &amp; Gentle. Exact products and availability vary.</div>
         </details>
         <details>
           <summary>Who can participate?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="faq-a">U.S. residents who are <b>18 or older</b>. One entry per person or household. Eligibility is confirmed on the next page.</div>
+          <div class="faq-a">U.S. residents who are <b>18 or older</b>. One sample per person or household. Eligibility is confirmed on the next page.</div>
         </details>
         <details>
           <summary>What does it cost?<span class="plus" aria-hidden="true"></span></summary>
@@ -869,18 +882,22 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
         </details>
         <details>
           <summary>What happens after I qualify?<span class="plus" aria-hidden="true"></span></summary>
-          <div class="faq-a">You'll see a confirmation and a button to continue. The next page explains exactly what to confirm and how the reward is processed.</div>
+          <div class="faq-a">You'll see a confirmation and a button to continue. The next page explains exactly what to confirm and how your sample is processed.</div>
+        </details>
+        <details>
+          <summary>I've received a free Tide sample before — can I still enter?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="faq-a">The next page asks about previous sample history and confirms current eligibility. Samples are limited to one per person or household.</div>
         </details>
       </div>
     </section>
 
     <!-- final CTA -->
     <section class="final-cta" id="finalCta" aria-labelledby="finalTitle">
-      <span class="eyebrow">2026 Customer Appreciation</span>
-      <h2 id="finalTitle">See if you qualify for your $500 Tide Reward.</h2>
+      <span class="eyebrow">2026 Tide Sample Program</span>
+      <h2 id="finalTitle">See if you qualify for your FREE Tide sample.</h2>
       <p>Three questions. About 30 seconds. Free to check.</p>
       <button type="button" class="btn btn-primary" data-start>
-        <span>Check My Eligibility</span>
+        <span>Get My FREE Sample</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
       </button>
       <div class="final-note">
@@ -922,7 +939,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
 
       <div id="quizQuestionWrap" aria-live="polite">
         <h1 class="q-title" id="quizTitle" tabindex="-1">Do you live in the United States?</h1>
-        <p class="q-help" id="quizHelp">This reward is for U.S. residents 18 and older.</p>
+        <p class="q-help" id="quizHelp">This sample program is for U.S. residents 18 and older.</p>
       </div>
 
       <div class="q-options" id="answers"></div>
@@ -941,7 +958,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
 <div id="loadingView" class="flow-wrap" hidden>
   <div class="flow-card loading-card" role="status" aria-live="polite">
     <div class="spinner" aria-hidden="true"></div>
-    <h2 id="loadingTitle">Checking today's availability…</h2>
+    <h2 id="loadingTitle">Checking sample availability…</h2>
     <p>Please wait while we review your answers.</p>
     <div class="load-progress" role="progressbar" aria-label="Checking eligibility" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="loadProgress">
       <span id="loadingBar"></span>
@@ -950,7 +967,7 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
     <ul class="load-list" id="loadingList">
       <li data-load="0"><span class="tick" aria-hidden="true"></span> U.S. location confirmed</li>
       <li data-load="1"><span class="tick" aria-hidden="true"></span> Age requirement checked</li>
-      <li data-load="2"><span class="tick" aria-hidden="true"></span> Reward availability reviewed</li>
+      <li data-load="2"><span class="tick" aria-hidden="true"></span> Sample availability reviewed</li>
     </ul>
   </div>
 </div>
@@ -963,8 +980,8 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
     <div class="exit-icon" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>
     </div>
-    <h1 id="exitTitle" tabindex="-1">This reward is for U.S. residents.</h1>
-    <p id="exitText">Thanks for stopping by. This customer appreciation event is currently open to people living in the United States.</p>
+    <h1 id="exitTitle" tabindex="-1">This sample is for U.S. residents.</h1>
+    <p id="exitText">Thanks for stopping by. This free Tide sample program is currently open to people living in the United States.</p>
     <button type="button" class="btn btn-primary" id="exitRestart">Start Over</button>
     <button type="button" class="btn btn-ghost" id="exitHome">Back to Page</button>
   </div>
@@ -980,20 +997,23 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
       </div>
       <span class="result-eyebrow">Pre-qualified</span>
-      <h1 id="resultTitle" tabindex="-1">You're <span class="nowrap">pre-qualified</span> for <em>$500</em>.</h1>
-      <p class="result-lede">Your answers matched. Complete the final step now to claim your <b>$500 Tide Reward Card</b>.</p>
-      <div class="stockchip">Your $500 stock-up: <b id="stockUpText">The whole laundry room</b></div>
+      <h1 id="resultTitle" tabindex="-1">You're <span class="nowrap">pre-qualified</span> for a <em>FREE</em> Tide Sample.</h1>
+      <p class="result-lede">Your answers matched. Complete the final step now to claim your <b>FREE Tide sample box</b>.</p>
+      <div class="stockchip">Your FREE sample pick: <b id="stockUpText">Pods</b></div>
     </div>
 
-    <img class="result-card-img" src="assets/tide-card.webp" width="1000" height="620" alt="$500 Tide Reward Card" decoding="async">
+    <div class="result-sample">
+      <img src="assets/tidep.webp" width="924" height="456" alt="A selection of FREE Tide sample products" decoding="async">
+      <span class="free-stamp">FREE SAMPLE</span>
+    </div>
 
     <div class="claim-summary">
-      <div><span>Reward</span><b>$500 Tide Reward Card</b></div>
+      <div><span>Sample</span><b>FREE Tide Sample Box</b></div>
       <div><span>Status</span><b class="green">Pre-qualified</b></div>
     </div>
 
     <a class="btn btn-primary btn-claim" id="claimBtn" href="https://www.2timetowin.xyz/click" rel="noopener">
-      <span>Claim My $500 Now</span>
+      <span>Claim My FREE Sample</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
     </a>
     <p class="claim-note">Final eligibility is confirmed on the next page.</p>
@@ -1002,12 +1022,12 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
       <h2>What happens next</h2>
       <ol>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Confirm your household details on the next page.</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Complete the final reward step shown there.</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Complete the final sample step shown there.</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Follow the claim instructions to finish.</li>
       </ol>
     </div>
 
-    <p class="result-legal">Eligibility isn't final until the next page is completed. Reward availability is limited. U.S. residents 18+.</p>
+    <p class="result-legal">Eligibility isn't final until the next page is completed. Sample availability is limited. U.S. residents 18+.</p>
     <p class="result-links">
       <button type="button" data-legal="terms">Terms</button>
       <span aria-hidden="true">·</span>
@@ -1027,27 +1047,27 @@ src="https://www.facebook.com/tr?id=1265921658956719&ev=PageView&noscript=1"
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="assets/tide-logo.webp" width="30" height="30" alt="Tide">
-      <b>Tide Reward Program</b>
+      <b>Tide Sample Program</b>
       <span>Independent promotion</span>
     </div>
     <p class="disclaimer">
-      <b>Important:</b> This is an independent promotional page and is not affiliated with, endorsed by, or sponsored by Procter &amp; Gamble. TIDE is a trademark of The Procter &amp; Gamble Company. Reward availability, eligibility, and fulfillment are subject to the terms shown on the offer page. Participation may require completing sponsor offers. Testimonials reflect individual experiences; results are not guaranteed. This page is not part of Facebook or Meta.
+      <b>Important:</b> This is an independent promotional page and is not affiliated with, endorsed by, or sponsored by Procter &amp; Gamble. TIDE is a trademark of The Procter &amp; Gamble Company. Sample availability, eligibility, and fulfillment are subject to the terms shown on the offer page. Participation may require completing sponsor offers. Testimonials reflect individual experiences; results are not guaranteed. This page is not part of Facebook or Meta.
     </p>
     <div class="footer-links">
       <button type="button" class="linklike" data-legal="terms">Terms &amp; Conditions</button>
       <button type="button" class="linklike" data-legal="privacy">Privacy Policy</button>
       <button type="button" class="linklike" data-legal="donotsell">Do Not Sell or Share My Info</button>
     </div>
-    <p class="copyright">© 2026 Tide Reward Program. All rights reserved. Offer ends December 31, 2026.</p>
+    <p class="copyright">© 2026 Tide Sample Program. All rights reserved. Offer ends December 31, 2026.</p>
   </div>
 </footer>
 
 <!-- ================= STICKY CTA ================= -->
 <div class="sticky-cta" id="stickyCta" aria-hidden="true">
   <div class="sticky-inner">
-    <div class="sticky-copy"><b>$500 Tide Reward</b><span>30-second check</span></div>
+    <div class="sticky-copy"><b>FREE Tide Sample</b><span>30-second check</span></div>
     <button type="button" class="btn btn-primary btn-sticky" data-start>
-      <span>Check Eligibility</span>
+      <span>Get FREE Sample</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
     </button>
     <button type="button" class="sticky-close" id="stickyClose" aria-label="Dismiss this bar">×</button>
@@ -1116,7 +1136,7 @@ window.TIDE_REWARD_CONFIG = {
   var QUESTIONS = [
     {
       title: "Do you live in the United States?",
-      help: "This reward is for U.S. residents 18 and older.",
+      help: "This sample program is for U.S. residents 18 and older.",
       options: [
         { label: "Yes, I live in the U.S.", value: "yes" },
         { label: "No", value: "no" }
@@ -1133,20 +1153,20 @@ window.TIDE_REWARD_CONFIG = {
       ]
     },
     {
-      title: "If you had $500 in Tide rewards, what would you stock up on first?",
+      title: "Which FREE Tide sample would you like to try first?",
       help: "Pick the one that sounds best to you.",
       options: [
-        { label: "Detergent & pods", value: "Detergent & pods" },
-        { label: "Stain fighters & boosters", value: "Stain fighters & boosters" },
-        { label: "The whole laundry room", value: "The whole laundry room" }
+        { label: "Original liquid", value: "Original liquid" },
+        { label: "Pods", value: "Pods" },
+        { label: "Free & Gentle", value: "Free & Gentle" }
       ]
     }
   ];
 
   var EXIT_COPY = {
     us: {
-      title: "This reward is for U.S. residents.",
-      text: "Thanks for stopping by. This customer appreciation event is currently open to people living in the United States."
+      title: "This sample is for U.S. residents.",
+      text: "Thanks for stopping by. This free Tide sample program is currently open to people living in the United States."
     }
   };
 
@@ -1154,9 +1174,9 @@ window.TIDE_REWARD_CONFIG = {
     terms: {
       title: "Terms & Conditions",
       body:
-        "<p><b>1. Eligibility.</b> This promotion is open to legal residents of the 50 United States and the District of Columbia who are 18 years of age or older at the time of entry. One entry per person or household.</p>" +
+        "<p><b>1. Eligibility.</b> This promotion is open to legal residents of the 50 United States and the District of Columbia who are 18 years of age or older at the time of entry. One sample per person or household.</p>" +
         "<p><b>2. No purchase necessary to check.</b> You do not need to buy anything or provide a credit card to use this eligibility check. The final claim step may include sponsored offers; any requirement to complete an offer will be disclosed on the offer page before you agree.</p>" +
-        "<p><b>3. Reward.</b> The advertised reward is a $500 Tide reward card, subject to eligibility, availability, and the terms shown on the offer page. Rewards are limited and are not guaranteed.</p>" +
+        "<p><b>3. Sample.</b> The advertised item is a free Tide sample box, subject to eligibility, availability, and the terms shown on the offer page. Samples are limited and are not guaranteed.</p>" +
         "<p><b>4. Independent promotion.</b> This page is operated by an independent promoter. It is not affiliated with, endorsed by, or sponsored by Procter &amp; Gamble. TIDE is a trademark of The Procter &amp; Gamble Company.</p>" +
         "<p><b>5. Privacy.</b> Information you provide is used to determine eligibility and to improve this page. See the Privacy Policy for details.</p>" +
         "<p><b>6. Limitation.</b> This page is for informational and promotional purposes. Full offer terms, including fulfillment timing, are provided by the offer provider on the next page.</p>" +
@@ -1249,7 +1269,7 @@ window.TIDE_REWARD_CONFIG = {
 
     if (!state.holdExpired) {
       bar.classList.remove("is-expired");
-      if (label) label.textContent = "Your $500 hold";
+      if (label) label.textContent = "Your FREE sample hold";
       time.textContent = formatTime(left);
       if (note) note.textContent = "Complete the check";
     }
@@ -1283,7 +1303,7 @@ window.TIDE_REWARD_CONFIG = {
     state.locked = false;
     renderQuestion();
     showView("quiz");
-    track("StartCheck", { content_name: "Tide $500 Reward" }, true);
+    track("StartCheck", { content_name: "Tide Free Sample" }, true);
     window.setTimeout(function () {
       var title = $("#quizTitle");
       if (title) title.focus({ preventScroll: true });
@@ -1405,8 +1425,8 @@ window.TIDE_REWARD_CONFIG = {
     showView("loading");
     setLoadProgress(0);
     $$("#loadingList li").forEach(function (li) { li.classList.remove("active", "done"); });
-    $("#loadingTitle").textContent = "Checking today's availability…";
-    track("CompleteCheck", { content_name: "Tide $500 Reward" }, true);
+    $("#loadingTitle").textContent = "Checking sample availability…";
+    track("CompleteCheck", { content_name: "Tide Free Sample" }, true);
 
     state.loadingTimers.push(window.setTimeout(function () {
       setLoadProgress(34);
@@ -1419,7 +1439,7 @@ window.TIDE_REWARD_CONFIG = {
 
     state.loadingTimers.push(window.setTimeout(function () {
       setLoadProgress(72);
-      $("#loadingTitle").textContent = "Checking reward availability…";
+      $("#loadingTitle").textContent = "Reviewing sample availability…";
       var li = $('#loadingList li[data-load="1"]');
       if (li) li.classList.add("done");
       var next = $('#loadingList li[data-load="2"]');
@@ -1443,10 +1463,10 @@ window.TIDE_REWARD_CONFIG = {
     clearLoadingTimers();
     showView("result");
     var stock = $("#stockUpText");
-    if (stock) stock.textContent = state.answers[2] || "The whole laundry room";
+    if (stock) stock.textContent = state.answers[2] || "Pods";
     var claim = $("#claimBtn");
     if (claim) claim.href = buildOfferUrl();
-    track("Qualified", { content_name: "Tide $500 Reward", value: 500, currency: "USD" }, true);
+    track("Qualified", { content_name: "Tide Free Sample" }, true);
     window.setTimeout(function () {
       var title = $("#resultTitle");
       if (title) title.focus({ preventScroll: true });
